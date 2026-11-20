@@ -1,0 +1,272 @@
+{
+ "bundle": "lab1_colab",
+ "required_notebooks": [
+  "notebooks/1_learn_world_model.ipynb",
+  "notebooks/2_imagine_and_plan.ipynb"
+ ],
+ "models": {
+  "quick": "5,000 transitions, 5 epochs",
+  "strong": "20,000 transitions, 20 epochs"
+ },
+ "configs": [
+  "configs/cpu_fast.yaml",
+  "configs/planner_strong.yaml"
+ ],
+ "pinned_installs": {
+  "highway-env": "1.12.1",
+  "pygame-ce": "2.5.8"
+ },
+ "checkpoint_provenance": [
+  {
+   "path": "checkpoints/world_model_best.pt",
+   "source_sha256": "6bfde0855927e11227093bb44a03146439947cee90d6f9571619131ebd8a3fbf",
+   "source_bytes": 18041477,
+   "package_sha256": "28c348cd4d74994c70156f15a4ec1fe5d90d802c7876b91d52fc7ce419f77d75",
+   "package_bytes": 6013889,
+   "removed": [
+    "optimizer_state"
+   ],
+   "model_tensors": 28,
+   "model_tensors_identical": true
+  },
+  {
+   "path": "checkpoints/strong/world_model_best.pt",
+   "source_sha256": "14646970e63e3dabad2bbd2e35d7ee2d79d188d01a7f92a6d7982254b5de28cd",
+   "source_bytes": 18041349,
+   "package_sha256": "9a434ec93e888554d11b47bd63edc8100c93d8f4597a62fc910ddcd1d0b1b896",
+   "package_bytes": 6013697,
+   "removed": [
+    "optimizer_state"
+   ],
+   "model_tensors": 28,
+   "model_tensors_identical": true
+  }
+ ],
+ "files": [
+  {
+   "path": "LICENSE",
+   "bytes": 1075,
+   "sha256": "ab20bbc8ae4c7cda951bda111a2242c7d916bfd35434e97a275610c20b12bb23"
+  },
+  {
+   "path": "NOTICE.md",
+   "bytes": 649,
+   "sha256": "49f64452739c948e9fcecba30226f9242bed404a0d39427e6e965f9c7c497f2d"
+  },
+  {
+   "path": "THIRD_PARTY_NOTICES.md",
+   "bytes": 735,
+   "sha256": "6e40906b219ca6dc3d861c2cc5fe2bdda59157f6ef68c78c1417cb33abf2c647"
+  },
+  {
+   "path": "checkpoints/history.json",
+   "bytes": 1812,
+   "sha256": "82ac444c9ae2e9314a6f72c19e69b20b3d28beb1b61fdba26841ecb51aa26216"
+  },
+  {
+   "path": "checkpoints/strong/history.json",
+   "bytes": 7308,
+   "sha256": "22d121e06be003586f68a098a5e0f46a032fe49dd15cbd28d574d9c4c2e3d5e7"
+  },
+  {
+   "path": "checkpoints/strong/world_model_best.pt",
+   "bytes": 6013697,
+   "sha256": "9a434ec93e888554d11b47bd63edc8100c93d8f4597a62fc910ddcd1d0b1b896"
+  },
+  {
+   "path": "checkpoints/world_model_best.pt",
+   "bytes": 6013889,
+   "sha256": "28c348cd4d74994c70156f15a4ec1fe5d90d802c7876b91d52fc7ce419f77d75"
+  },
+  {
+   "path": "configs/cpu_fast.yaml",
+   "bytes": 1351,
+   "sha256": "e974b0ee78986e94f01e3d2eb178e32c9704b4d14bf85c7f2cf897a1364ae834"
+  },
+  {
+   "path": "configs/planner_strong.yaml",
+   "bytes": 2025,
+   "sha256": "3937b6b98a39754a189a77bf9cdffe8e90e151ab940cfa3bf1b4194cb38c306c"
+  },
+  {
+   "path": "datasets/highway_cpu.npz",
+   "bytes": 1571815,
+   "sha256": "270d59559ede9702846393b543d03e04ad7c6256b872458669afa276ff68beb8"
+  },
+  {
+   "path": "datasets/highway_strong.npz",
+   "bytes": 6335538,
+   "sha256": "861223e98b2e598ecfcd31c4f0c2cb931cced189b84ac4cc487a5ea7fe3e5288"
+  },
+  {
+   "path": "src/lab1/__init__.py",
+   "bytes": 279,
+   "sha256": "142d82598fe5d7b291675a0e584167ae7606d4f66b6507a4eab3f4c92ec8ebde"
+  },
+  {
+   "path": "src/lab1/config.py",
+   "bytes": 7246,
+   "sha256": "986fd38b5374fd7fcd33bc9e11b8edeb5b4f504e8f618a1a0f80477947e474c2"
+  },
+  {
+   "path": "src/lab1/data/__init__.py",
+   "bytes": 380,
+   "sha256": "cf13b5a7cf07342f880952a63a1eda1bfebd70fbee1ef34ed1042b462455a635"
+  },
+  {
+   "path": "src/lab1/data/collect.py",
+   "bytes": 4586,
+   "sha256": "8cfaeb7e33bd16770991a861ba857f33fb5d5d0f3416d7d2bf29771a62cd6456"
+  },
+  {
+   "path": "src/lab1/data/dataset.py",
+   "bytes": 5670,
+   "sha256": "1048ede5b99d875858bfb2e414f2688b0bcf77b51d29a8464e16bac7a67a9e0a"
+  },
+  {
+   "path": "src/lab1/envs/__init__.py",
+   "bytes": 44,
+   "sha256": "80e2d61670ed0bfb498910802c49daeb77b37c7d9f31444efcbd27be8bbabe89"
+  },
+  {
+   "path": "src/lab1/envs/display.py",
+   "bytes": 3499,
+   "sha256": "10c7d0fac79f97653f0507ef10e0d2b6b33f5b5ee25004d85bd00b1c8c453e1e"
+  },
+  {
+   "path": "src/lab1/envs/highway.py",
+   "bytes": 3442,
+   "sha256": "c8ad8ac18b12c2f858b85d42d409361192c47b8b528917cc0a07f97e809809d7"
+  },
+  {
+   "path": "src/lab1/imagination/__init__.py",
+   "bytes": 221,
+   "sha256": "0559850e981cc61bcf174ba1a634becc4847c44034f9af01162a7d248f4c9d72"
+  },
+  {
+   "path": "src/lab1/imagination/rollout.py",
+   "bytes": 3671,
+   "sha256": "f28e63c251bba96723e33e9baa585d27a21b4aa6c3c7605fabda1c03450a17ee"
+  },
+  {
+   "path": "src/lab1/models/__init__.py",
+   "bytes": 448,
+   "sha256": "992a6430162cc9d37ca7bed35dcda4ec02f14f70a871b4c7524b11930ac6f0ef"
+  },
+  {
+   "path": "src/lab1/models/decoder.py",
+   "bytes": 2123,
+   "sha256": "fc5cd09345bd6f193d072617264a13103fb4ab0ba6b7f4eadd7510501ba81cfa"
+  },
+  {
+   "path": "src/lab1/models/dynamics.py",
+   "bytes": 1525,
+   "sha256": "7a5ff0590cc251dda9b6719b2718d9c26015c36edab99b7f44cd1d63b80bae5b"
+  },
+  {
+   "path": "src/lab1/models/encoder.py",
+   "bytes": 1785,
+   "sha256": "63f7bfc26d7a92a61c554eb959d0d2c8e432529b02fcf74b3c30f886a0f52a8d"
+  },
+  {
+   "path": "src/lab1/models/reward.py",
+   "bytes": 1578,
+   "sha256": "378477005ae28595694b3238218cdd765861af2f0cbf60f9d45897b5b960a71f"
+  },
+  {
+   "path": "src/lab1/models/reward_ensemble.py",
+   "bytes": 3912,
+   "sha256": "f4eac01191cf744c7e2d2306a7bb80561ecaba37138cb85ab0384f7478d2502c"
+  },
+  {
+   "path": "src/lab1/models/world_model.py",
+   "bytes": 8056,
+   "sha256": "f1bbbc4e5306f85abf50092507fca2e3bedd2048fd8b4f99675788058c10a10f"
+  },
+  {
+   "path": "src/lab1/planning/__init__.py",
+   "bytes": 827,
+   "sha256": "487df19ac2bb59f07d264a79eeac5091a66e3090a3ae65d5edf3221039c02129"
+  },
+  {
+   "path": "src/lab1/planning/diagnostics.py",
+   "bytes": 4523,
+   "sha256": "dbc869dea2fb59417c860765ba98690b77d937be4e766e7d63461865d70b09ce"
+  },
+  {
+   "path": "src/lab1/planning/experiments.py",
+   "bytes": 14111,
+   "sha256": "dc4eccd231ff1469e5d0a1e6d3f2a7709680e562fd469bbad03c311a622ebf77"
+  },
+  {
+   "path": "src/lab1/planning/random_shooting.py",
+   "bytes": 9747,
+   "sha256": "47d7f92fc780ab6f30509b19b067b175800d8205f22a391aeebd3a0be84e4783"
+  },
+  {
+   "path": "src/lab1/training/__init__.py",
+   "bytes": 161,
+   "sha256": "4e017aaa4b8bf535471c8f6de2f4410f1b6ce630398c80c477ffa4c0d03a7d2d"
+  },
+  {
+   "path": "src/lab1/training/reward_ensemble_trainer.py",
+   "bytes": 6790,
+   "sha256": "4397ba0823fb6e5f1612ccb0722ca993278579cdc31f9a8ae83e5cc794aa4db4"
+  },
+  {
+   "path": "src/lab1/training/trainer.py",
+   "bytes": 7070,
+   "sha256": "bd07ffdd6408e23d6482322df27f5390103c802fec4773e38870ed4cca3f3ad0"
+  },
+  {
+   "path": "src/lab1/utils/__init__.py",
+   "bytes": 183,
+   "sha256": "f1cbd6029315a6d79e2f9de19b8650e69e8cf0ef9fdd4e112faaf439bced9431"
+  },
+  {
+   "path": "src/lab1/utils/checkpoint.py",
+   "bytes": 1811,
+   "sha256": "e2e12f5bccb9eb6c15aeb73c8c967fedcb446907cad1567ffd1eed1946f6b28a"
+  },
+  {
+   "path": "src/lab1/utils/model_handoff.py",
+   "bytes": 3521,
+   "sha256": "a3d1a5a52790274d370f17f9c0546f84ddecd39996f103f22eb80ad154a21466"
+  },
+  {
+   "path": "src/lab1/utils/notebook.py",
+   "bytes": 1461,
+   "sha256": "58d8e8a65d5db01f7146f75420aeca1adb554def3dc523965d7c1795b7220e00"
+  },
+  {
+   "path": "src/lab1/utils/seed.py",
+   "bytes": 494,
+   "sha256": "d89a5f5eab3eb404b53a2e2ed1e2eef2b105cd523d843017acac6720dfab5299"
+  },
+  {
+   "path": "src/lab1/visualization/__init__.py",
+   "bytes": 2972,
+   "sha256": "988b65e27bfb5a71e44ce372e37c798e13b0936e313494d0e2dd82cd537079fa"
+  },
+  {
+   "path": "src/lab1/visualization/animations.py",
+   "bytes": 5291,
+   "sha256": "6be0c459bfbc43b5a9bd1fbb09942733f375c04dd53e41dd1f4a6a82b7846916"
+  },
+  {
+   "path": "src/lab1/visualization/learning.py",
+   "bytes": 19446,
+   "sha256": "74eae5b5e7ad1463beb5edfc7a52095b1916fa8e7dc9b353cc56eaae1c71b1b6"
+  },
+  {
+   "path": "src/lab1/visualization/plots.py",
+   "bytes": 29222,
+   "sha256": "55c6205102660ae32fbc69e54ca204e95a9488163bf6787dfdcb128919c2831d"
+  },
+  {
+   "path": "src/lab1/visualization/story.py",
+   "bytes": 43037,
+   "sha256": "e6ae1e949d3e2481e51580955a86ce211ce2526f0eea5b49a73304ea78580ef4"
+  }
+ ]
+}

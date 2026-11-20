@@ -1,0 +1,68 @@
+# Classroom checkpoint config used throughout the required Lab 1 notebook.
+#
+# It uses exactly the same model architecture as cpu_fast.yaml, with more data
+# and epochs. Training budget alone does not establish control reliability.
+#
+# Uses its own dataset/checkpoint paths so it never clobbers the fast run:
+#   python scripts/collect.py          --config configs/planner_strong.yaml
+#   python scripts/train.py            --config configs/planner_strong.yaml
+#   python scripts/plan.py --config configs/planner_strong.yaml \
+#     --checkpoint checkpoints/strong/world_model_best.pt --episodes 10
+#
+# Reference outcome (20k transitions, 20 epochs, ten fixed seeds):
+#   - planner return 15.78 +/- 9.61 episode SD; crashes 8/10
+#   - random return  12.50 +/- 6.96 episode SD; crashes 9/10
+# Higher observed mean on these seeds, not statistical superiority or safety.
+#   - recommended setting: 64 candidate sequences, horizon 6
+# Search-budget stress tests and uncertainty belong to the optional notebooks
+# in notebooks/optional/ (not the course's separate Dreamer Lab 2).
+
+seed: 0
+
+env:
+  id: highway-fast-v0
+  image_size: 64
+  stack_size: 4
+  policy_frequency: 1
+  simulation_frequency: 15
+  lanes_count: 4
+  vehicles_count: 25
+  duration: 30
+  offscreen_rendering: true
+  scaling: 1.75
+
+data:
+  num_transitions: 20000
+  dataset_path: datasets/highway_strong.npz
+  val_fraction: 0.1
+  batch_size: 128
+  num_workers: 0
+
+model:
+  latent_dim: 64
+  use_decoder: true
+  use_reward_head: true
+  encoder_channels: [32, 64, 128]
+  dynamics_hidden: [256, 256]
+
+training:
+  epochs: 20
+  learning_rate: 0.0003
+  weight_decay: 0.0
+  grad_clip: 1.0
+  device: auto          # prefers CUDA -> MPS -> CPU
+  recon_loss_weight: 1.0
+  reward_loss_weight: 1.0
+  dynamics_loss_weight: 1.0
+  log_dir: runs
+  checkpoint_dir: checkpoints/strong
+  checkpoint_every: 5
+
+imagination:
+  horizon: 10
+
+planning:
+  enabled: true
+  # Fixed classroom setting used by the required notebook and the reference result above.
+  num_sequences: 64
+  horizon: 6

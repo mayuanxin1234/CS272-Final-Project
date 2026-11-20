@@ -1,0 +1,56 @@
+# Fast CPU configuration for Lab 1.
+# Reduced dataset and epochs so students can collect, train and imagine in
+# roughly 20-30 minutes on CPU. This quick checkpoint is not the final planning
+# benchmark; the required notebook uses planner_strong.yaml throughout.
+#   python scripts/train.py --config configs/cpu_fast.yaml
+
+seed: 0
+
+env:
+  id: highway-fast-v0
+  image_size: 64
+  stack_size: 4          # frame stacking; 1 is simpler but loses motion info
+  policy_frequency: 1
+  simulation_frequency: 15
+  lanes_count: 4
+  vehicles_count: 25
+  duration: 30
+  offscreen_rendering: true
+  scaling: 1.75
+
+data:
+  num_transitions: 5000
+  dataset_path: datasets/highway_cpu.npz
+  val_fraction: 0.1
+  batch_size: 64
+  num_workers: 0
+
+model:
+  latent_dim: 64
+  use_decoder: true
+  use_reward_head: true
+  encoder_channels: [32, 64, 128]
+  dynamics_hidden: [256, 256]
+
+training:
+  epochs: 5
+  learning_rate: 0.0003
+  weight_decay: 0.0
+  grad_clip: 1.0
+  device: cpu
+  recon_loss_weight: 1.0
+  reward_loss_weight: 1.0
+  dynamics_loss_weight: 1.0
+  log_dir: runs
+  checkpoint_dir: checkpoints
+  checkpoint_every: 1
+
+imagination:
+  horizon: 10
+
+planning:
+  enabled: true
+  # Available for experimentation with the quick checkpoint. Its reward model
+  # may be undertrained, so use planner_strong.yaml for the classroom benchmark.
+  num_sequences: 64
+  horizon: 6
