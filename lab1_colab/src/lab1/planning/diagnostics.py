@@ -20,11 +20,28 @@ def sample_candidate_plans(
     model: WorldModel,
     obs: np.ndarray,
     *,
+    request_actions,
+    messages,
     num_sequences: int = 64,
     horizon: int = 6,
     seed: int = 0,
     device: torch.device | str = "cpu",
 ) -> dict[str, object]:
+
+    request_actions = np.asarray(request_actions, dtype=np.int64)
+    messages = np.asarray(messages, dtype=np.int64)
+
+    if request_actions.shape != (num_sequences, horizon):
+        raise ValueError(
+            f"request_actions must have shape "
+            f"({num_sequences}, {horizon}), got {request_actions.shape}"
+        )
+
+    if messages.shape != (num_sequences, horizon):
+        raise ValueError(
+            f"messages must have shape "
+            f"({num_sequences}, {horizon}), got {messages.shape}"
+        )
     """Sample and score one batch of random-shooting candidate plans."""
     device = torch.device(device)
     model = model.to(device).eval()
@@ -39,18 +56,21 @@ def sample_candidate_plans(
         .contiguous()
         .to(device)
     )
-    rewards = (
-        model.imagine(obs_t, torch.from_numpy(actions).to(device))["rewards"]
-        .cpu()
-        .numpy()
-    )
+    rewards = model.imagine(
+    obs_t,
+    torch.from_numpy(actions).to(device),
+    torch.from_numpy(request_actions).to(device),
+    torch.from_numpy(messages).to(device),
+    )["rewards"]
     returns = rewards.sum(axis=1)
     best = int(np.argmax(returns))
     return {
         "actions": actions,
-        "rewards": rewards,
-        "returns": returns,
-        "best_index": best,
+        "request_actions": request_actions,
+        "messages": messages,
+        "rewards": rewards.cpu().numpy(),
+        "returns": rewards.sum(axis=1).cpu().numpy(),
+        "best_index": int(torch.argmax(rewards.sum(axis=1)).item()),
         "num_sequences": num_sequences,
         "horizon": horizon,
     }
