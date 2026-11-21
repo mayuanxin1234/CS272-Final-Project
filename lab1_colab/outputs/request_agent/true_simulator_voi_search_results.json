@@ -1,0 +1,467 @@
+[
+  {
+    "geom": {
+      "ego_x": 30.0,
+      "ego_speed": 25.0,
+      "front_x": 54.0,
+      "front_speed": 22.0,
+      "rear_x": 15.0,
+      "rear_speed": 22.0
+    },
+    "best_brake": "IDLE",
+    "best_maint": "FASTER",
+    "best_accel": "FASTER",
+    "best_blind_act": "FASTER",
+    "crashes_avoided": 1,
+    "accel_wrong_crashed": true,
+    "voi_score": 0.04181941318048388,
+    "robustness_rate": 0.7777777777777778,
+    "pixel_invariance": true,
+    "outcomes_summary": {
+      "intent_BRAKE_act_LANE_LEFT": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.1,
+        "min_rear_gap": 20.674904062291567
+      },
+      "intent_BRAKE_act_IDLE": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.12,
+        "min_rear_gap": 20.674904062291567
+      },
+      "intent_BRAKE_act_FASTER": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 3.9945417604585494,
+        "min_rear_gap": 23.187568766170017
+      },
+      "intent_BRAKE_act_SLOWER": {
+        "crashed": false,
+        "safe_merge": false,
+        "return": 2.835458250455506,
+        "min_rear_gap": 18.162239358413174
+      },
+      "intent_MAINTAIN_act_LANE_LEFT": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.195,
+        "min_rear_gap": 19.500710275568622
+      },
+      "intent_MAINTAIN_act_IDLE": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.215,
+        "min_rear_gap": 19.500710275568622
+      },
+      "intent_MAINTAIN_act_FASTER": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 3.9945417604585494,
+        "min_rear_gap": 22.01337497944707
+      },
+      "intent_MAINTAIN_act_SLOWER": {
+        "crashed": false,
+        "safe_merge": false,
+        "return": 3.160013182512322,
+        "min_rear_gap": 10.82356937674487
+      },
+      "intent_ACCELERATE_act_LANE_LEFT": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.195,
+        "min_rear_gap": 14.02781943632624
+      },
+      "intent_ACCELERATE_act_IDLE": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.215,
+        "min_rear_gap": 14.02781943632624
+      },
+      "intent_ACCELERATE_act_FASTER": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 3.9945417604585494,
+        "min_rear_gap": 21.47351570060485
+      },
+      "intent_ACCELERATE_act_SLOWER": {
+        "crashed": false,
+        "safe_merge": false,
+        "return": 3.4850000654595106,
+        "min_rear_gap": 2.001486654408211
+      }
+    }
+  },
+  {
+    "geom": {
+      "ego_x": 30.0,
+      "ego_speed": 25.0,
+      "front_x": 54.0,
+      "front_speed": 22.0,
+      "rear_x": 18.0,
+      "rear_speed": 22.0
+    },
+    "best_brake": "IDLE",
+    "best_maint": "FASTER",
+    "best_accel": "FASTER",
+    "best_blind_act": "FASTER",
+    "crashes_avoided": 1,
+    "accel_wrong_crashed": true,
+    "voi_score": 0.04181941318048388,
+    "robustness_rate": 0.8888888888888888,
+    "pixel_invariance": true,
+    "outcomes_summary": {
+      "intent_BRAKE_act_LANE_LEFT": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.1,
+        "min_rear_gap": 17.478753611778146
+      },
+      "intent_BRAKE_act_IDLE": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.12,
+        "min_rear_gap": 17.478753611778146
+      },
+      "intent_BRAKE_act_FASTER": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 3.9945417604585494,
+        "min_rear_gap": 19.991418315656595
+      },
+      "intent_BRAKE_act_SLOWER": {
+        "crashed": false,
+        "safe_merge": false,
+        "return": 2.835458250455506,
+        "min_rear_gap": 14.966088907899753
+      },
+      "intent_MAINTAIN_act_LANE_LEFT": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.195,
+        "min_rear_gap": 16.442901675434463
+      },
+      "intent_MAINTAIN_act_IDLE": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.215,
+        "min_rear_gap": 16.442901675434463
+      },
+      "intent_MAINTAIN_act_FASTER": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 3.9945417604585494,
+        "min_rear_gap": 18.955566379312913
+      },
+      "intent_MAINTAIN_act_SLOWER": {
+        "crashed": false,
+        "safe_merge": false,
+        "return": 3.160013182512322,
+        "min_rear_gap": 11.260445630874443
+      },
+      "intent_ACCELERATE_act_LANE_LEFT": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.195,
+        "min_rear_gap": 15.937100498282916
+      },
+      "intent_ACCELERATE_act_IDLE": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.215,
+        "min_rear_gap": 15.937100498282916
+      },
+      "intent_ACCELERATE_act_FASTER": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 3.9945417604585494,
+        "min_rear_gap": 18.449765202161366
+      },
+      "intent_ACCELERATE_act_SLOWER": {
+        "crashed": false,
+        "safe_merge": false,
+        "return": 3.4850000654595106,
+        "min_rear_gap": 4.770895745594146
+      }
+    }
+  },
+  {
+    "geom": {
+      "ego_x": 30.0,
+      "ego_speed": 25.0,
+      "front_x": 54.0,
+      "front_speed": 22.0,
+      "rear_x": 21.0,
+      "rear_speed": 22.0
+    },
+    "best_brake": "IDLE",
+    "best_maint": "FASTER",
+    "best_accel": "FASTER",
+    "best_blind_act": "FASTER",
+    "crashes_avoided": 1,
+    "accel_wrong_crashed": true,
+    "voi_score": 0.04181941318048388,
+    "robustness_rate": 0.6666666666666666,
+    "pixel_invariance": true,
+    "outcomes_summary": {
+      "intent_BRAKE_act_LANE_LEFT": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.1,
+        "min_rear_gap": 14.793508748684467
+      },
+      "intent_BRAKE_act_IDLE": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.12,
+        "min_rear_gap": 14.793508748684467
+      },
+      "intent_BRAKE_act_FASTER": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 3.9945417604585494,
+        "min_rear_gap": 17.306173452562916
+      },
+      "intent_BRAKE_act_SLOWER": {
+        "crashed": false,
+        "safe_merge": false,
+        "return": 2.835458250455506,
+        "min_rear_gap": 12.280844044806074
+      },
+      "intent_MAINTAIN_act_LANE_LEFT": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.195,
+        "min_rear_gap": 13.901667698230739
+      },
+      "intent_MAINTAIN_act_IDLE": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.215,
+        "min_rear_gap": 13.901667698230739
+      },
+      "intent_MAINTAIN_act_FASTER": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 3.9945417604585494,
+        "min_rear_gap": 16.41433240210919
+      },
+      "intent_MAINTAIN_act_SLOWER": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.1600000093211764,
+        "min_rear_gap": 11.389002994352346
+      },
+      "intent_ACCELERATE_act_LANE_LEFT": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.195,
+        "min_rear_gap": 11.957912198167264
+      },
+      "intent_ACCELERATE_act_IDLE": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.215,
+        "min_rear_gap": 11.957912198167264
+      },
+      "intent_ACCELERATE_act_FASTER": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 3.9945417604585494,
+        "min_rear_gap": 15.931605986040353
+      },
+      "intent_ACCELERATE_act_SLOWER": {
+        "crashed": false,
+        "safe_merge": false,
+        "return": 3.5350000015928793,
+        "min_rear_gap": 8.72962432140929
+      }
+    }
+  },
+  {
+    "geom": {
+      "ego_x": 30.0,
+      "ego_speed": 25.0,
+      "front_x": 54.0,
+      "front_speed": 22.0,
+      "rear_x": 27.0,
+      "rear_speed": 22.0
+    },
+    "best_brake": "IDLE",
+    "best_maint": "FASTER",
+    "best_accel": "FASTER",
+    "best_blind_act": "FASTER",
+    "crashes_avoided": 1,
+    "accel_wrong_crashed": true,
+    "voi_score": 0.04181941318048388,
+    "robustness_rate": 0.6666666666666666,
+    "pixel_invariance": true,
+    "outcomes_summary": {
+      "intent_BRAKE_act_LANE_LEFT": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.12,
+        "min_rear_gap": 8.852110230080896
+      },
+      "intent_BRAKE_act_IDLE": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.14,
+        "min_rear_gap": 8.852110230080896
+      },
+      "intent_BRAKE_act_FASTER": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.014541760458549,
+        "min_rear_gap": 11.364774933959346
+      },
+      "intent_BRAKE_act_SLOWER": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.1600000093211764,
+        "min_rear_gap": 6.339445526202503
+      },
+      "intent_MAINTAIN_act_LANE_LEFT": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.215,
+        "min_rear_gap": 8.347201399874187
+      },
+      "intent_MAINTAIN_act_IDLE": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.235,
+        "min_rear_gap": 8.347201399874187
+      },
+      "intent_MAINTAIN_act_FASTER": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.014541760458549,
+        "min_rear_gap": 10.859866103752637
+      },
+      "intent_MAINTAIN_act_SLOWER": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.1800000093211764,
+        "min_rear_gap": 5.834536695995794
+      },
+      "intent_ACCELERATE_act_LANE_LEFT": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.215,
+        "min_rear_gap": 8.010720084554961
+      },
+      "intent_ACCELERATE_act_IDLE": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.235,
+        "min_rear_gap": 8.010720084554961
+      },
+      "intent_ACCELERATE_act_FASTER": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.014541760458549,
+        "min_rear_gap": 10.523384788433411
+      },
+      "intent_ACCELERATE_act_SLOWER": {
+        "crashed": false,
+        "safe_merge": false,
+        "return": 3.5550000015928793,
+        "min_rear_gap": 5.498055380676568
+      }
+    }
+  },
+  {
+    "geom": {
+      "ego_x": 30.0,
+      "ego_speed": 25.0,
+      "front_x": 42.0,
+      "front_speed": 28.0,
+      "rear_x": 15.0,
+      "rear_speed": 25.0
+    },
+    "best_brake": "IDLE",
+    "best_maint": "IDLE",
+    "best_accel": "SLOWER",
+    "best_blind_act": "IDLE",
+    "crashes_avoided": 0,
+    "accel_wrong_crashed": false,
+    "voi_score": 3.4666666703046856,
+    "robustness_rate": 0.6666666666666666,
+    "pixel_invariance": true,
+    "outcomes_summary": {
+      "intent_BRAKE_act_LANE_LEFT": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.1,
+        "min_rear_gap": 17.683892644629935
+      },
+      "intent_BRAKE_act_IDLE": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.12,
+        "min_rear_gap": 17.683892644629935
+      },
+      "intent_BRAKE_act_FASTER": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.014541815004004,
+        "min_rear_gap": 20.196557348508385
+      },
+      "intent_BRAKE_act_SLOWER": {
+        "crashed": false,
+        "safe_merge": false,
+        "return": 2.835458250455506,
+        "min_rear_gap": 13.868269455750067
+      },
+      "intent_MAINTAIN_act_LANE_LEFT": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.1,
+        "min_rear_gap": 16.955972183354916
+      },
+      "intent_MAINTAIN_act_IDLE": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.12,
+        "min_rear_gap": 16.955972183354916
+      },
+      "intent_MAINTAIN_act_FASTER": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.014541815004004,
+        "min_rear_gap": 19.468636887233366
+      },
+      "intent_MAINTAIN_act_SLOWER": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.110000010914057,
+        "min_rear_gap": 10.800966916199997
+      },
+      "intent_ACCELERATE_act_LANE_LEFT": {
+        "crashed": false,
+        "safe_merge": false,
+        "return": 3.65,
+        "min_rear_gap": -0.4689240545355631
+      },
+      "intent_ACCELERATE_act_IDLE": {
+        "crashed": false,
+        "safe_merge": false,
+        "return": 3.67,
+        "min_rear_gap": -0.4689240545355631
+      },
+      "intent_ACCELERATE_act_FASTER": {
+        "crashed": true,
+        "safe_merge": false,
+        "return": 2.014541815004004,
+        "min_rear_gap": 19.02721311042294
+      },
+      "intent_ACCELERATE_act_SLOWER": {
+        "crashed": false,
+        "safe_merge": true,
+        "return": 4.070000010914057,
+        "min_rear_gap": 1.7297606783834851
+      }
+    }
+  }
+]

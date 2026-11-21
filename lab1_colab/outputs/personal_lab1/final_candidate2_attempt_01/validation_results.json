@@ -1,0 +1,245 @@
+{
+  "mean_validation_losses": {
+    "total": 0.02002042922101214,
+    "dynamics": 0.0076749132034406465,
+    "recon": 0.002490313513003641,
+    "reward": 0.009855202567734474
+  },
+  "action_ordering_samples": [
+    {
+      "sample_idx": 0,
+      "by_intent": {
+        "BRAKE": {
+          "predictions": {
+            "LANE_LEFT": 0.3305625021457672,
+            "IDLE": 0.3361088037490845,
+            "FASTER": 0.3897515833377838,
+            "SLOWER": 0.29007983207702637
+          },
+          "ranking": [
+            "FASTER",
+            "IDLE",
+            "LANE_LEFT",
+            "SLOWER"
+          ]
+        },
+        "MAINTAIN": {
+          "predictions": {
+            "LANE_LEFT": 0.32634174823760986,
+            "IDLE": 0.34554654359817505,
+            "FASTER": 0.40540021657943726,
+            "SLOWER": 0.2862046957015991
+          },
+          "ranking": [
+            "FASTER",
+            "IDLE",
+            "LANE_LEFT",
+            "SLOWER"
+          ]
+        },
+        "ACCELERATE": {
+          "predictions": {
+            "LANE_LEFT": 0.32385456562042236,
+            "IDLE": 0.34833940863609314,
+            "FASTER": 0.40614768862724304,
+            "SLOWER": 0.28197577595710754
+          },
+          "ranking": [
+            "FASTER",
+            "IDLE",
+            "LANE_LEFT",
+            "SLOWER"
+          ]
+        }
+      }
+    },
+    {
+      "sample_idx": 1,
+      "by_intent": {
+        "BRAKE": {
+          "predictions": {
+            "LANE_LEFT": 0.4007740020751953,
+            "IDLE": 0.40313225984573364,
+            "FASTER": 0.4350358843803406,
+            "SLOWER": 0.34856241941452026
+          },
+          "ranking": [
+            "FASTER",
+            "IDLE",
+            "LANE_LEFT",
+            "SLOWER"
+          ]
+        },
+        "MAINTAIN": {
+          "predictions": {
+            "LANE_LEFT": 0.3905259370803833,
+            "IDLE": 0.40088433027267456,
+            "FASTER": 0.43188226222991943,
+            "SLOWER": 0.33239108324050903
+          },
+          "ranking": [
+            "FASTER",
+            "IDLE",
+            "LANE_LEFT",
+            "SLOWER"
+          ]
+        },
+        "ACCELERATE": {
+          "predictions": {
+            "LANE_LEFT": 0.39680981636047363,
+            "IDLE": 0.40789690613746643,
+            "FASTER": 0.4207768440246582,
+            "SLOWER": 0.3367593288421631
+          },
+          "ranking": [
+            "FASTER",
+            "IDLE",
+            "LANE_LEFT",
+            "SLOWER"
+          ]
+        }
+      }
+    },
+    {
+      "sample_idx": 2,
+      "by_intent": {
+        "BRAKE": {
+          "predictions": {
+            "LANE_LEFT": 0.41805821657180786,
+            "IDLE": 0.42166969180107117,
+            "FASTER": 0.4507743716239929,
+            "SLOWER": 0.3543074429035187
+          },
+          "ranking": [
+            "FASTER",
+            "IDLE",
+            "LANE_LEFT",
+            "SLOWER"
+          ]
+        },
+        "MAINTAIN": {
+          "predictions": {
+            "LANE_LEFT": 0.41175150871276855,
+            "IDLE": 0.4215042293071747,
+            "FASTER": 0.4401205778121948,
+            "SLOWER": 0.3437163233757019
+          },
+          "ranking": [
+            "FASTER",
+            "IDLE",
+            "LANE_LEFT",
+            "SLOWER"
+          ]
+        },
+        "ACCELERATE": {
+          "predictions": {
+            "LANE_LEFT": 0.40386903285980225,
+            "IDLE": 0.43403199315071106,
+            "FASTER": 0.4451862573623657,
+            "SLOWER": 0.34268248081207275
+          },
+          "ranking": [
+            "FASTER",
+            "IDLE",
+            "LANE_LEFT",
+            "SLOWER"
+          ]
+        }
+      }
+    },
+    {
+      "sample_idx": 3,
+      "by_intent": {
+        "BRAKE": {
+          "predictions": {
+            "LANE_LEFT": 0.41792595386505127,
+            "IDLE": 0.4328874945640564,
+            "FASTER": 0.46367526054382324,
+            "SLOWER": 0.3657984435558319
+          },
+          "ranking": [
+            "FASTER",
+            "IDLE",
+            "LANE_LEFT",
+            "SLOWER"
+          ]
+        },
+        "MAINTAIN": {
+          "predictions": {
+            "LANE_LEFT": 0.42122048139572144,
+            "IDLE": 0.42340201139450073,
+            "FASTER": 0.4437708854675293,
+            "SLOWER": 0.3549407720565796
+          },
+          "ranking": [
+            "FASTER",
+            "IDLE",
+            "LANE_LEFT",
+            "SLOWER"
+          ]
+        },
+        "ACCELERATE": {
+          "predictions": {
+            "LANE_LEFT": 0.41956329345703125,
+            "IDLE": 0.42684972286224365,
+            "FASTER": 0.45087122917175293,
+            "SLOWER": 0.3474082946777344
+          },
+          "ranking": [
+            "FASTER",
+            "IDLE",
+            "LANE_LEFT",
+            "SLOWER"
+          ]
+        }
+      }
+    },
+    {
+      "sample_idx": 4,
+      "by_intent": {
+        "BRAKE": {
+          "predictions": {
+            "LANE_LEFT": 0.443196564912796,
+            "IDLE": 0.43654969334602356,
+            "FASTER": 0.43998825550079346,
+            "SLOWER": 0.35210204124450684
+          },
+          "ranking": [
+            "LANE_LEFT",
+            "FASTER",
+            "IDLE",
+            "SLOWER"
+          ]
+        },
+        "MAINTAIN": {
+          "predictions": {
+            "LANE_LEFT": 0.44155681133270264,
+            "IDLE": 0.4381335973739624,
+            "FASTER": 0.4431879222393036,
+            "SLOWER": 0.35360217094421387
+          },
+          "ranking": [
+            "FASTER",
+            "LANE_LEFT",
+            "IDLE",
+            "SLOWER"
+          ]
+        },
+        "ACCELERATE": {
+          "predictions": {
+            "LANE_LEFT": 0.4310963451862335,
+            "IDLE": 0.4363026022911072,
+            "FASTER": 0.43948107957839966,
+            "SLOWER": 0.3451767563819885
+          },
+          "ranking": [
+            "FASTER",
+            "IDLE",
+            "LANE_LEFT",
+            "SLOWER"
+          ]
+        }
+      }
+    }
+  ]
+}

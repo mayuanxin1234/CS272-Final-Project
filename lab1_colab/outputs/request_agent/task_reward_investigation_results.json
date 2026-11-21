@@ -1,0 +1,7698 @@
+{
+  "BASELINE": {
+    "summary": {
+      "NO_COMM": {
+        "mean_return": 0.31281661759696044,
+        "std_return": 5.551115123125783e-17,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 0.0,
+        "paired_improvement": 0.0,
+        "action_divergence_pct": 0.0
+      },
+      "ORACLE_REAR": {
+        "mean_return": 1.9028097908449775,
+        "std_return": 2.220446049250313e-16,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0,
+        "paired_improvement": 1.589993173248017,
+        "action_divergence_pct": 100.0
+      },
+      "ORACLE_FRONT": {
+        "mean_return": 0.31281661759696044,
+        "std_return": 5.551115123125783e-17,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 0.0,
+        "paired_improvement": 0.0,
+        "action_divergence_pct": 0.0
+      }
+    },
+    "intent_analysis": {
+      "BRAKE": {
+        "no_comm_first_actions": {
+          "1": 18
+        },
+        "oracle_first_actions": {
+          "3": 18
+        },
+        "no_comm_safe_merge": 0.0,
+        "oracle_safe_merge": 1.0,
+        "no_comm_return": 0.31281661759696056,
+        "oracle_return": 1.9028097908449775
+      },
+      "MAINTAIN": {
+        "no_comm_first_actions": {
+          "1": 18
+        },
+        "oracle_first_actions": {
+          "3": 18
+        },
+        "no_comm_safe_merge": 0.0,
+        "oracle_safe_merge": 1.0,
+        "no_comm_return": 0.31281661759696056,
+        "oracle_return": 1.9028097908449775
+      },
+      "ACCELERATE": {
+        "no_comm_first_actions": {
+          "1": 14
+        },
+        "oracle_first_actions": {
+          "3": 14
+        },
+        "no_comm_safe_merge": 0.0,
+        "oracle_safe_merge": 1.0,
+        "no_comm_return": 0.3128166175969605,
+        "oracle_return": 1.902809790844977
+      }
+    },
+    "raw": {
+      "NO_COMM": [
+        {
+          "seed": 4000,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4001,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4002,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4003,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4004,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4005,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4006,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4007,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4008,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4009,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4010,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4011,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4012,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4013,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4014,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4015,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4016,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4017,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4018,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4019,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4020,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4021,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4022,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4023,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4024,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4025,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4026,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4027,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4028,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4029,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4030,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4031,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4032,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4033,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4034,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4035,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4036,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4037,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4038,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4039,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4040,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4041,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4042,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4043,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4044,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4045,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4046,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4047,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4048,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4049,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        }
+      ],
+      "ORACLE_REAR": [
+        {
+          "seed": 4000,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4001,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4002,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4003,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4004,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4005,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4006,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4007,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4008,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4009,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4010,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4011,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4012,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4013,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4014,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4015,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4016,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4017,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4018,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4019,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4020,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4021,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4022,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4023,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4024,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4025,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4026,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4027,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4028,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4029,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4030,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4031,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4032,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4033,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4034,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4035,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4036,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4037,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4038,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4039,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4040,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4041,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4042,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4043,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4044,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4045,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4046,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4047,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4048,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4049,
+          "return": 1.9028097908449773,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 3,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "3": 1,
+            "0": 1
+          }
+        }
+      ],
+      "ORACLE_FRONT": [
+        {
+          "seed": 4000,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4001,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4002,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4003,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4004,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4005,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4006,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4007,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4008,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4009,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4010,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4011,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4012,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4013,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4014,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4015,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4016,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4017,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4018,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4019,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4020,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4021,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4022,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4023,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4024,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4025,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4026,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4027,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4028,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4029,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4030,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4031,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4032,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4033,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4034,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4035,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4036,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4037,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4038,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4039,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4040,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4041,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4042,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4043,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4044,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4045,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4046,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4047,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4048,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4049,
+          "return": 0.3128166175969605,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        }
+      ]
+    }
+  },
+  "VARIANT_A_FLOW_ALIGNMENT": {
+    "summary": {
+      "NO_COMM": {
+        "mean_return": 0.3984498527908814,
+        "std_return": 0.0,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 0.0,
+        "paired_improvement": 0.0,
+        "action_divergence_pct": 0.0
+      },
+      "ORACLE_REAR": {
+        "mean_return": 1.2350204802559501,
+        "std_return": 0.0,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0,
+        "paired_improvement": 0.8365706274650688,
+        "action_divergence_pct": 100.0
+      },
+      "ORACLE_FRONT": {
+        "mean_return": 0.3984498527908814,
+        "std_return": 0.0,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 0.0,
+        "paired_improvement": 0.0,
+        "action_divergence_pct": 0.0
+      }
+    },
+    "intent_analysis": {
+      "BRAKE": {
+        "no_comm_first_actions": {
+          "1": 18
+        },
+        "oracle_first_actions": {
+          "4": 18
+        },
+        "no_comm_safe_merge": 0.0,
+        "oracle_safe_merge": 1.0,
+        "no_comm_return": 0.39844985279088146,
+        "oracle_return": 1.2350204802559501
+      },
+      "MAINTAIN": {
+        "no_comm_first_actions": {
+          "1": 18
+        },
+        "oracle_first_actions": {
+          "4": 18
+        },
+        "no_comm_safe_merge": 0.0,
+        "oracle_safe_merge": 1.0,
+        "no_comm_return": 0.39844985279088146,
+        "oracle_return": 1.2350204802559501
+      },
+      "ACCELERATE": {
+        "no_comm_first_actions": {
+          "1": 14
+        },
+        "oracle_first_actions": {
+          "4": 14
+        },
+        "no_comm_safe_merge": 0.0,
+        "oracle_safe_merge": 1.0,
+        "no_comm_return": 0.39844985279088146,
+        "oracle_return": 1.2350204802559506
+      }
+    },
+    "raw": {
+      "NO_COMM": [
+        {
+          "seed": 4000,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4001,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4002,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4003,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4004,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4005,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4006,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4007,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4008,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4009,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4010,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4011,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4012,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4013,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4014,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4015,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4016,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4017,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4018,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4019,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4020,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4021,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4022,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4023,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4024,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4025,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4026,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4027,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4028,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4029,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4030,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4031,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4032,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4033,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4034,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4035,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4036,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4037,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4038,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4039,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4040,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4041,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4042,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4043,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4044,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4045,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4046,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4047,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4048,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4049,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        }
+      ],
+      "ORACLE_REAR": [
+        {
+          "seed": 4000,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4001,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4002,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4003,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4004,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4005,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4006,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4007,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4008,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4009,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4010,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4011,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4012,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4013,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4014,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4015,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4016,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4017,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4018,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4019,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4020,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4021,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4022,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4023,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4024,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4025,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4026,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4027,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4028,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4029,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4030,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4031,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4032,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4033,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4034,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4035,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4036,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4037,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4038,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4039,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4040,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4041,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4042,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4043,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4044,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4045,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4046,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4047,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4048,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4049,
+          "return": 1.2350204802559501,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        }
+      ],
+      "ORACLE_FRONT": [
+        {
+          "seed": 4000,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4001,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4002,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4003,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4004,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4005,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4006,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4007,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4008,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4009,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4010,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4011,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4012,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4013,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4014,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4015,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4016,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4017,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4018,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4019,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4020,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4021,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4022,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4023,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4024,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4025,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4026,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4027,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4028,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4029,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4030,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4031,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4032,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4033,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4034,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4035,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4036,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4037,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4038,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4039,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4040,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4041,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4042,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4043,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4044,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4045,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4046,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4047,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4048,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4049,
+          "return": 0.3984498527908814,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        }
+      ]
+    }
+  },
+  "VARIANT_B_EFFORT_PENALTY": {
+    "summary": {
+      "NO_COMM": {
+        "mean_return": 0.3336710587700912,
+        "std_return": 5.551115123125783e-17,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 0.0,
+        "paired_improvement": 0.0,
+        "action_divergence_pct": 0.0
+      },
+      "ORACLE_REAR": {
+        "mean_return": 1.2360072818687824,
+        "std_return": 0.0,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0,
+        "paired_improvement": 0.9023362230986913,
+        "action_divergence_pct": 0.0
+      },
+      "ORACLE_FRONT": {
+        "mean_return": 0.3336710587700912,
+        "std_return": 5.551115123125783e-17,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 0.0,
+        "paired_improvement": 0.0,
+        "action_divergence_pct": 0.0
+      }
+    },
+    "intent_analysis": {
+      "BRAKE": {
+        "no_comm_first_actions": {
+          "1": 18
+        },
+        "oracle_first_actions": {
+          "1": 18
+        },
+        "no_comm_safe_merge": 0.0,
+        "oracle_safe_merge": 1.0,
+        "no_comm_return": 0.3336710587700912,
+        "oracle_return": 1.2360072818687824
+      },
+      "MAINTAIN": {
+        "no_comm_first_actions": {
+          "1": 18
+        },
+        "oracle_first_actions": {
+          "1": 18
+        },
+        "no_comm_safe_merge": 0.0,
+        "oracle_safe_merge": 1.0,
+        "no_comm_return": 0.3336710587700912,
+        "oracle_return": 1.2360072818687824
+      },
+      "ACCELERATE": {
+        "no_comm_first_actions": {
+          "1": 14
+        },
+        "oracle_first_actions": {
+          "1": 14
+        },
+        "no_comm_safe_merge": 0.0,
+        "oracle_safe_merge": 1.0,
+        "no_comm_return": 0.3336710587700912,
+        "oracle_return": 1.2360072818687828
+      }
+    },
+    "raw": {
+      "NO_COMM": [
+        {
+          "seed": 4000,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4001,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4002,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4003,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4004,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4005,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4006,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4007,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4008,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4009,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4010,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4011,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4012,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4013,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4014,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4015,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4016,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4017,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4018,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4019,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4020,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4021,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4022,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4023,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4024,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4025,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4026,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4027,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4028,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4029,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4030,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4031,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4032,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4033,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4034,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4035,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4036,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4037,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4038,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4039,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4040,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4041,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4042,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4043,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4044,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4045,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4046,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4047,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4048,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4049,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        }
+      ],
+      "ORACLE_REAR": [
+        {
+          "seed": 4000,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4001,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4002,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4003,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4004,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4005,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4006,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4007,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4008,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4009,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4010,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4011,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4012,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4013,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4014,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4015,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4016,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4017,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4018,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4019,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4020,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4021,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4022,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4023,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4024,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4025,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4026,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4027,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4028,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4029,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4030,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4031,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4032,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4033,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4034,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4035,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4036,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4037,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4038,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4039,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4040,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4041,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4042,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4043,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4044,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4045,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4046,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4047,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4048,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4049,
+          "return": 1.2360072818687824,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1,
+            "0": 1
+          }
+        }
+      ],
+      "ORACLE_FRONT": [
+        {
+          "seed": 4000,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4001,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4002,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4003,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4004,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4005,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4006,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4007,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4008,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4009,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4010,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4011,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4012,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4013,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4014,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4015,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4016,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4017,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4018,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4019,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4020,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4021,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4022,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4023,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4024,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4025,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4026,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4027,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4028,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4029,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4030,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4031,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4032,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4033,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4034,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4035,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4036,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4037,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4038,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4039,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4040,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4041,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4042,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4043,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4044,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4045,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4046,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4047,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4048,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4049,
+          "return": 0.33367105877009123,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        }
+      ]
+    }
+  },
+  "VARIANT_C_GAUSSIAN_FLOW": {
+    "summary": {
+      "NO_COMM": {
+        "mean_return": 0.3839279923382407,
+        "std_return": 5.551115123125783e-17,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 0.0,
+        "paired_improvement": 0.0,
+        "action_divergence_pct": 0.0
+      },
+      "ORACLE_REAR": {
+        "mean_return": 1.273189313513489,
+        "std_return": 2.220446049250313e-16,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0,
+        "paired_improvement": 0.8892613211752479,
+        "action_divergence_pct": 100.0
+      },
+      "ORACLE_FRONT": {
+        "mean_return": 0.3839279923382407,
+        "std_return": 5.551115123125783e-17,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 0.0,
+        "paired_improvement": 0.0,
+        "action_divergence_pct": 0.0
+      }
+    },
+    "intent_analysis": {
+      "BRAKE": {
+        "no_comm_first_actions": {
+          "1": 18
+        },
+        "oracle_first_actions": {
+          "4": 18
+        },
+        "no_comm_safe_merge": 0.0,
+        "oracle_safe_merge": 1.0,
+        "no_comm_return": 0.38392799233824076,
+        "oracle_return": 1.2731893135134886
+      },
+      "MAINTAIN": {
+        "no_comm_first_actions": {
+          "1": 18
+        },
+        "oracle_first_actions": {
+          "4": 18
+        },
+        "no_comm_safe_merge": 0.0,
+        "oracle_safe_merge": 1.0,
+        "no_comm_return": 0.38392799233824076,
+        "oracle_return": 1.2731893135134886
+      },
+      "ACCELERATE": {
+        "no_comm_first_actions": {
+          "1": 14
+        },
+        "oracle_first_actions": {
+          "4": 14
+        },
+        "no_comm_safe_merge": 0.0,
+        "oracle_safe_merge": 1.0,
+        "no_comm_return": 0.38392799233824076,
+        "oracle_return": 1.2731893135134889
+      }
+    },
+    "raw": {
+      "NO_COMM": [
+        {
+          "seed": 4000,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4001,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4002,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4003,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4004,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4005,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4006,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4007,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4008,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4009,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4010,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4011,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4012,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4013,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4014,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4015,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4016,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4017,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4018,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4019,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4020,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4021,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4022,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4023,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4024,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4025,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4026,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4027,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4028,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4029,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4030,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4031,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4032,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4033,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4034,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4035,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4036,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4037,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4038,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4039,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4040,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4041,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4042,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4043,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4044,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4045,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4046,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4047,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4048,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4049,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        }
+      ],
+      "ORACLE_REAR": [
+        {
+          "seed": 4000,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4001,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4002,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4003,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4004,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4005,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4006,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4007,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4008,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4009,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4010,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4011,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4012,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4013,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4014,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4015,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4016,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4017,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4018,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4019,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4020,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4021,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4022,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4023,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4024,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4025,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4026,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4027,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4028,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4029,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4030,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4031,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4032,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4033,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4034,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4035,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4036,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4037,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4038,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4039,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4040,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4041,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4042,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4043,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4044,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4045,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4046,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4047,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4048,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        },
+        {
+          "seed": 4049,
+          "return": 1.2731893135134889,
+          "crashed": false,
+          "merged": true,
+          "safe_merge": true,
+          "first_action": 4,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "4": 1,
+            "0": 1
+          }
+        }
+      ],
+      "ORACLE_FRONT": [
+        {
+          "seed": 4000,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4001,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4002,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4003,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4004,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4005,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4006,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4007,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4008,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4009,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4010,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4011,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4012,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4013,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4014,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4015,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4016,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4017,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4018,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4019,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4020,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4021,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4022,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4023,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4024,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4025,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4026,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4027,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4028,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4029,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4030,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4031,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4032,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4033,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4034,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4035,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4036,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4037,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4038,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4039,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4040,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4041,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4042,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4043,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4044,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "BRAKE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4045,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4046,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4047,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4048,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "ACCELERATE",
+          "action_counts": {
+            "1": 1
+          }
+        },
+        {
+          "seed": 4049,
+          "return": 0.38392799233824076,
+          "crashed": false,
+          "merged": false,
+          "safe_merge": false,
+          "first_action": 1,
+          "rear_intent": "MAINTAIN",
+          "action_counts": {
+            "1": 1
+          }
+        }
+      ]
+    }
+  }
+}

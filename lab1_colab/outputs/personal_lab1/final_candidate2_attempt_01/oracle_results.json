@@ -1,0 +1,2036 @@
+{
+  "num_seeds": 50,
+  "elapsed_seconds": 66.19421792030334,
+  "summary": {
+    "NO_COMM": {
+      "mean_return": 4.164024168063727,
+      "std_return": 0.25116548419334395,
+      "collision_rate": 0.0,
+      "merge_rate": 1.0,
+      "safe_merge_rate": 1.0,
+      "paired_improvement": 0.0,
+      "paired_diff_std": 0.0,
+      "crashes_avoided": 0,
+      "crashes_introduced": 0,
+      "net_crashes_avoided": 0
+    },
+    "ORACLE_REAR": {
+      "mean_return": 4.1379223725937635,
+      "std_return": 0.3228576620873204,
+      "collision_rate": 0.02,
+      "merge_rate": 1.0,
+      "safe_merge_rate": 0.98,
+      "paired_improvement": -0.026101795469963066,
+      "paired_diff_std": 0.312063465471336,
+      "crashes_avoided": 0,
+      "crashes_introduced": 1,
+      "net_crashes_avoided": -1
+    },
+    "ORACLE_FRONT": {
+      "mean_return": 4.189016817515491,
+      "std_return": 0.26455134485175835,
+      "collision_rate": 0.0,
+      "merge_rate": 1.0,
+      "safe_merge_rate": 1.0,
+      "paired_improvement": 0.024992649451764243,
+      "paired_diff_std": 0.11934599856315814,
+      "crashes_avoided": 0,
+      "crashes_introduced": 0,
+      "net_crashes_avoided": 0
+    },
+    "ORACLE_BEST": {
+      "mean_return": 4.2022255832438,
+      "std_return": 0.27045088580243154,
+      "collision_rate": 0.0,
+      "merge_rate": 1.0,
+      "safe_merge_rate": 1.0,
+      "paired_improvement": 0.038201415180073806,
+      "paired_diff_std": 0.1589737562149112,
+      "crashes_avoided": 0,
+      "crashes_introduced": 0,
+      "net_crashes_avoided": 0
+    }
+  },
+  "intent_summary": {
+    "BRAKE": {
+      "NO_COMM": {
+        "count": 18,
+        "mean_return": 4.214113955705346,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0
+      },
+      "ORACLE_REAR": {
+        "count": 18,
+        "mean_return": 4.101862776085255,
+        "collision_rate": 0.05555555555555555,
+        "safe_merge_rate": 0.9444444444444444
+      },
+      "ORACLE_FRONT": {
+        "count": 18,
+        "mean_return": 4.243259828466616,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0
+      },
+      "ORACLE_BEST": {
+        "count": 18,
+        "mean_return": 4.235760207730615,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0
+      }
+    },
+    "MAINTAIN": {
+      "NO_COMM": {
+        "count": 18,
+        "mean_return": 4.1362543485311924,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0
+      },
+      "ORACLE_REAR": {
+        "count": 18,
+        "mean_return": 4.132087684894828,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0
+      },
+      "ORACLE_FRONT": {
+        "count": 18,
+        "mean_return": 4.178754724247045,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0
+      },
+      "ORACLE_BEST": {
+        "count": 18,
+        "mean_return": 4.175699171721792,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0
+      }
+    },
+    "ACCELERATE": {
+      "NO_COMM": {
+        "count": 14,
+        "mean_return": 4.1353270662091886,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0
+      },
+      "ORACLE_REAR": {
+        "count": 14,
+        "mean_return": 4.191786452289049,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0
+      },
+      "ORACLE_FRONT": {
+        "count": 14,
+        "mean_return": 4.132469923352046,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0
+      },
+      "ORACLE_BEST": {
+        "count": 14,
+        "mean_return": 4.19321502371762,
+        "collision_rate": 0.0,
+        "safe_merge_rate": 1.0
+      }
+    }
+  },
+  "action_changes": {
+    "pct_rear_chg": 5.714285714285714,
+    "pct_front_chg": 2.619047619047619,
+    "details": {
+      "rear": 24,
+      "front": 11,
+      "total_steps": 420,
+      "by_intent": {
+        "BRAKE": {
+          "total": 155,
+          "changed": 11
+        },
+        "MAINTAIN": {
+          "total": 148,
+          "changed": 6
+        },
+        "ACCELERATE": {
+          "total": 117,
+          "changed": 7
+        }
+      }
+    }
+  },
+  "concrete_examples": [
+    {
+      "seed": 4000,
+      "step": 0,
+      "rear_intent": "BRAKE",
+      "no_comm_action": "FASTER",
+      "no_comm_return": 2.3773722648620605,
+      "oracle_rear_action": "FASTER",
+      "oracle_rear_return": 2.3618738651275635,
+      "oracle_front_action": "FASTER",
+      "oracle_front_return": 2.3777055740356445
+    },
+    {
+      "seed": 4001,
+      "step": 0,
+      "rear_intent": "BRAKE",
+      "no_comm_action": "FASTER",
+      "no_comm_return": 2.3944482803344727,
+      "oracle_rear_action": "FASTER",
+      "oracle_rear_return": 2.3794844150543213,
+      "oracle_front_action": "FASTER",
+      "oracle_front_return": 2.395066738128662
+    },
+    {
+      "seed": 4002,
+      "step": 0,
+      "rear_intent": "MAINTAIN",
+      "no_comm_action": "FASTER",
+      "no_comm_return": 2.4412055015563965,
+      "oracle_rear_action": "FASTER",
+      "oracle_rear_return": 2.445645570755005,
+      "oracle_front_action": "FASTER",
+      "oracle_front_return": 2.4420883655548096
+    },
+    {
+      "seed": 4003,
+      "step": 0,
+      "rear_intent": "MAINTAIN",
+      "no_comm_action": "IDLE",
+      "no_comm_return": 2.3214712142944336,
+      "oracle_rear_action": "IDLE",
+      "oracle_rear_return": 2.329679250717163,
+      "oracle_front_action": "IDLE",
+      "oracle_front_return": 2.3207168579101562
+    },
+    {
+      "seed": 4004,
+      "step": 0,
+      "rear_intent": "BRAKE",
+      "no_comm_action": "LANE_LEFT",
+      "no_comm_return": 2.3314638137817383,
+      "oracle_rear_action": "LANE_LEFT",
+      "oracle_rear_return": 2.3307037353515625,
+      "oracle_front_action": "LANE_LEFT",
+      "oracle_front_return": 2.3311381340026855
+    },
+    {
+      "seed": 4005,
+      "step": 0,
+      "rear_intent": "BRAKE",
+      "no_comm_action": "FASTER",
+      "no_comm_return": 2.413668155670166,
+      "oracle_rear_action": "FASTER",
+      "oracle_rear_return": 2.396599769592285,
+      "oracle_front_action": "FASTER",
+      "oracle_front_return": 2.4138031005859375
+    }
+  ],
+  "decision": "FINAL ORACLE GATE FAILED \u2014 STOP AND REPORT WHY",
+  "seed_records": {
+    "NO_COMM": [
+      {
+        "seed": 4000,
+        "return": 3.9595485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4001,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4002,
+        "return": 3.9595485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4003,
+        "return": 3.999541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4004,
+        "return": 4.899541751137373,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4005,
+        "return": 4.614997747535946,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4006,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4007,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4008,
+        "return": 4.524541751137373,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4009,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4010,
+        "return": 4.034541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4011,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4012,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4013,
+        "return": 3.979548587210532,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4014,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4015,
+        "return": 3.9995418150040045,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4016,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4017,
+        "return": 3.9595485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4018,
+        "return": 4.919541751137373,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4019,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4020,
+        "return": 4.630444683295782,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4021,
+        "return": 4.034541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4022,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4023,
+        "return": 3.979548587210532,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4024,
+        "return": 4.1145417604585495,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4025,
+        "return": 4.019541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4026,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4027,
+        "return": 4.180455613344051,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4028,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4029,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4030,
+        "return": 3.979541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4031,
+        "return": 4.1145417604585495,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4032,
+        "return": 4.1145417604585495,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4033,
+        "return": 4.789916351301227,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4034,
+        "return": 4.039605720673785,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4035,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4036,
+        "return": 4.019916041434513,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4037,
+        "return": 4.339980001649749,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4038,
+        "return": 4.730076692348442,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4039,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4040,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4041,
+        "return": 3.979548587210532,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4042,
+        "return": 4.014541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4043,
+        "return": 3.9195485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4044,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4045,
+        "return": 4.369548577889356,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4046,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4047,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4048,
+        "return": 4.409548577889356,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4049,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      }
+    ],
+    "ORACLE_REAR": [
+      {
+        "seed": 4000,
+        "return": 3.9595485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4001,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4002,
+        "return": 3.9595485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4003,
+        "return": 3.999541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4004,
+        "return": 4.899541751137373,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4005,
+        "return": 4.480004574287929,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4006,
+        "return": 3.979541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4007,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4008,
+        "return": 4.524541751137373,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4009,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4010,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4011,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4012,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4013,
+        "return": 4.729979992328574,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4014,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4015,
+        "return": 4.019541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4016,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4017,
+        "return": 3.9595485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4018,
+        "return": 4.919541751137373,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4019,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4020,
+        "return": 4.650444683295782,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4021,
+        "return": 4.034541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4022,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4023,
+        "return": 3.979548587210532,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4024,
+        "return": 4.1145417604585495,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4025,
+        "return": 4.019541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4026,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4027,
+        "return": 3.979541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4028,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4029,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4030,
+        "return": 3.979541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4031,
+        "return": 4.1145417604585495,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4032,
+        "return": 4.1145417604585495,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4033,
+        "return": 4.789916351301227,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4034,
+        "return": 4.039605720673785,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4035,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4036,
+        "return": 4.019916041434513,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4037,
+        "return": 4.339980001649749,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4038,
+        "return": 2.6904556133440503,
+        "crashed": true,
+        "merged": true,
+        "safe_merge": false,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4039,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4040,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4041,
+        "return": 3.979548587210532,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4042,
+        "return": 4.349548577889356,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4043,
+        "return": 3.939548587210532,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4044,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4045,
+        "return": 4.369548577889356,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4046,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4047,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4048,
+        "return": 4.389548577889356,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4049,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      }
+    ],
+    "ORACLE_FRONT": [
+      {
+        "seed": 4000,
+        "return": 3.9595485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4001,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4002,
+        "return": 3.9595485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4003,
+        "return": 3.999541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4004,
+        "return": 4.899541751137373,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4005,
+        "return": 4.594997747535945,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4006,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4007,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4008,
+        "return": 4.524541751137373,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4009,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4010,
+        "return": 4.034541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4011,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4012,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4013,
+        "return": 3.9595485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4014,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4015,
+        "return": 3.9995418150040045,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4016,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4017,
+        "return": 3.9595485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4018,
+        "return": 4.919541751137373,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4019,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4020,
+        "return": 4.630444683295782,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4021,
+        "return": 4.034541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4022,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4023,
+        "return": 3.979548587210532,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4024,
+        "return": 4.1145417604585495,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4025,
+        "return": 4.019541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4026,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4027,
+        "return": 4.390074505616104,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4028,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4029,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4030,
+        "return": 4.744548577889356,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4031,
+        "return": 4.1145417604585495,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4032,
+        "return": 4.1145417604585495,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4033,
+        "return": 4.789916351301227,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4034,
+        "return": 4.039605720673785,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4035,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4036,
+        "return": 4.019916041434513,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4037,
+        "return": 4.339980001649749,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4038,
+        "return": 4.730076692348442,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4039,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4040,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4041,
+        "return": 3.9595485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4042,
+        "return": 4.349548577889356,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4043,
+        "return": 3.9195485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4044,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4045,
+        "return": 4.389548577889356,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4046,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4047,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4048,
+        "return": 4.409548577889356,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4049,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      }
+    ],
+    "ORACLE_BEST": [
+      {
+        "seed": 4000,
+        "return": 3.9595485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4001,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4002,
+        "return": 3.9595485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4003,
+        "return": 3.999541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4004,
+        "return": 4.899541751137373,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4005,
+        "return": 4.460004574287929,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4006,
+        "return": 3.979541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4007,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4008,
+        "return": 4.524541751137373,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4009,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4010,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4011,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4012,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4013,
+        "return": 4.729979992328574,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4014,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4015,
+        "return": 4.019541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4016,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4017,
+        "return": 3.9595485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4018,
+        "return": 4.919541751137373,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4019,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4020,
+        "return": 4.650444683295782,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4021,
+        "return": 4.034541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4022,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4023,
+        "return": 3.979548587210532,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4024,
+        "return": 4.1145417604585495,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4025,
+        "return": 4.019541815004004,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4026,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4027,
+        "return": 4.390074505616104,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4028,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4029,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4030,
+        "return": 4.744548577889356,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4031,
+        "return": 4.1145417604585495,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4032,
+        "return": 4.1145417604585495,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4033,
+        "return": 4.789916351301227,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4034,
+        "return": 4.039605720673785,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4035,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4036,
+        "return": 4.019916041434513,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4037,
+        "return": 4.339980001649749,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4038,
+        "return": 4.730076692348442,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4039,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4040,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4041,
+        "return": 3.979548587210532,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4042,
+        "return": 4.349548577889356,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4043,
+        "return": 3.9195485872105325,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4044,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "BRAKE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4045,
+        "return": 4.389548577889356,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4046,
+        "return": 4.094541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4047,
+        "return": 4.054541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4048,
+        "return": 4.409548577889356,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "ACCELERATE",
+        "front_intent": "MAINTAIN"
+      },
+      {
+        "seed": 4049,
+        "return": 4.074541760458549,
+        "crashed": false,
+        "merged": true,
+        "safe_merge": true,
+        "rear_intent": "MAINTAIN",
+        "front_intent": "MAINTAIN"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+# Python Bytecode & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+env/
+venv/
+ENV/
+
+# OS & Editor Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.ipynb_checkpoints/
+/tmp/
+
+# Matplotlib & Runtime Caches
+.matplotlib/
+matplotlib/
+
+# Intermediate / Old Experiment Large Checkpoints & Outputs (>1 GB)
+outputs/personal_lab1/attempt_01/
+outputs/personal_lab1/tight_scenario_attempt_01/
+outputs/personal_lab1/safety_world_model_attempt_01/
+outputs/personal_lab1/rear_bottleneck_attempt_01/
+
+# Intermediate Per-Epoch World Model Checkpoints & Runs
+outputs/personal_lab1/*/checkpoints/
+outputs/personal_lab1/*/runs/
+outputs/personal_lab1/*/model_epoch_*.pt
+
+# Intermediate Research Datasets
+datasets/merge_communication_tight.npz
+datasets/merge_rear_bottleneck.npz
+
+# Allow Final Artifacts Explicitly
+!datasets/merge_final_candidate2.npz
+!outputs/personal_lab1/final_candidate2_attempt_01/my_lab1_world_model_final_candidate2.pt
+!outputs/request_agent/final_evaluation/*.pt
+!outputs/request_agent/final_evaluation/*.csv
+!outputs/request_agent/final_evaluation/*.json

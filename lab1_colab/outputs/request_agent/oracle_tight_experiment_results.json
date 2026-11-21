@@ -1,0 +1,86 @@
+{
+  "num_seeds": 50,
+  "elapsed_seconds": 73.12737512588501,
+  "summary": {
+    "NO_COMM": {
+      "mean_return": 4.397501254664269,
+      "std_return": 0.5327358368212879,
+      "collision_rate": 0.08,
+      "merge_rate": 1.0,
+      "safe_merge_rate": 0.92,
+      "paired_improvement": 0.0,
+      "paired_diff_std": 0.0,
+      "crashes_avoided": 0,
+      "crashes_introduced": 0,
+      "net_crashes_avoided": 0
+    },
+    "ORACLE_FRONT": {
+      "mean_return": 4.262446827572533,
+      "std_return": 0.6413085690182735,
+      "collision_rate": 0.14,
+      "merge_rate": 1.0,
+      "safe_merge_rate": 0.86,
+      "paired_improvement": -0.13505442709173685,
+      "paired_diff_std": 0.4809183487718229,
+      "crashes_avoided": 0,
+      "crashes_introduced": 3,
+      "net_crashes_avoided": -3
+    },
+    "ORACLE_REAR": {
+      "mean_return": 4.283089387069288,
+      "std_return": 0.6607852444603928,
+      "collision_rate": 0.12,
+      "merge_rate": 1.0,
+      "safe_merge_rate": 0.88,
+      "paired_improvement": -0.11441186759498213,
+      "paired_diff_std": 0.4862214069687949,
+      "crashes_avoided": 0,
+      "crashes_introduced": 2,
+      "net_crashes_avoided": -2
+    },
+    "ORACLE_BEST": {
+      "mean_return": 4.281596872688807,
+      "std_return": 0.6602942729959971,
+      "collision_rate": 0.12,
+      "merge_rate": 1.0,
+      "safe_merge_rate": 0.88,
+      "paired_improvement": -0.11590438197546284,
+      "paired_diff_std": 0.4858598313592328,
+      "crashes_avoided": 0,
+      "crashes_introduced": 2,
+      "net_crashes_avoided": -2
+    }
+  },
+  "action_changes": {
+    "total_steps": 466,
+    "pct_front_action_changed": 5.36480686695279,
+    "pct_rear_action_changed": 4.07725321888412,
+    "by_intent": {
+      "front_MAINTAIN": {
+        "total": 177,
+        "changed": 17
+      },
+      "front_ACCELERATE": {
+        "total": 127,
+        "changed": 2
+      },
+      "front_BRAKE": {
+        "total": 162,
+        "changed": 6
+      },
+      "rear_MAINTAIN": {
+        "total": 177,
+        "changed": 7
+      },
+      "rear_ACCELERATE": {
+        "total": 198,
+        "changed": 9
+      },
+      "rear_BRAKE": {
+        "total": 91,
+        "changed": 3
+      }
+    }
+  },
+  "verdict": "ORACLE STILL DOES NOT HELP \u2014 DO NOT TRAIN DQN"
+}

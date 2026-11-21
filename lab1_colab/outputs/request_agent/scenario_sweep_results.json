@@ -1,0 +1,338 @@
+[
+  {
+    "name": "Baseline (70m Gap)",
+    "config": {
+      "ego_x": 30.0,
+      "ego_speed": 25.0,
+      "front_x": 75.0,
+      "front_speed": 27.0,
+      "rear_x": 5.0,
+      "rear_speed": 27.0,
+      "accel_delta": 5.0,
+      "brake_delta": 5.0
+    },
+    "gap": 70.0,
+    "front_distance": 45.0,
+    "rear_distance": 25.0,
+    "summary": {
+      "NO_COMM": {
+        "mean_return": 4.073003239937235,
+        "collision_rate": 0.04,
+        "merge_rate": 0.96,
+        "safe_merge_rate": 0.96,
+        "paired_improvement": 0.0
+      },
+      "ORACLE_FRONT": {
+        "mean_return": 4.084381660578338,
+        "collision_rate": 0.04,
+        "merge_rate": 1.0,
+        "safe_merge_rate": 0.96,
+        "paired_improvement": 0.011378420641103358
+      },
+      "ORACLE_REAR": {
+        "mean_return": 4.073803239937235,
+        "collision_rate": 0.04,
+        "merge_rate": 0.96,
+        "safe_merge_rate": 0.96,
+        "paired_improvement": 0.0007999999999999829
+      },
+      "ORACLE_BEST": {
+        "mean_return": 4.084381660578338,
+        "collision_rate": 0.04,
+        "merge_rate": 1.0,
+        "safe_merge_rate": 0.96,
+        "paired_improvement": 0.011378420641103358
+      }
+    },
+    "pct_front_action_changed": 1.5873015873015872,
+    "pct_rear_action_changed": 0.3968253968253968
+  },
+  {
+    "name": "Candidate 1 (45m Gap)",
+    "config": {
+      "ego_x": 30.0,
+      "ego_speed": 25.0,
+      "front_x": 60.0,
+      "front_speed": 27.0,
+      "rear_x": 15.0,
+      "rear_speed": 27.0,
+      "accel_delta": 5.0,
+      "brake_delta": 5.0
+    },
+    "gap": 45.0,
+    "front_distance": 30.0,
+    "rear_distance": 15.0,
+    "summary": {
+      "NO_COMM": {
+        "mean_return": 4.073003239937235,
+        "collision_rate": 0.04,
+        "merge_rate": 0.96,
+        "safe_merge_rate": 0.96,
+        "paired_improvement": 0.0
+      },
+      "ORACLE_FRONT": {
+        "mean_return": 4.084381660578338,
+        "collision_rate": 0.04,
+        "merge_rate": 1.0,
+        "safe_merge_rate": 0.96,
+        "paired_improvement": 0.011378420641103358
+      },
+      "ORACLE_REAR": {
+        "mean_return": 4.073803239937235,
+        "collision_rate": 0.04,
+        "merge_rate": 0.96,
+        "safe_merge_rate": 0.96,
+        "paired_improvement": 0.0007999999999999829
+      },
+      "ORACLE_BEST": {
+        "mean_return": 4.084381660578338,
+        "collision_rate": 0.04,
+        "merge_rate": 1.0,
+        "safe_merge_rate": 0.96,
+        "paired_improvement": 0.011378420641103358
+      }
+    },
+    "pct_front_action_changed": 1.5873015873015872,
+    "pct_rear_action_changed": 0.3968253968253968
+  },
+  {
+    "name": "Candidate 2 (Front Pinch, 38m Gap)",
+    "config": {
+      "ego_x": 30.0,
+      "ego_speed": 25.0,
+      "front_x": 50.0,
+      "front_speed": 27.0,
+      "rear_x": 12.0,
+      "rear_speed": 27.0,
+      "accel_delta": 5.0,
+      "brake_delta": 5.0
+    },
+    "gap": 38.0,
+    "front_distance": 20.0,
+    "rear_distance": 18.0,
+    "summary": {
+      "NO_COMM": {
+        "mean_return": 3.46331564433855,
+        "collision_rate": 0.36,
+        "merge_rate": 0.96,
+        "safe_merge_rate": 0.64,
+        "paired_improvement": 0.0
+      },
+      "ORACLE_FRONT": {
+        "mean_return": 3.474694064979653,
+        "collision_rate": 0.36,
+        "merge_rate": 1.0,
+        "safe_merge_rate": 0.64,
+        "paired_improvement": 0.011378420641103358
+      },
+      "ORACLE_REAR": {
+        "mean_return": 3.46411564433855,
+        "collision_rate": 0.36,
+        "merge_rate": 0.96,
+        "safe_merge_rate": 0.64,
+        "paired_improvement": 0.0007999999999999829
+      },
+      "ORACLE_BEST": {
+        "mean_return": 3.474694064979653,
+        "collision_rate": 0.36,
+        "merge_rate": 1.0,
+        "safe_merge_rate": 0.64,
+        "paired_improvement": 0.011378420641103358
+      }
+    },
+    "pct_front_action_changed": 1.5873015873015872,
+    "pct_rear_action_changed": 0.3968253968253968
+  },
+  {
+    "name": "Candidate 3 (Rear Press, 38m Gap)",
+    "config": {
+      "ego_x": 30.0,
+      "ego_speed": 25.0,
+      "front_x": 56.0,
+      "front_speed": 27.0,
+      "rear_x": 18.0,
+      "rear_speed": 27.0,
+      "accel_delta": 5.0,
+      "brake_delta": 5.0
+    },
+    "gap": 38.0,
+    "front_distance": 26.0,
+    "rear_distance": 12.0,
+    "summary": {
+      "NO_COMM": {
+        "mean_return": 3.6158032399372355,
+        "collision_rate": 0.28,
+        "merge_rate": 0.96,
+        "safe_merge_rate": 0.72,
+        "paired_improvement": 0.0
+      },
+      "ORACLE_FRONT": {
+        "mean_return": 3.627181660578339,
+        "collision_rate": 0.28,
+        "merge_rate": 1.0,
+        "safe_merge_rate": 0.72,
+        "paired_improvement": 0.011378420641103358
+      },
+      "ORACLE_REAR": {
+        "mean_return": 3.616603239937236,
+        "collision_rate": 0.28,
+        "merge_rate": 0.96,
+        "safe_merge_rate": 0.72,
+        "paired_improvement": 0.0007999999999999829
+      },
+      "ORACLE_BEST": {
+        "mean_return": 3.627181660578339,
+        "collision_rate": 0.28,
+        "merge_rate": 1.0,
+        "safe_merge_rate": 0.72,
+        "paired_improvement": 0.011378420641103358
+      }
+    },
+    "pct_front_action_changed": 1.5873015873015872,
+    "pct_rear_action_changed": 0.3968253968253968
+  },
+  {
+    "name": "Candidate 4 (Balanced Tight, 36m Gap)",
+    "config": {
+      "ego_x": 30.0,
+      "ego_speed": 25.0,
+      "front_x": 52.0,
+      "front_speed": 27.0,
+      "rear_x": 16.0,
+      "rear_speed": 27.0,
+      "accel_delta": 5.0,
+      "brake_delta": 5.0
+    },
+    "gap": 36.0,
+    "front_distance": 22.0,
+    "rear_distance": 14.0,
+    "summary": {
+      "NO_COMM": {
+        "mean_return": 3.6158032399372355,
+        "collision_rate": 0.28,
+        "merge_rate": 0.96,
+        "safe_merge_rate": 0.72,
+        "paired_improvement": 0.0
+      },
+      "ORACLE_FRONT": {
+        "mean_return": 3.627181660578339,
+        "collision_rate": 0.28,
+        "merge_rate": 1.0,
+        "safe_merge_rate": 0.72,
+        "paired_improvement": 0.011378420641103358
+      },
+      "ORACLE_REAR": {
+        "mean_return": 3.616603239937236,
+        "collision_rate": 0.28,
+        "merge_rate": 0.96,
+        "safe_merge_rate": 0.72,
+        "paired_improvement": 0.0007999999999999829
+      },
+      "ORACLE_BEST": {
+        "mean_return": 3.627181660578339,
+        "collision_rate": 0.28,
+        "merge_rate": 1.0,
+        "safe_merge_rate": 0.72,
+        "paired_improvement": 0.011378420641103358
+      }
+    },
+    "pct_front_action_changed": 1.5873015873015872,
+    "pct_rear_action_changed": 0.3968253968253968
+  },
+  {
+    "name": "Candidate 5 (Dynamic Delta, 36m Gap)",
+    "config": {
+      "ego_x": 30.0,
+      "ego_speed": 25.0,
+      "front_x": 52.0,
+      "front_speed": 27.0,
+      "rear_x": 16.0,
+      "rear_speed": 27.0,
+      "accel_delta": 7.0,
+      "brake_delta": 7.0
+    },
+    "gap": 36.0,
+    "front_distance": 22.0,
+    "rear_distance": 14.0,
+    "summary": {
+      "NO_COMM": {
+        "mean_return": 3.9998028027353048,
+        "collision_rate": 0.08,
+        "merge_rate": 0.96,
+        "safe_merge_rate": 0.92,
+        "paired_improvement": 0.0
+      },
+      "ORACLE_FRONT": {
+        "mean_return": 4.011181223376408,
+        "collision_rate": 0.08,
+        "merge_rate": 1.0,
+        "safe_merge_rate": 0.92,
+        "paired_improvement": 0.011378420641103358
+      },
+      "ORACLE_REAR": {
+        "mean_return": 4.000602802735305,
+        "collision_rate": 0.08,
+        "merge_rate": 0.96,
+        "safe_merge_rate": 0.92,
+        "paired_improvement": 0.0007999999999999829
+      },
+      "ORACLE_BEST": {
+        "mean_return": 4.011181223376408,
+        "collision_rate": 0.08,
+        "merge_rate": 1.0,
+        "safe_merge_rate": 0.92,
+        "paired_improvement": 0.011378420641103358
+      }
+    },
+    "pct_front_action_changed": 1.5873015873015872,
+    "pct_rear_action_changed": 0.3968253968253968
+  },
+  {
+    "name": "Candidate 6 (Dual Pinch, 32m Gap)",
+    "config": {
+      "ego_x": 30.0,
+      "ego_speed": 25.0,
+      "front_x": 50.0,
+      "front_speed": 27.0,
+      "rear_x": 18.0,
+      "rear_speed": 27.0,
+      "accel_delta": 5.0,
+      "brake_delta": 5.0
+    },
+    "gap": 32.0,
+    "front_distance": 20.0,
+    "rear_distance": 12.0,
+    "summary": {
+      "NO_COMM": {
+        "mean_return": 3.46331564433855,
+        "collision_rate": 0.36,
+        "merge_rate": 0.96,
+        "safe_merge_rate": 0.64,
+        "paired_improvement": 0.0
+      },
+      "ORACLE_FRONT": {
+        "mean_return": 3.474694064979653,
+        "collision_rate": 0.36,
+        "merge_rate": 1.0,
+        "safe_merge_rate": 0.64,
+        "paired_improvement": 0.011378420641103358
+      },
+      "ORACLE_REAR": {
+        "mean_return": 3.46411564433855,
+        "collision_rate": 0.36,
+        "merge_rate": 0.96,
+        "safe_merge_rate": 0.64,
+        "paired_improvement": 0.0007999999999999829
+      },
+      "ORACLE_BEST": {
+        "mean_return": 3.474694064979653,
+        "collision_rate": 0.36,
+        "merge_rate": 1.0,
+        "safe_merge_rate": 0.64,
+        "paired_improvement": 0.011378420641103358
+      }
+    },
+    "pct_front_action_changed": 1.5873015873015872,
+    "pct_rear_action_changed": 0.3968253968253968
+  }
+]

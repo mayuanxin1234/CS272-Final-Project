@@ -1,0 +1,92 @@
+{
+  "num_seeds": 50,
+  "elapsed_seconds": 65.15941977500916,
+  "summary": {
+    "NO_COMM": {
+      "mean_raw_return": 4.061056142523598,
+      "std_raw_return": 0.40173249042912856,
+      "collision_rate": 0.04,
+      "merge_success_rate": 0.98,
+      "safe_merge_rate": 0.96,
+      "mean_length": 9.96,
+      "paired_return_improvement": 0.0,
+      "paired_return_diff_std": 0.0,
+      "crashes_avoided": 0,
+      "crashes_introduced": 0,
+      "net_collision_reduction": 0,
+      "merges_gained": 0,
+      "merges_lost": 0
+    },
+    "ORACLE_FRONT": {
+      "mean_raw_return": 4.06674535284415,
+      "std_raw_return": 0.3783726421194647,
+      "collision_rate": 0.04,
+      "merge_success_rate": 1.0,
+      "safe_merge_rate": 0.96,
+      "mean_length": 9.92,
+      "paired_return_improvement": 0.005689210320551679,
+      "paired_return_diff_std": 0.055065928203770056,
+      "crashes_avoided": 0,
+      "crashes_introduced": 0,
+      "net_collision_reduction": 0,
+      "merges_gained": 1,
+      "merges_lost": 0
+    },
+    "ORACLE_REAR": {
+      "mean_raw_return": 4.061456142523599,
+      "std_raw_return": 0.4018009319953986,
+      "collision_rate": 0.04,
+      "merge_success_rate": 0.98,
+      "safe_merge_rate": 0.96,
+      "mean_length": 9.96,
+      "paired_return_improvement": 0.00039999999999999145,
+      "paired_return_diff_std": 0.00279999999999994,
+      "crashes_avoided": 0,
+      "crashes_introduced": 0,
+      "net_collision_reduction": 0,
+      "merges_gained": 0,
+      "merges_lost": 0
+    },
+    "ORACLE_BEST": {
+      "mean_raw_return": 4.06674535284415,
+      "std_raw_return": 0.3783726421194647,
+      "collision_rate": 0.04,
+      "merge_success_rate": 1.0,
+      "safe_merge_rate": 0.96,
+      "mean_length": 9.92,
+      "paired_return_improvement": 0.005689210320551679,
+      "paired_return_diff_std": 0.055065928203770056,
+      "crashes_avoided": 0,
+      "crashes_introduced": 0,
+      "net_collision_reduction": 0,
+      "merges_gained": 1,
+      "merges_lost": 0
+    }
+  },
+  "intent_analysis": {
+    "front_BRAKE": {
+      "total": 18,
+      "changed": 0
+    },
+    "front_ACCELERATE": {
+      "total": 14,
+      "changed": 1
+    },
+    "front_MAINTAIN": {
+      "total": 18,
+      "changed": 0
+    },
+    "rear_BRAKE": {
+      "total": 10,
+      "changed": 0
+    },
+    "rear_ACCELERATE": {
+      "total": 21,
+      "changed": 0
+    },
+    "rear_MAINTAIN": {
+      "total": 19,
+      "changed": 1
+    }
+  }
+}

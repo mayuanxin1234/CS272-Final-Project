@@ -1,0 +1,515 @@
+[
+  {
+    "label": "Double DQN (Greedy)",
+    "mean_raw": 3.5860013184710495,
+    "std_raw": 0.8275509640944301,
+    "mean_final": 3.5860013184710495,
+    "std_final": 0.8275509640944301,
+    "collision_rate": 0.45,
+    "merge_success_rate": 0.85,
+    "mean_requests": 0.0,
+    "mean_bits": 0.0,
+    "action_pct": {
+      "0": 100.0,
+      "1": 0.0,
+      "2": 0.0
+    },
+    "first_ep_decisions": [
+      {
+        "step": 0,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.4371833824030395,
+        "comm_cost": 0.0,
+        "final_reward": 0.4371833824030395
+      },
+      {
+        "step": 1,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "0 (LANE_LEFT)",
+        "raw_reward": 0.42780979084497706,
+        "comm_cost": 0.0,
+        "final_reward": 0.42780979084497706
+      },
+      {
+        "step": 2,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": 0.44962571902403614,
+        "comm_cost": 0.0,
+        "final_reward": 0.44962571902403614
+      },
+      {
+        "step": 3,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "0 (LANE_LEFT)",
+        "raw_reward": 0.42993603978476336,
+        "comm_cost": 0.0,
+        "final_reward": 0.42993603978476336
+      },
+      {
+        "step": 4,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": 0.4499890699517319,
+        "comm_cost": 0.0,
+        "final_reward": 0.4499890699517319
+      },
+      {
+        "step": 5,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": 0.449998132183347,
+        "comm_cost": 0.0,
+        "final_reward": 0.449998132183347
+      },
+      {
+        "step": 6,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": 0.4499996808121096,
+        "comm_cost": 0.0,
+        "final_reward": 0.4499996808121096
+      },
+      {
+        "step": 7,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": 0.4499999454545449,
+        "comm_cost": 0.0,
+        "final_reward": 0.4499999454545449
+      },
+      {
+        "step": 8,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "0 (LANE_LEFT)",
+        "raw_reward": 0.9799999906788235,
+        "comm_cost": 0.0,
+        "final_reward": 0.9799999906788235
+      }
+    ]
+  },
+  {
+    "label": "Always NONE (No Comm)",
+    "mean_raw": 3.4572649375298803,
+    "std_raw": 0.7741245710271647,
+    "mean_final": 3.4572649375298803,
+    "std_final": 0.7741245710271647,
+    "collision_rate": 0.6,
+    "merge_success_rate": 0.85,
+    "mean_requests": 0.0,
+    "mean_bits": 0.0,
+    "action_pct": {
+      "0": 100.0,
+      "1": 0.0,
+      "2": 0.0
+    },
+    "first_ep_decisions": [
+      {
+        "step": 0,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.4371833824030395,
+        "comm_cost": 0.0,
+        "final_reward": 0.4371833824030395
+      },
+      {
+        "step": 1,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": 0.4478097908449771,
+        "comm_cost": 0.0,
+        "final_reward": 0.4478097908449771
+      },
+      {
+        "step": 2,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "0 (LANE_LEFT)",
+        "raw_reward": 0.4296257190240361,
+        "comm_cost": 0.0,
+        "final_reward": 0.4296257190240361
+      },
+      {
+        "step": 3,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": 0.4499360397847634,
+        "comm_cost": 0.0,
+        "final_reward": 0.4499360397847634
+      },
+      {
+        "step": 4,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": 0.4499890699517319,
+        "comm_cost": 0.0,
+        "final_reward": 0.4499890699517319
+      },
+      {
+        "step": 5,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "0 (LANE_LEFT)",
+        "raw_reward": 0.429998132183347,
+        "comm_cost": 0.0,
+        "final_reward": 0.429998132183347
+      },
+      {
+        "step": 6,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": 0.4499996808121096,
+        "comm_cost": 0.0,
+        "final_reward": 0.4499996808121096
+      },
+      {
+        "step": 7,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.4499999454545449,
+        "comm_cost": 0.0,
+        "final_reward": 0.4499999454545449
+      },
+      {
+        "step": 8,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": 0.44999999067882346,
+        "comm_cost": 0.0,
+        "final_reward": 0.44999999067882346
+      },
+      {
+        "step": 9,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": -1.0,
+        "comm_cost": 0.0,
+        "final_reward": -1.0
+      }
+    ]
+  },
+  {
+    "label": "Always ASK_FRONT",
+    "mean_raw": 3.6179088117482046,
+    "std_raw": 0.6735117637093994,
+    "mean_final": 3.0779088117482054,
+    "std_final": 0.7813827904228832,
+    "collision_rate": 0.45,
+    "merge_success_rate": 0.55,
+    "mean_requests": 10.8,
+    "mean_bits": 43.2,
+    "action_pct": {
+      "0": 0.0,
+      "1": 100.0,
+      "2": 0.0
+    },
+    "first_ep_decisions": [
+      {
+        "step": 0,
+        "request": "1 (ASK_FRONT)",
+        "message": "1 (MAINTAIN)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.4371833824030395,
+        "comm_cost": 0.05,
+        "final_reward": 0.3871833824030395
+      },
+      {
+        "step": 1,
+        "request": "1 (ASK_FRONT)",
+        "message": "1 (MAINTAIN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": 0.4478097908449771,
+        "comm_cost": 0.05,
+        "final_reward": 0.3978097908449771
+      },
+      {
+        "step": 2,
+        "request": "1 (ASK_FRONT)",
+        "message": "1 (MAINTAIN)",
+        "driving": "0 (LANE_LEFT)",
+        "raw_reward": 0.4296257190240361,
+        "comm_cost": 0.05,
+        "final_reward": 0.37962571902403613
+      },
+      {
+        "step": 3,
+        "request": "1 (ASK_FRONT)",
+        "message": "1 (MAINTAIN)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.4499360397847634,
+        "comm_cost": 0.05,
+        "final_reward": 0.3999360397847634
+      },
+      {
+        "step": 4,
+        "request": "1 (ASK_FRONT)",
+        "message": "1 (MAINTAIN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": 0.4499890699517319,
+        "comm_cost": 0.05,
+        "final_reward": 0.3999890699517319
+      },
+      {
+        "step": 5,
+        "request": "1 (ASK_FRONT)",
+        "message": "1 (MAINTAIN)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.449998132183347,
+        "comm_cost": 0.05,
+        "final_reward": 0.399998132183347
+      },
+      {
+        "step": 6,
+        "request": "1 (ASK_FRONT)",
+        "message": "1 (MAINTAIN)",
+        "driving": "0 (LANE_LEFT)",
+        "raw_reward": 0.4299996808121096,
+        "comm_cost": 0.05,
+        "final_reward": 0.3799996808121096
+      },
+      {
+        "step": 7,
+        "request": "1 (ASK_FRONT)",
+        "message": "1 (MAINTAIN)",
+        "driving": "0 (LANE_LEFT)",
+        "raw_reward": 0.9799999454545449,
+        "comm_cost": 0.05,
+        "final_reward": 0.9299999454545449
+      }
+    ]
+  },
+  {
+    "label": "Always ASK_REAR",
+    "mean_raw": 3.5850158590379086,
+    "std_raw": 0.7795410316641719,
+    "mean_final": 3.10251585903791,
+    "std_final": 0.7837862494105142,
+    "collision_rate": 0.5,
+    "merge_success_rate": 0.95,
+    "mean_requests": 9.65,
+    "mean_bits": 38.6,
+    "action_pct": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 100.0
+    },
+    "first_ep_decisions": [
+      {
+        "step": 0,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.4371833824030395,
+        "comm_cost": 0.05,
+        "final_reward": 0.3871833824030395
+      },
+      {
+        "step": 1,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.4478097908449771,
+        "comm_cost": 0.05,
+        "final_reward": 0.3978097908449771
+      },
+      {
+        "step": 2,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.44962571902403614,
+        "comm_cost": 0.05,
+        "final_reward": 0.39962571902403615
+      },
+      {
+        "step": 3,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.4499360397847634,
+        "comm_cost": 0.05,
+        "final_reward": 0.3999360397847634
+      },
+      {
+        "step": 4,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.4499890699517319,
+        "comm_cost": 0.05,
+        "final_reward": 0.3999890699517319
+      },
+      {
+        "step": 5,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.449998132183347,
+        "comm_cost": 0.05,
+        "final_reward": 0.399998132183347
+      },
+      {
+        "step": 6,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.4499996808121096,
+        "comm_cost": 0.05,
+        "final_reward": 0.3999996808121096
+      },
+      {
+        "step": 7,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.4499999454545449,
+        "comm_cost": 0.05,
+        "final_reward": 0.3999999454545449
+      },
+      {
+        "step": 8,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.44999999067882346,
+        "comm_cost": 0.05,
+        "final_reward": 0.39999999067882347
+      },
+      {
+        "step": 9,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": -1.0,
+        "comm_cost": 0.05,
+        "final_reward": -1.05
+      }
+    ]
+  },
+  {
+    "label": "Random Request",
+    "mean_raw": 3.725767476235992,
+    "std_raw": 0.7117385442329363,
+    "mean_final": 3.3782674762359926,
+    "std_final": 0.7412121869775952,
+    "collision_rate": 0.4,
+    "merge_success_rate": 0.85,
+    "mean_requests": 6.95,
+    "mean_bits": 27.8,
+    "action_pct": {
+      "0": 33.49282296650718,
+      "1": 33.97129186602871,
+      "2": 32.535885167464116
+    },
+    "first_ep_decisions": [
+      {
+        "step": 0,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.4371833824030395,
+        "comm_cost": 0.05,
+        "final_reward": 0.3871833824030395
+      },
+      {
+        "step": 1,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "0 (LANE_LEFT)",
+        "raw_reward": 0.42780979084497706,
+        "comm_cost": 0.0,
+        "final_reward": 0.42780979084497706
+      },
+      {
+        "step": 2,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.44962571902403614,
+        "comm_cost": 0.05,
+        "final_reward": 0.39962571902403615
+      },
+      {
+        "step": 3,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.4499360397847634,
+        "comm_cost": 0.05,
+        "final_reward": 0.3999360397847634
+      },
+      {
+        "step": 4,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.4499890699517319,
+        "comm_cost": 0.05,
+        "final_reward": 0.3999890699517319
+      },
+      {
+        "step": 5,
+        "request": "1 (ASK_FRONT)",
+        "message": "1 (MAINTAIN)",
+        "driving": "0 (LANE_LEFT)",
+        "raw_reward": 0.429998132183347,
+        "comm_cost": 0.05,
+        "final_reward": 0.379998132183347
+      },
+      {
+        "step": 6,
+        "request": "1 (ASK_FRONT)",
+        "message": "1 (MAINTAIN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": 0.4499996808121096,
+        "comm_cost": 0.05,
+        "final_reward": 0.3999996808121096
+      },
+      {
+        "step": 7,
+        "request": "0 (NONE)",
+        "message": "0 (UNKNOWN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": 0.4499999454545449,
+        "comm_cost": 0.0,
+        "final_reward": 0.4499999454545449
+      },
+      {
+        "step": 8,
+        "request": "2 (ASK_REAR)",
+        "message": "2 (ACCELERATE)",
+        "driving": "3 (FASTER)",
+        "raw_reward": 0.44999999067882346,
+        "comm_cost": 0.05,
+        "final_reward": 0.39999999067882347
+      },
+      {
+        "step": 9,
+        "request": "1 (ASK_FRONT)",
+        "message": "1 (MAINTAIN)",
+        "driving": "1 (IDLE)",
+        "raw_reward": -1.0,
+        "comm_cost": 0.05,
+        "final_reward": -1.05
+      }
+    ]
+  }
+]
