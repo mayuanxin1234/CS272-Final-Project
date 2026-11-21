@@ -1,13 +1,13 @@
 # Research Progression & Experimental Diagnostic Notes
 
-This document provides a concise, chronological record of the experimental milestones, diagnostic failures, and scientific findings that shaped the final project.
+This document provides a comprehensive, chronological record of the experimental milestones, diagnostic failures, and scientific insights that culminated in the final project.
 
 ---
 
 ## 1. Milestone 1 — Original Merge Scenario (70m Gap)
-- **Geometry**: Ego $x = 30\text{ m}$, Front $x = 80\text{ m}$, Rear $x = 10\text{ m}$ (initial target lane gap: $70\text{ m}$).
+- **Geometry**: Ego $x = 30\text{ m}$, Front $x = 80\text{ m}$, Rear $x = 10\text{ m}$ (target lane gap: $70\text{ m}$).
 - **Observation**: The baseline `NO_COMM` policy achieved a **$100.0\%$ safe merge rate**.
-- **Diagnosis**: The inter-vehicle gap was so wide that the ego vehicle could merge unilaterally into the highway at any time without interacting with or conditioning on neighboring vehicles. The scenario lacked decision-critical partial observability.
+- **Diagnosis**: The inter-vehicle gap was so wide that the ego vehicle could merge unconditionally into the highway without interacting with neighboring vehicles. The scenario lacked decision-critical partial observability.
 
 ---
 
@@ -60,13 +60,85 @@ This document provides a concise, chronological record of the experimental miles
   Across all defensible task rewards:
   - `NO_COMM` achieved $100.0\%$ safe merges with $0.0\%$ collisions.
   - `ORACLE_REAR` produced $0.0\%$ return improvement ($\Delta = +0.000$) and $0.0\%$ action shift.
-  - **Conclusion**: The HighwayEnv merge dynamics admit robust conservative driving strategies that guarantee safe merging without requiring neighboring intent. Semantic communication has intrinsically low decision value for the driving task.
+  - **Conclusion**: The HighwayEnv merge dynamics admit robust conservative driving strategies that guarantee safe merging without requiring neighboring intent. In open merge geometries, semantic communication has intrinsically low marginal value for driving because a single robust action (`FASTER` or `SLOWER`) can safely resolve the bottleneck regardless of neighbor intent.
 
 ---
 
-## 7. Milestone 7 — Final Synthesis: Double DQN Request Policy
-- **Objective**: Freeze Candidate #2 and evaluate whether a second RL agent (Double DQN) can learn to minimize communication costs under these dynamics.
+## 7. Milestone 7 — Candidate #2 Double DQN Evaluation (Utility Filter)
+- **Objective**: Freeze Candidate #2 and evaluate whether Double DQN can learn communication cost tradeoffs.
 - **Outcome**:
   - Across 3 independent training seeds, the DQN learned to suppress unnecessary communication, averaging **$1.59$ requests/episode** ($81.8\%$ reduction vs full communication) while maintaining an identical **$98.0\%$ safe merge rate**.
   - Confirmed that the learned request policy acts as an optimal utility-preserving filter when communication has low task value.
 
+---
+
+## 8. Milestone 8 — The Information Gap Pivot: Moving to Occlusion
+- **Scientific Insight**: In previous merge setups, the neighbor's hidden state was simply its acceleration intent. But highway merging physics often allow an ego vehicle to accelerate past or brake behind an uncooperative car regardless of intent. True decision-critical Value of Information requires a physical **information gap**—specifically, visual occlusions where a connected neighbor has sensory access to critical road hazards that the ego cannot perceive.
+- **Hypothesis**: Cooperative blind-zone sensing creates genuine decision-theoretic Value of Information: without communication, the ego is blind to downstream or upstream hazards and will crash; with semantic communication from the situated CAV, the ego can take proactive avoidance maneuvers.
+
+---
+
+## 9. Milestone 9 — Cooperative Occlusion Redesign & True-Simulator Oracle Gate
+- **Environment**: Candidate A — Cooperative Blind-Zone Sensing (`ego-merge-occlusion-final-v0`).
+  - Balanced 3-way hidden hazard: `CLEAR` (33.3%), `FRONT_HAZARD` (33.3%, stationary obstacle at $x=285\text{ m}$), `REAR_HAZARD` (33.3%, $30\text{ m/s}$ overtaker).
+  - 4 semantic messages: `UNKNOWN (0)`, `CLEAR (1)`, `HAZARD_AHEAD (2)`, `HAZARD_BEHIND (3)`.
+  - Zero observation leakage: $100\%$ byte-for-byte identical initial frames across states ($\max \Delta = 0.000000$).
+- **True-Simulator Oracle Gate Results (60 seeds)**:
+  - `NO_COMM`: **$33.3\%$** safe merge rate ($66.7\%$ collision rate).
+  - `RANDOM_REQUEST`: **$66.7\%$** safe merge rate ($33.3\%$ collision rate).
+  - `FULL_COMM`: **$100.0\%$** safe merge rate ($0.0\%$ collision rate).
+  - `ORACLE_SELECTIVE`: **$100.0\%$** safe merge rate ($0.0\%$ collision rate).
+- **Verdict**: Gate **PASSED** decisively. Genuine Value of Information established without artificial reward tuning.
+
+---
+
+## 10. Milestone 10 — Learned WorldModel & Learned-MPC Occlusion Gate
+- **Dataset Collection**: Collected `datasets/merge_occlusion_final.npz` (20,000 transitions, 5,288 episodes).
+- **WorldModel Training**: Trained communication-aware WorldModel (`my_lab1_world_model_occlusion_final.pt`, validation loss: $0.08458$).
+- **Learned-MPC Gate**:
+  - `NO_COMM`: **$75.0\%$** safe merge rate ($25.0\%$ collision rate).
+  - `ORACLE_SELECTIVE`: **$100.0\%$** safe merge rate ($0.0\%$ collision rate, $+51.6\%$ return gain).
+- **Verdict**: Learned WorldModel MPC correctly leverages semantic message tokens in latent rollouts. Gate **PASSED**.
+
+---
+
+## 11. Milestone 11 — Final Double DQN Request Policy on Occlusion Scenario
+- **DQN Architecture**: 71-D input $[z_t(64), a_{t-1}^{\text{req}}(3), m_{t-1}(4)]$, Huber loss, target network, soft updates.
+- **Results Across 3 Seeds ($\lambda=0.05$, 60 Held-Out Seeds)**:
+  - Safe Merge Rate: **$100.0\%$** (0.0% collision) across all 3 seeds.
+  - Return: **$3.585 \pm 0.002$**, Utility: **$3.504 \pm 0.007$**.
+  - Request Frequency: **$1.62$ requests/episode** ($6.5$ bits/ep).
+  - Request Distribution: $61.4\%$ `NONE`, $13.7\%$ `ASK_FRONT`, $25.0\%$ `ASK_REAR`.
+- **Communication Cost Sweep**:
+  - $\lambda=0.00$: $3.27$ reqs/ep ($100\%$ safe).
+  - $\lambda=0.01$: $3.17$ reqs/ep ($100\%$ safe).
+  - $\lambda=0.05$: $1.83$ reqs/ep ($100\%$ safe).
+  - $\lambda=0.10$: $1.08$ reqs/ep ($100\%$ safe).
+  - Confirmed: Higher communication cost penalizes unnecessary queries while maintaining zero collisions.
+
+---
+
+## 12. Milestone 12 — Optical Fog / Degraded Visibility Robustness
+- **Optical Scattering Model**: Implemented Beer–Lambert atmospheric scattering directly on the camera frames ($I_{\text{fog}}(r) = I(r)e^{-\beta r} + I_{\text{airlight}}(1 - e^{-\beta r})$).
+- **Zero-Shot Evaluation**: Tested frozen WorldModel + DQN without retraining across 3 visibility levels:
+  - `CLEAR` ($\beta=0.00$, vis $>50\text{ m}$): $100.0\%$ safe merge ($0.0\%$ collision), $1.83$ reqs/ep.
+  - `LIGHT FOG` ($\beta=0.05$, vis $\approx 25\text{ m}$): $100.0\%$ safe merge ($0.0\%$ collision), $3.57$ reqs/ep.
+  - `HEAVY FOG` ($\beta=0.15$, vis $\approx 10\text{ m}$): $100.0\%$ safe merge ($0.0\%$ collision), $2.13$ reqs/ep.
+- **Conclusion**: The learned system exhibits strong zero-shot robustness under degraded vision because V2X radio messages operate out-of-band and condition the world model's latent predictions.
+
+---
+
+## 13. Milestone 13 — Aggressive / Unpredictable Driver Zero-Shot Robustness
+- **Behavior Distribution**: 4-mode stochastic driver distribution (`NORMAL`, `SUDDEN_ACCELERATE`, `HARD_BRAKE`, `AGGRESSIVE_APPROACH`).
+- **Zero-Shot Evaluation (60 Held-Out Seeds)**:
+  - `NO_COMM`: $63.3\%$ safe merge ($36.7\%$ collision rate).
+  - `RANDOM_REQUEST`: $88.3\%$ safe merge ($11.7\%$ collision rate).
+  - `FULL_COMM`: $98.3\%$ safe merge ($1.7\%$ collision rate).
+  - `ORACLE_SELECTIVE`: $98.3\%$ safe merge ($1.7\%$ collision rate).
+  - `ZERO_SHOT_DQN (3-Seed Mean)`: **$98.3\%$ safe merge** ($1.7\%$ collision rate), return $= 3.405$, utility $= 3.326$, $1.56$ reqs/ep.
+- **Behavior Breakdown**:
+  - `NORMAL`: DQN $100.0\%$
+  - `SUDDEN_ACCELERATE`: NO_COMM $13.3\% \to$ DQN **$93.3\%$**
+  - `HARD_BRAKE`: DQN $100.0\%$
+  - `AGGRESSIVE_APPROACH`: NO_COMM $40.0\% \to$ DQN **$100.0\%$**
+- **Conclusion**: Zero-shot robustness confirmed. At merge onset ($t=0$), the frozen DQN consistently queries `ASK_REAR` to resolve blind-spot tailgating risk, enabling the WorldModel MPC to adjust merge timing and eliminate over $95\%$ of uncoordinated collisions.

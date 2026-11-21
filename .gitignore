@@ -43,7 +43,21 @@ outputs/personal_lab1/*/model_epoch_*.pt
 datasets/merge_communication_tight.npz
 datasets/merge_rear_bottleneck.npz
 
-# Allow Final Artifacts Explicitly
+# Allow Final Occlusion Artifacts Explicitly
+!datasets/merge_occlusion_final.npz
+!outputs/personal_lab1/occlusion_final_attempt_01/my_lab1_world_model_occlusion_final.pt
+!outputs/personal_lab1/occlusion_final_attempt_01/*.json
+!outputs/personal_lab1/occlusion_final_attempt_01/*.py
+!outputs/request_agent/occlusion_final_evaluation/*.pt
+!outputs/request_agent/occlusion_final_evaluation/*.csv
+!outputs/request_agent/occlusion_final_evaluation/*.json
+!outputs/request_agent/occlusion_oracle_diagnostic_results.json
+!outputs/request_agent/robustness_fog_oracle_results.json
+!outputs/request_agent/robustness_fog_zero_shot_results.json
+!outputs/request_agent/robustness_aggressive_driver_oracle_results.json
+!outputs/request_agent/robustness_aggressive_zero_shot_results.json
+
+# Allow Prior Candidate #2 Artifacts Explicitly
 !datasets/merge_final_candidate2.npz
 !outputs/personal_lab1/final_candidate2_attempt_01/my_lab1_world_model_final_candidate2.pt
 !outputs/request_agent/final_evaluation/*.pt

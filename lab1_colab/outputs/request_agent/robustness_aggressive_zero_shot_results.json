@@ -1,0 +1,209 @@
+{
+  "baseline_summaries": {
+    "NO_COMM": {
+      "safe_merge_rate": 63.33333333333333,
+      "collision_rate": 36.666666666666664,
+      "mean_driving_return": 1.828636520388879,
+      "mean_utility": 1.828636520388879,
+      "mean_requests": 0.0,
+      "mean_bits": 0.0
+    },
+    "RANDOM_REQUEST": {
+      "safe_merge_rate": 88.33333333333333,
+      "collision_rate": 11.666666666666666,
+      "mean_driving_return": 2.949815486284559,
+      "mean_utility": 2.9156488196178922,
+      "mean_requests": 0.6833333333333333,
+      "mean_bits": 2.7333333333333334
+    },
+    "FULL_COMM": {
+      "safe_merge_rate": 98.33333333333333,
+      "collision_rate": 1.6666666666666667,
+      "mean_driving_return": 3.2666807464668604,
+      "mean_utility": 3.216680746466861,
+      "mean_requests": 1.0,
+      "mean_bits": 4.0
+    },
+    "ORACLE_SELECTIVE": {
+      "safe_merge_rate": 98.33333333333333,
+      "collision_rate": 1.6666666666666667,
+      "mean_driving_return": 3.352309031761035,
+      "mean_utility": 3.314809031761035,
+      "mean_requests": 0.75,
+      "mean_bits": 3.0
+    }
+  },
+  "dqn_summaries": {
+    "1": {
+      "safe_merge_rate": 98.33333333333333,
+      "collision_rate": 1.6666666666666667,
+      "mean_driving_return": 3.406371918980134,
+      "mean_utility": 3.3022052523134664,
+      "mean_requests": 2.0833333333333335,
+      "mean_bits": 8.333333333333334
+    },
+    "2": {
+      "safe_merge_rate": 98.33333333333333,
+      "collision_rate": 1.6666666666666667,
+      "mean_driving_return": 3.3993487752485034,
+      "mean_utility": 3.329348775248503,
+      "mean_requests": 1.4,
+      "mean_bits": 5.6
+    },
+    "3": {
+      "safe_merge_rate": 98.33333333333333,
+      "collision_rate": 1.6666666666666667,
+      "mean_driving_return": 3.4078533187105355,
+      "mean_utility": 3.347853318710535,
+      "mean_requests": 1.2,
+      "mean_bits": 4.8
+    }
+  },
+  "agg_dqn_summary": {
+    "safe_merge_rate": 98.33333333333333,
+    "collision_rate": 1.6666666666666667,
+    "mean_driving_return": 3.404524670979724,
+    "mean_utility": 3.326469115424169,
+    "mean_requests": 1.5611111111111111,
+    "mean_bits": 6.2444444444444445
+  },
+  "style_breakdown": {
+    "NORMAL": {
+      "NO_COMM": 100.0,
+      "RANDOM_REQUEST": 100.0,
+      "FULL_COMM": 100.0,
+      "ORACLE_SELECTIVE": 100.0,
+      "DQN_SEED1": 100.0,
+      "DQN_SEED2": 100.0,
+      "DQN_SEED3": 100.0,
+      "DQN_AGGREGATE": 100.0
+    },
+    "SUDDEN_ACCELERATE": {
+      "NO_COMM": 13.333333333333334,
+      "RANDOM_REQUEST": 73.33333333333333,
+      "FULL_COMM": 93.33333333333333,
+      "ORACLE_SELECTIVE": 93.33333333333333,
+      "DQN_SEED1": 93.33333333333333,
+      "DQN_SEED2": 93.33333333333333,
+      "DQN_SEED3": 93.33333333333333,
+      "DQN_AGGREGATE": 93.33333333333333
+    },
+    "HARD_BRAKE": {
+      "NO_COMM": 100.0,
+      "RANDOM_REQUEST": 100.0,
+      "FULL_COMM": 100.0,
+      "ORACLE_SELECTIVE": 100.0,
+      "DQN_SEED1": 100.0,
+      "DQN_SEED2": 100.0,
+      "DQN_SEED3": 100.0,
+      "DQN_AGGREGATE": 100.0
+    },
+    "AGGRESSIVE_APPROACH": {
+      "NO_COMM": 40.0,
+      "RANDOM_REQUEST": 80.0,
+      "FULL_COMM": 100.0,
+      "ORACLE_SELECTIVE": 100.0,
+      "DQN_SEED1": 100.0,
+      "DQN_SEED2": 100.0,
+      "DQN_SEED3": 100.0,
+      "DQN_AGGREGATE": 100.0
+    }
+  },
+  "req_choice_summary": {
+    "NORMAL": {
+      "seed_1": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      },
+      "seed_2": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      },
+      "seed_3": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      },
+      "aggregate": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      }
+    },
+    "SUDDEN_ACCELERATE": {
+      "seed_1": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      },
+      "seed_2": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      },
+      "seed_3": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      },
+      "aggregate": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      }
+    },
+    "HARD_BRAKE": {
+      "seed_1": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      },
+      "seed_2": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      },
+      "seed_3": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      },
+      "aggregate": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      }
+    },
+    "AGGRESSIVE_APPROACH": {
+      "seed_1": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      },
+      "seed_2": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      },
+      "seed_3": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      },
+      "aggregate": {
+        "NONE": 0.0,
+        "ASK_FRONT": 0.0,
+        "ASK_REAR": 100.0
+      }
+    }
+  },
+  "eval_meta": {
+    "num_seeds": 60,
+    "base_seed": 9500,
+    "lambda_cost": 0.05,
+    "wm_path": "outputs/personal_lab1/occlusion_final_attempt_01/my_lab1_world_model_occlusion_final.pt",
+    "elapsed_seconds": 6.93253493309021
+  }
+}

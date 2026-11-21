@@ -1,0 +1,26 @@
+{
+  "predicted_returns": {
+    "UNKNOWN": {
+      "Traj_A_Blind_Merge_Lane1": 2.5326719284057617,
+      "Traj_B_Double_Change_Lane0": 2.8404183387756348,
+      "Traj_C_Yield_On_Ramp": 2.2256603240966797
+    },
+    "CLEAR": {
+      "Traj_A_Blind_Merge_Lane1": 1.2159708738327026,
+      "Traj_B_Double_Change_Lane0": 2.372551918029785,
+      "Traj_C_Yield_On_Ramp": 2.418905258178711
+    },
+    "HAZARD_AHEAD": {
+      "Traj_A_Blind_Merge_Lane1": 1.7873862981796265,
+      "Traj_B_Double_Change_Lane0": 3.6884052753448486,
+      "Traj_C_Yield_On_Ramp": 0.7037205100059509
+    },
+    "HAZARD_BEHIND": {
+      "Traj_A_Blind_Merge_Lane1": 0.3603156805038452,
+      "Traj_B_Double_Change_Lane0": 1.9094035625457764,
+      "Traj_C_Yield_On_Ramp": 2.3584063053131104
+    }
+  },
+  "front_sensitivity": true,
+  "rear_sensitivity": true
+}

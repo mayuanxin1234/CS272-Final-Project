@@ -1,0 +1,6 @@
+Policy,Safe Merge Rate (%),Collision Rate (%),Mean Driving Return,Mean Utility,Mean Travel Time,Mean Requests,Mean Bits,% NONE,% ASK_FRONT,% ASK_REAR
+NO_COMM,75.0,25.0,2.345,2.345,3.3,0.00,0.0,100.0,0.0,0.0
+RANDOM_REQUEST,90.0,10.0,2.998,2.969,3.8,0.58,2.3,84.7,9.2,6.1
+LEARNED_DQN (3-seed mean),100.0,0.0,3.585,3.504,4.2,1.62,6.5,61.4,13.7,25.0
+FULL_COMM,100.0,0.0,3.460,3.410,4.3,1.00,4.0,76.6,15.6,7.8
+ORACLE_SELECTIVE,100.0,0.0,3.554,3.521,4.2,0.67,2.7,84.3,7.9,7.9

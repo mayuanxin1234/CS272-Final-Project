@@ -85,14 +85,25 @@ class MergeMPCPlanner:
             )
             candidate_actions = self.allowed_actions[indices]
 
-        # Convert to tensors on device
+        # Convert candidate actions to tensor
         actions_tensor = torch.from_numpy(candidate_actions).to(self.device)
-        obs_tensor = (
-            torch.from_numpy(obs.astype(np.float32) / 255.0)
-            .unsqueeze(0)
-            .expand(self.num_sequences, -1, -1, -1)
-            .to(self.device)
-        )
+
+        # Encode observation once or reuse provided latent
+        if latent is not None:
+            z0 = (
+                torch.from_numpy(latent.astype(np.float32))
+                .unsqueeze(0)
+                .expand(self.num_sequences, -1)
+                .to(self.device)
+            )
+        else:
+            obs_single = (
+                torch.from_numpy(obs.astype(np.float32) / 255.0)
+                .unsqueeze(0)
+                .to(self.device)
+            )
+            with torch.no_grad():
+                z0 = self.model.encode(obs_single).expand(self.num_sequences, -1)
 
         # Allocate communication tensors (num_sequences, horizon)
         requests_tensor = torch.zeros(
@@ -109,17 +120,18 @@ class MergeMPCPlanner:
         # Steps 1..horizon-1 (future):
         if self.future_mode == "persistent":
             messages_tensor[:, 1:] = int(message)
-        # Default "none" leaves future requests=0 (NONE) and future messages=0 (UNKNOWN)
 
         with torch.no_grad():
-            imagined = self.model.imagine(
-                obs_tensor,
-                actions_tensor,
-                requests_tensor,
-                messages_tensor,
-            )
-            # Cumulative predicted rewards over horizon
-            predicted_returns = imagined["rewards"].sum(dim=1)  # shape (num_sequences,)
+            curr_z = z0
+            rewards = []
+            for t in range(self.horizon):
+                act_t = actions_tensor[:, t]
+                req_t = requests_tensor[:, t]
+                msg_t = messages_tensor[:, t]
+                if self.model.reward_head is not None:
+                    rewards.append(self.model.predict_reward(curr_z, act_t, req_t, msg_t))
+                curr_z = self.model.predict_next(curr_z, act_t, req_t, msg_t)
+            predicted_returns = torch.stack(rewards, dim=1).sum(dim=1)
             best_idx = torch.argmax(predicted_returns).item()
 
         best_first_action = int(candidate_actions[best_idx, 0])

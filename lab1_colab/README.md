@@ -4,166 +4,252 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-orange.svg)](https://pytorch.org/)
 [![HighwayEnv](https://img.shields.io/badge/Gym-HighwayEnv-green.svg)](https://highway-env.farama.org/)
 
-## 1. Research Question
-**Can an autonomous vehicle learn when and what semantic information to request from connected neighboring vehicles while minimizing communication overhead?**
+---
 
-Connected autonomous vehicles (CAVs) have the potential to resolve high-risk driving bottlenecks by sharing intent. However, broadcasting continuous state or requesting communication unconditionally saturates bandwidth and introduces latency. This project studies a hierarchical, communication-efficient architecture where:
-1. A **Double DQN request agent** decides at each decision step whether to remain silent or selectively query surrounding vehicles for high-level semantic intent (`NONE`, `ASK_FRONT`, `ASK_REAR`).
+## 1. Research Question & Motivation
+**Can an autonomous vehicle learn when and what semantic information to request from connected neighboring vehicles to merge safely under visual occlusion, while minimizing communication overhead?**
+
+Visual line-of-sight sensors (cameras, LiDAR) on autonomous vehicles frequently suffer from severe blind zones caused by roadway curvature, physical obstructions, or neighboring vehicles. While Vehicle-to-Everything (V2X) communication allows connected autonomous vehicles (CAVs) to share information beyond direct line-of-sight, continuous raw sensor sharing or unconditional message broadcasting saturates wireless channels, introduces contention and latency, and consumes substantial computational bandwidth. 
+
+This project studies a hierarchical, communication-efficient architecture where:
+1. A **Double DQN request agent** learns to selectively query surrounding vehicles for high-level semantic messages (`NONE`, `ASK_FRONT`, `ASK_REAR`) under an explicit communication penalty $\lambda$.
 2. A **communication-aware WorldModel** predicts latent multi-step rollouts conditioned on received semantic messages.
-3. A **Model Predictive Control (MPC) driving planner** searches over candidate driving trajectories using the world model to safely execute highway merging maneuvers.
+3. A **Model Predictive Control (MPC) driving planner** plans safe lane-merging trajectories in latent space using the world model.
 
 ---
 
 ## 2. System Architecture
 
 ```
-[Local Observation o_t] ──► [CNN Encoder] ──► [Latent z_t] ──────────────┐
-                                                    │                    │
-                                                    ▼                    ▼
-                                      [Double DQN Request Policy]   [WorldModel MPC]
-                                                    │                    ▲
-                                                    ▼                    │
-                                     [Request: NONE/FRONT/REAR]          │
-                                                    │                    │
-                                                    ▼                    │
-                                        [Semantic Message m_t] ──────────┘
-                                                    │
-                                                    ▼
-                                         [Driving Action a_t] ──► [Environment Physics]
+[Local Grayscale Observation o_t] ──► [WorldModel CNN Encoder] ──► [Latent z_t (64-D)]
+                                                                           │
+                                                                           ▼
+                                                              [Double DQN Request Policy]
+                                                                           │
+                                                                           ▼
+                                                             [Request: NONE / FRONT / REAR]
+                                                                           │
+                                                                           ▼
+                                                             [Semantic Message m_t (0..3)]
+                                                                           │
+                                                                           ▼
+                                                                  [WorldModel MPC]
+                                                                           │
+                                                                           ▼
+                                                                 [Driving Action a_t]
+                                                                           │
+                                                                           ▼
+                                                                   [HighwayEnv Merge]
 ```
 
-### Action & Communication Spaces
+### Discrete Action & Semantic Spaces
 - **Driving Actions ($5$ discrete)**: `0: LANE_LEFT`, `1: IDLE`, `2: LANE_RIGHT`, `3: FASTER`, `4: SLOWER`
 - **Request Actions ($3$ discrete)**: `0: NONE`, `1: ASK_FRONT`, `2: ASK_REAR`
-- **Semantic Messages ($4$ discrete)**: `0: UNKNOWN`, `1: MAINTAIN`, `2: ACCELERATE`, `3: BRAKE`
-- **DQN State Space ($71\text{-D}$)**: $[z_t(64), \text{one\_hot}(a_{t-1}^{\text{req}}, 3), \text{one\_hot}(m_{t-1}, 4)]$
+- **Semantic Messages ($4$ discrete)**:
+  - `0: UNKNOWN` (default prior to inquiry or unqueried vehicle)
+  - `1: CLEAR` (no obstacle detected; lane unobstructed)
+  - `2: HAZARD_AHEAD` (lead vehicle detects downstream obstacle / emergency braking)
+  - `3: HAZARD_BEHIND` (trailing vehicle detects high-speed overtaker charging lane)
+- **DQN State Space ($71\text{-D}$)**:
+  $$s_t^{\text{DQN}} = [z_t(64), \text{one\_hot}(a_{t-1}^{\text{req}}, 3), \text{one\_hot}(m_{t-1}, 4)]$$
 - **Request Reward / Multi-Objective Utility**:
   $$\mathcal{U}_t = R_{\text{driving}, t} - \lambda \cdot \mathbb{I}(a_t^{\text{req}} \neq \text{NONE})$$
 
 ---
 
-## 3. Final Experimental Setup (Candidate #2)
+## 3. Main Final Experiment: Cooperative Blind-Zone Sensing (Occlusion)
 
-The final evaluation scenario uses **Candidate #2**, a highway on-ramp merge bottleneck under partial observability:
-- **Ego Vehicle**: Initial position $x = 30.0\text{ m}$, initial speed $v = 25.0\text{ m/s}$ (on access ramp).
-- **Front Vehicle (Target Lane)**: Initial position $x = 54.0\text{ m}$, speed $v = 22.0\text{ m/s}$ (predictable lead, semantic intent `MAINTAIN`).
-- **Rear Vehicle (Target Lane)**: Initial position $x = 18.0\text{ m}$, speed $v = 22.0\text{ m/s}$ (decision-critical trailing agent with hidden semantic intent randomly drawn from $\{\text{MAINTAIN}: 22\text{ m/s}, \text{ACCELERATE}: 27\text{ m/s}, \text{BRAKE}: 17\text{ m/s}\}$).
-- **Initial Partial Observability**: Initial grayscale observations $o_0$ are $100\%$ byte-for-byte invariant across hidden intents, ensuring intent must be requested via communication or inferred dynamically.
+The primary benchmark is **Candidate A: Cooperative Blind-Zone Sensing in Target-Lane Merge** (`ego-merge-occlusion-final-v0` in `request_agent/occlusion_env.py`):
+- **Ego Vehicle**: Begins on on-ramp (`"b", "c", 2`) at $s=5.0\text{ m}$ ($x=235.0\text{ m}$), $v=20.0\text{ m/s}$.
+- **Front CAV**: Target highway lane (`"b", "c", 1`) at $s=35.0\text{ m}$ ($x=265.0\text{ m}$), $v=22.0\text{ m/s}$.
+- **Rear CAV**: Target highway lane (`"a", "b", 1`) at $s=225.0\text{ m}$ ($x=225.0\text{ m}$), $v=22.0\text{ m/s}$.
+- **3 Balanced Hidden States ($33.3\%$ each)**:
+  1. `CLEAR`: Highway target lane clear; both CAVs report `CLEAR`.
+  2. `FRONT_HAZARD`: Stationary obstacle stalled downstream at $x=285.0\text{ m}$ in target lane, hidden from ego by highway geometry. Front CAV observes obstacle and reports `HAZARD_AHEAD`.
+  3. `REAR_HAZARD`: High-speed overtaker charging at $30.0\text{ m/s}$ in target lane, hidden from ego. Rear CAV observes charging overtaker and reports `HAZARD_BEHIND`.
+- **Zero Initial Observation Leakage**:
+  $$\max_{i, j \in \{\text{CLEAR}, \text{FRONT}, \text{REAR}\}} \|o_0^{(i)} - o_0^{(j)}\|_\infty = 0.0$$
+  Initial camera observations are $100\%$ byte-for-byte identical across all hidden states at $t=0$.
 
 ---
 
 ## 4. Main Experimental Results
 
-All policies were evaluated across **50 held-out fixed test seeds (Seeds 5000–5049)** that were strictly excluded from model and DQN training.
+All policies were evaluated across **60 held-out evaluation seeds (Seeds 9000–9059)** strictly excluded from model and DQN training (balanced: $20$ CLEAR, $20$ FRONT_HAZARD, $20$ REAR_HAZARD).
 
-### Baseline Comparison (50 Held-Out Seeds)
+### Baseline Comparison Table (60 Held-Out Seeds, $\lambda = 0.05$)
+| Policy | Safe Merge Rate (%) | Collision Rate (%) | Mean Driving Return | Mean Utility | Mean Travel Time (s) | Requests / Ep | Bandwidth (bits/ep) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **NO_COMM** | $75.0\%$ | $25.0\%$ | $2.345$ | $2.345$ | $3.3$ | $0.00$ | $0.0$ b |
+| **RANDOM_REQUEST** | $90.0\%$ | $10.0\%$ | $2.998$ | $2.969$ | $3.8$ | $0.58$ | $2.3$ b |
+| **FULL_COMM** | $100.0\%$ | $0.0\%$ | $3.460$ | $3.410$ | $4.3$ | $1.00$ | $4.0$ b |
+| **ORACLE_SELECTIVE** | $100.0\%$ | $0.0\%$ | $3.554$ | $3.521$ | $4.2$ | $0.67$ | $2.7$ b |
+| **LEARNED_DQN (3-Seed Mean)** | **$100.0\%$** | **$0.0\%$** | **$3.585 \pm 0.002$** | **$3.504 \pm 0.007$** | **$4.2$** | **$1.62$** | **$6.5$ b** |
 
-| Policy | Safe Merge Rate (%) | Collision Rate (%) | Driving Return ($\mu \pm \sigma$) | Final Utility ($\mu \pm \sigma$) | Requests / Ep | Bits / Ep | % NONE | % ASK_FRONT | % ASK_REAR |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **`NO_COMM`** | $98.0\%$ | $2.0\%$ | $4.169 \pm 0.310$ | **$4.169 \pm 0.310$** | $0.00$ | $0.0$ | $100.0\%$ | $0.0\%$ | $0.0\%$ |
-| **`FULL_COMM`** | $98.0\%$ | $2.0\%$ | $4.228 \pm 0.351$ | $3.793 \pm 0.328$ | $8.70$ | $34.8$ | $0.0\%$ | $0.0\%$ | $100.0\%$ |
-| **`RANDOM_REQUEST`** | $98.0\%$ | $2.0\%$ | $4.229 \pm 0.349$ | $3.935 \pm 0.353$ | $5.88$ | $23.5$ | $32.4\%$ | $32.6\%$ | $34.9\%$ |
-| **`LEARNED_DQN (Seed 1)`** | $98.0\%$ | $2.0\%$ | $4.169 \pm 0.310$ | **$4.154 \pm 0.300$** | $0.30$ | $1.2$ | $96.5\%$ | $1.2\%$ | $2.4\%$ |
-| **`LEARNED_DQN (Seed 2)`** | $98.0\%$ | $2.0\%$ | $4.169 \pm 0.310$ | **$4.148 \pm 0.325$** | $0.42$ | $1.7$ | $95.0\%$ | $2.8\%$ | $2.1\%$ |
-| **`LEARNED_DQN (Seed 3)`** | $98.0\%$ | $2.0\%$ | $4.156 \pm 0.293$ | $3.954 \pm 0.284$ | $4.04$ | $16.2$ | $52.4\%$ | $2.8\%$ | $44.8\%$ |
-| **`LEARNED_DQN (3-Seed Mean)`** | **$98.0\%$** | **$2.0\%$** | $4.165 \pm 0.006$ | **$4.085 \pm 0.093$** | **$1.59 \pm 1.74$** | **$6.3 \pm 6.9$** | **$81.3\%$** | **$2.3\%$** | **$16.4\%$** |
-| **`ORACLE_REAR` (Diagnostic)** | $98.0\%$ | $2.0\%$ | $4.207 \pm 0.343$ | $4.207 \pm 0.343$ | $0.00$ | $0.0$ | $100.0\%$ | $0.0\%$ | $0.0\%$ |
+### Individual DQN Training Seeds ($\lambda = 0.05$)
+- **Seed 1**: $100.0\%$ safe merge, $0.0\%$ collision, return $= 3.586$, utility $= 3.494$, $1.83$ reqs/ep ($7.3$ b).
+- **Seed 2**: $100.0\%$ safe merge, $0.0\%$ collision, return $= 3.583$, utility $= 3.510$, $1.47$ reqs/ep ($5.9$ b).
+- **Seed 3**: $100.0\%$ safe merge, $0.0\%$ collision, return $= 3.586$, utility $= 3.508$, $1.55$ reqs/ep ($6.2$ b).
+- **Overall Request Distribution**: $61.4\%$ `NONE` / $13.7\%$ `ASK_FRONT` / $25.0\%$ `ASK_REAR`.
 
-### Key Findings & Nuance
-1. **Safety Equivalence**: Collision rate is exactly **$2.0\%$** (1 collision out of 50 seeds) and safe merge rate is **$98.0\%$** across every baseline. Semantic communication **did not improve safety** because the MPC driving controller finds robust trajectories without neighbor intent.
-2. **Bandwidth Savings**: Relative to full communication ($8.70$ requests/ep), the learned DQN policy achieves an average of $1.59$ requests/ep across 3 seeds—an **$81.8\%$ reduction in communication** (and up to $96.6\%$ reduction in Seed 1).
-3. **Utility Preservation**: Because `FULL_COMM` pays communication costs on every step without improving safety, its utility drops to $3.793$. The learned DQN maintains high utility ($4.085$ aggregate, $4.154$ Seed 1) by learning to suppress unnecessary requests.
-4. **Seed Variability**: Seed 1 and Seed 2 converged strongly to silent execution ($96.5\%$ and $95.0\%$ NONE), whereas Seed 3 retained moderate exploration requests ($52.4\%$ NONE), highlighting sensitivity to Q-learning initialization under weak reward signals.
-
----
-
-## 5. Communication-Cost Sweep ($\lambda \in [0.00, 0.01, 0.05, 0.10]$)
-
-| Request Cost ($\lambda$) | Driving Return | Final Utility | Safe Merge Rate (%) | Collision Rate (%) | Requests / Episode | Transmitted Bits / Ep | % NONE | % ASK_FRONT | % ASK_REAR |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **$\lambda = 0.00$** | $4.230$ | $4.230$ | $98.0\%$ | $2.0\%$ | $2.34$ | $9.4$ | $72.9\%$ | $13.7\%$ | $13.4\%$ |
-| **$\lambda = 0.01$** | $4.205$ | $4.129$ | $98.0\%$ | $2.0\%$ | $7.54$ | $30.2$ | $12.5\%$ | $77.7\%$ | $9.7\%$ |
-| **$\lambda = 0.05$** | $4.169$ | $4.154$ | $98.0\%$ | $2.0\%$ | $0.30$ | $1.2$ | $96.5\%$ | $1.2\%$ | $2.4\%$ |
-| **$\lambda = 0.10$** | $4.169$ | $4.151$ | $98.0\%$ | $2.0\%$ | $0.18$ | $0.7$ | $97.9\%$ | $2.1\%$ | $0.0\%$ |
-
-### Analysis of Cost Response
-- **Suppression Threshold ($\lambda \ge 0.05$)**: Communication is strongly suppressed once $\lambda \ge 0.05$, with request percentages dropping below $0.30$ reqs/ep ($>96\%$ NONE).
-- **Non-Monotonicity at $\lambda = 0.01$**: Rather than decreasing monotonically from $\lambda = 0.00$, requests spike to $7.54$ reqs/ep at $\lambda = 0.01$. Because a penalty of $0.01$ is minuscule relative to episode returns ($\sim 4.2$), the cost gradient is weak. The policy drifted toward `ASK_FRONT` ($77.7\%$), querying benign static intent that does not disrupt driving, before sharp suppression takes over at $\lambda \ge 0.05$.
+> [!NOTE]
+> **Behavioral Nuance at Decision Initialization**:
+> Because initial camera observations $o_0$ are identical across hidden hazard states, the DQN cannot know the true hazard before requesting assistance. At $t=0$, the learned policy consistently issues `ASK_REAR` as a risk-prioritized probe (addressing the fast rear overtaker vulnerability), and then dynamically adapts subsequent requests and driving actions based on the returned semantic message. We do not claim the agent knows the true hazard prior to querying.
 
 ---
 
-## 6. Repository Structure
+## 5. Communication-Cost Sweep
+
+We evaluated the sensitivity of the learned Double DQN request policy across varying communication penalty coefficients $\lambda \in [0.00, 0.10]$ on 60 held-out seeds:
+
+| Lambda Cost ($\lambda$) | Safe Merge Rate (%) | Collision Rate (%) | Mean Driving Return | Mean Utility | Requests / Ep | Bandwidth (bits/ep) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **$0.00$** | $100.0\%$ | $0.0\%$ | $3.568$ | $3.568$ | $3.27$ | $13.1$ b |
+| **$0.01$** | $100.0\%$ | $0.0\%$ | $3.568$ | $3.536$ | $3.17$ | $12.7$ b |
+| **$0.05$** | $100.0\%$ | $0.0\%$ | $3.586$ | $3.494$ | $1.83$ | $7.3$ b |
+| **$0.10$** | $100.0\%$ | $0.0\%$ | $3.483$ | $3.374$ | $1.08$ | $4.3$ b |
+
+**Key Finding**: Increasing communication penalty reduces request frequency by $67.0\%$ (from $3.27$ to $1.08$ requests/episode) while preserving a $100.0\%$ safe merge rate across the entire range. 
+
+*(Note: Direct bandwidth comparisons between learned DQN and FULL_COMM depend on timing accounting conventions; FULL_COMM here queries the designated channel once per episode at $t=0$, whereas DQN queries reactively across steps).*
+
+---
+
+## 6. Robustness Experiment 1: Degraded Visibility (Optical Fog)
+
+To evaluate whether cooperative V2X communication remains effective when ego vision is compromised, we implemented a physics-based **Beer–Lambert atmospheric scattering model** operating directly on the grayscale camera frames passed to the WorldModel CNN encoder:
+$$I_{\text{fog}}(r) = I(r) \cdot e^{-\beta r} + I_{\text{airlight}} \cdot (1 - e^{-\beta r})$$
+
+We evaluated the **frozen, pre-trained WorldModel and DQN policy zero-shot** (no retraining or fine-tuning):
+
+| Fog Condition | Attenuation ($\beta$) | Visual Range | Safe Merge Rate (%) | Collision Rate (%) | Requests / Ep |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **CLEAR WEATHER** | $0.00$ | $> 50$ m | **$100.0\%$** | $0.0\%$ | $1.83$ |
+| **LIGHT FOG** | $0.05$ | $\approx 25$ m | **$100.0\%$** | $0.0\%$ | $3.57$ |
+| **HEAVY FOG** | $0.15$ | $\approx 10$ m | **$100.0\%$** | $0.0\%$ | $2.13$ |
+
+**Finding**: The learned system exhibits strong zero-shot robustness under severe optical degradation ($100\%$ safe merges across all fog levels). While request frequency varied under degraded inputs, safety was fully preserved because V2X radio messages operate out-of-band and condition the world model's latent transition predictions.
+
+---
+
+## 7. Robustness Experiment 2: Aggressive / Unpredictable Drivers
+
+We tested the frozen WorldModel + Double DQN policy **zero-shot** against a 4-mode stochastic driver profile in the HighwayEnv simulator (60 held-out evaluation seeds, $15$ per style):
+1. **NORMAL** ($25\%$): Standard polite headway ($T=1.5\text{ s}$), cruising at $22\text{ m/s}$.
+2. **SUDDEN_ACCELERATE** ($25\%$): Rear vehicle surges aggressively to $32\text{ m/s}$ ($a=+5.0\text{ m/s}^2$, $T=0.4\text{ s}$).
+3. **HARD_BRAKE** ($25\%$): Front vehicle decelerates abruptly to $5\text{ m/s}$ ($a=-6.0\text{ m/s}^2$).
+4. **AGGRESSIVE_APPROACH** ($25\%$): Rear vehicle charges at $30\text{ m/s}$ refusing to yield to ramp traffic.
+
+### Zero-Shot Overall Performance Comparison
+| Policy | Safe Merge Rate (%) | Collision Rate (%) | Mean Driving Return | Mean Utility | Requests / Ep | Bandwidth (bits/ep) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **NO_COMM** | $63.3\%$ | $36.7\%$ | $1.829$ | $1.829$ | $0.00$ | $0.0$ b |
+| **RANDOM_REQUEST** | $88.3\%$ | $11.7\%$ | $2.950$ | $2.916$ | $0.68$ | $2.7$ b |
+| **FULL_COMM** | $98.3\%$ | $1.7\%$ | $3.267$ | $3.217$ | $1.00$ | $4.0$ b |
+| **ORACLE_SELECTIVE** | $98.3\%$ | $1.7\%$ | $3.352$ | $3.315$ | $0.75$ | $3.0$ b |
+| **ZERO_SHOT_DQN (3-Seed Mean)** | **$98.3\%$** | **$1.7\%$** | **$3.405$** | **$3.326$** | **$1.56$** | **$6.2$ b** |
+
+### Safe Merge Rate by Behavior Style (%)
+| Behavior Style | Episodes | NO_COMM | RANDOM | FULL_COMM | ORACLE | ZERO_SHOT_DQN Aggregate |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **NORMAL** | 15 | $100.0\%$ | $100.0\%$ | $100.0\%$ | $100.0\%$ | **$100.0\%$** |
+| **SUDDEN_ACCELERATE** | 15 | $13.3\%$ | $73.3\%$ | $93.3\%$ | $93.3\%$ | **$93.3\%$** |
+| **HARD_BRAKE** | 15 | $100.0\%$ | $100.0\%$ | $100.0\%$ | $100.0\%$ | **$100.0\%$** |
+| **AGGRESSIVE_APPROACH** | 15 | $40.0\%$ | $80.0\%$ | $100.0\%$ | $100.0\%$ | **$100.0\%$** |
+
+**Zero-Shot Verdict**: `ZERO-SHOT AGGRESSIVE ROBUSTNESS PASSED`. The frozen DQN and WorldModel generalized zero-shot to aggressive drivers, cutting collisions from $36.7\%$ to $1.7\%$ and matching the oracle baseline.
+
+---
+
+## 8. Main Research Conclusion
+
+> In the occluded HighwayEnv merge scenario, selective semantic communication improved safe merging from $75\%$ without communication to $100\%$ with the learned request policy, eliminating observed collisions on the held-out evaluation set. Increasing communication cost reduced request frequency while preserving $100\%$ safe-merge performance. The frozen learned system also maintained strong zero-shot performance under degraded visibility and aggressive-driver behavior.
+
+---
+
+## 9. Limitations & Scope
+
+1. **Simulation Scope**: All experiments were conducted in the 2D kinematic `highway-env` simulation framework; physical vehicle dynamics, road surface friction, and real-world sensor noise were not tested.
+2. **Discrete Semantics**: Communication messages were constrained to a 4-token discrete vocabulary. Real-world V2X deployments may use continuous trajectory intents or hybrid messaging protocols.
+3. **Synchronous Decision Steps**: The environment assumes synchronized decision rounds without network packet drops or multi-path RF fading.
+4. **Safety Claims**: A $100\%$ safe merge rate in simulation does not guarantee real-world safety or imply that the DQN knows neighbor states before querying.
+
+---
+
+## 10. Repository Structure & Final Artifacts
 
 ```
-CS272-Final-Project/lab1_colab/
-├── configs/
-│   └── cpu_fast.yaml                              # Simulation & model configuration
+.
 ├── datasets/
-│   └── merge_final_candidate2.npz                 # Final offline dataset (15,000 transitions)
-├── docs/
-│   └── EXPERIMENT_NOTES.md                        # Complete research progression & milestone logs
+│   ├── merge_occlusion_final.npz                # [FINAL] 20k transitions occlusion dataset
+│   └── merge_final_candidate2.npz              # [PRIOR] Candidate #2 research dataset
 ├── outputs/
-│   ├── personal_lab1/final_candidate2_attempt_01/
-│   │   └── my_lab1_world_model_final_candidate2.pt  # Trained communication-aware WorldModel
-│   └── request_agent/final_evaluation/
-│       ├── baseline_comparison_table.csv          # Final baseline comparison (CSV)
-│       ├── cost_sweep_table.csv                   # Final cost sweep table (CSV)
-│       ├── final_evaluation_results.json          # Full evaluation rollout logs & metrics
-│       ├── dqn_seed*.pt                           # Trained Double DQN policy checkpoints
-│       └── dqn_seed*_history.json                 # 500-episode training curves
+│   ├── personal_lab1/
+│   │   ├── occlusion_final_attempt_01/
+│   │   │   ├── my_lab1_world_model_occlusion_final.pt  # [FINAL] Trained WorldModel
+│   │   │   ├── validation_results.json
+│   │   │   └── train_runner.py
+│   │   └── final_candidate2_attempt_01/        # [PRIOR] Candidate #2 WorldModel
+│   └── request_agent/
+│       ├── occlusion_final_evaluation/         # [FINAL] 3 DQN seeds & cost sweep
+│       │   ├── dqn_seed1_lambda0.05.pt
+│       │   ├── dqn_seed2_lambda0.05.pt
+│       │   ├── dqn_seed3_lambda0.05.pt
+│       │   ├── dqn_seed1_lambda0.00.pt
+│       │   ├── dqn_seed1_lambda0.01.pt
+│       │   ├── dqn_seed1_lambda0.10.pt
+│       │   ├── baseline_comparison_table.csv
+│       │   ├── cost_sweep_table.csv
+│       │   ├── request_by_hazard_state_table.csv
+│       │   └── final_evaluation_results.json
+│       ├── robustness_fog_oracle_results.json
+│       ├── robustness_fog_zero_shot_results.json
+│       ├── robustness_aggressive_driver_oracle_results.json
+│       └── robustness_aggressive_zero_shot_results.json
 ├── request_agent/
-│   ├── final_candidate2_env.py                    # Candidate #2 Gym environment wrapper
-│   ├── mpc_adapter.py                             # WorldModel MPC planner
-│   ├── dqn_agent.py                               # Double DQN implementation
-│   ├── network.py                                 # QNetwork architecture
-│   ├── replay_buffer.py                           # Experience replay buffer
-│   ├── train_and_evaluate_dqn.py                  # End-to-end training and evaluation script
-│   └── [diagnostic scripts]                       # Diagnostic research tools (VoI, ablation, etc.)
-├── src/lab1/                                      # Lab 1 WorldModel source package
-├── requirements.txt                               # Pinned / bounded project dependencies
-└── README.md                                      # Project documentation
+│   ├── occlusion_env.py                        # [FINAL] Occlusion Gym environment
+│   ├── collect_occlusion_dataset.py            # Dataset collection pipeline
+│   ├── train_and_evaluate_occlusion_dqn.py     # DQN training and evaluation runner
+│   ├── mpc_adapter.py                          # Latent WorldModel MPC planner
+│   ├── dqn_agent.py                            # Double DQN agent architecture
+│   ├── network.py                              # QNetwork neural architecture
+│   ├── replay_buffer.py                        # Prioritized / uniform replay buffer
+│   ├── robustness_fog_diagnostic.py            # Fog robustness evaluation
+│   └── evaluate_aggressive_zero_shot.py        # Aggressive driver zero-shot evaluation
+├── docs/
+│   └── EXPERIMENT_NOTES.md                     # Complete research progression & notes
+└── requirements.txt                            # Pinned dependency specification
 ```
 
 ---
 
-## 7. Installation & Reproducibility
+## 11. Reproducibility Guide
 
-### Setup Environment
+### Environment Setup
 ```bash
-# Clone the repository
-git clone <REPO_URL>
+git clone <repo-url>
 cd CS272-Final-Project/lab1_colab
-
-# Create and activate virtual environment
 python3 -m venv .venv
 source .venv/bin/activate
-
-# Install required dependencies
-pip install --upgrade pip
 pip install -r requirements.txt
-
-# Set paths
-export PYTHONPATH=src:.
-export MPLCONFIGDIR=/tmp/matplotlib
 ```
 
-### Reproduce Final Baseline Evaluation & Cost Sweep (Using Pretrained Checkpoints)
-To reproduce all tables and metrics without retraining:
+### Reproduce Main Baseline Comparison & Cost Sweep
 ```bash
-PYTHONPATH=src:. python request_agent/train_and_evaluate_dqn.py
+PYTHONPATH=src:. python request_agent/train_and_evaluate_occlusion_dqn.py --eval_only
 ```
-This loads the frozen WorldModel (`my_lab1_world_model_final_candidate2.pt`) and trains the 3 DQN seeds ($500$ episodes each), executes the cost sweep, and writes `baseline_comparison_table.csv` and `cost_sweep_table.csv`.
+
+### Reproduce Fog Robustness Zero-Shot Evaluation
+```bash
+PYTHONPATH=src:. python request_agent/robustness_fog_diagnostic.py
+```
+
+### Reproduce Aggressive Driver Zero-Shot Evaluation
+```bash
+PYTHONPATH=src:. python request_agent/evaluate_aggressive_zero_shot.py
+```
 
 ---
 
-## 8. Conclusions & Limitations
-
-### Conclusion
-The Double DQN request policy successfully learned to optimize multi-objective driving utility under communication penalties. However, because the underlying HighwayEnv merge dynamics admit robust local kinematic solutions (`FASTER` or `SLOWER`), semantic neighbor intent has low marginal decision value for MPC planning. Consequently, the RL policy discovered that **suppressing communication is the utility-maximizing strategy**, eliminating unnecessary network load without degrading driving safety.
-
-### Limitations
-1. **Safety Invariance**: Semantic communication did not improve collision or merge rates over uncommunicative baselines in this geometry.
-2. **Kinematic Decoupling**: A strong continuous/discrete MPC planner can out-accelerate or yield to trailing traffic without requiring explicit coordination.
-3. **Seed Variance**: Weak value-of-information gradients lead to variance in final request frequencies across random training seeds.
-4. **Future Directions**: Future research should investigate environments with unavoidable physical occlusions, dense multi-lane intersections, or non-cooperative human drivers where blind autonomous execution is strictly sub-optimal.
-
+## 12. Contributors
+- CS272 Autonomous Driving & Reinforcement Learning Project Team

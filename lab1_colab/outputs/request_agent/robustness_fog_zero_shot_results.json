@@ -1,0 +1,18 @@
+{
+  "CLEAR_WEATHER": {
+    "safe_merge_rate": 100.0,
+    "collision_rate": 0.0,
+    "mean_requests": 1.8333333333333333
+  },
+  "LIGHT_FOG": {
+    "safe_merge_rate": 100.0,
+    "collision_rate": 0.0,
+    "mean_requests": 3.566666666666667
+  },
+  "HEAVY_FOG": {
+    "safe_merge_rate": 100.0,
+    "collision_rate": 0.0,
+    "mean_requests": 2.1333333333333333
+  }
+}
+

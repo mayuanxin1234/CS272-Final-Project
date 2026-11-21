@@ -1,0 +1,7647 @@
+{
+  "dqn_seeds": [
+    {
+      "policy": "LEARNED_DQN",
+      "safe_merge_rate": 100.0,
+      "collision_rate": 0.0,
+      "mean_driving_return": 3.585910639537426,
+      "mean_utility": 3.4942439728707577,
+      "mean_travel_time": 4.183333333333334,
+      "mean_requests": 1.8333333333333333,
+      "mean_bits": 7.333333333333333,
+      "pct_none": 56.17529880478087,
+      "pct_front": 18.326693227091635,
+      "pct_rear": 25.49800796812749,
+      "hazard_breakdown": {
+        "CLEAR": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.71202588546385,
+          "utility": 3.6120258854638507,
+          "requests": 2.0
+        },
+        "FRONT_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.8546259677251946,
+          "utility": 3.754625967725194,
+          "requests": 2.0
+        },
+        "REAR_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.1910800654232316,
+          "utility": 3.1160800654232315,
+          "requests": 1.5
+        }
+      },
+      "seed": 1
+    },
+    {
+      "policy": "LEARNED_DQN",
+      "safe_merge_rate": 100.0,
+      "collision_rate": 0.0,
+      "mean_driving_return": 3.5831711934573245,
+      "mean_utility": 3.50983786012399,
+      "mean_travel_time": 4.183333333333334,
+      "mean_requests": 1.4666666666666666,
+      "mean_bits": 5.866666666666666,
+      "pct_none": 64.9402390438247,
+      "pct_front": 9.56175298804781,
+      "pct_rear": 25.49800796812749,
+      "hazard_breakdown": {
+        "CLEAR": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.71202588546385,
+          "utility": 3.65952588546385,
+          "requests": 1.05
+        },
+        "FRONT_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.8546259677251946,
+          "utility": 3.754625967725194,
+          "requests": 2.0
+        },
+        "REAR_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.1828617271829276,
+          "utility": 3.1153617271829277,
+          "requests": 1.35
+        }
+      },
+      "seed": 2
+    },
+    {
+      "policy": "LEARNED_DQN",
+      "safe_merge_rate": 100.0,
+      "collision_rate": 0.0,
+      "mean_driving_return": 3.585577306204093,
+      "mean_utility": 3.5080773062040915,
+      "mean_travel_time": 4.183333333333334,
+      "mean_requests": 1.55,
+      "mean_bits": 6.2,
+      "pct_none": 62.94820717131474,
+      "pct_front": 13.147410358565736,
+      "pct_rear": 23.904382470119522,
+      "hazard_breakdown": {
+        "CLEAR": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.71202588546385,
+          "utility": 3.6595258854638493,
+          "requests": 1.05
+        },
+        "FRONT_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.8546259677251946,
+          "utility": 3.7346259677251945,
+          "requests": 2.4
+        },
+        "REAR_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.1900800654232313,
+          "utility": 3.130080065423232,
+          "requests": 1.2
+        }
+      },
+      "seed": 3
+    }
+  ],
+  "dqn_aggregate": {
+    "policy": "LEARNED_DQN (3-seed mean)",
+    "safe_merge_rate": 100.0,
+    "safe_merge_std": 0.0,
+    "collision_rate": 0.0,
+    "collision_std": 0.0,
+    "mean_driving_return": 3.5848863797329478,
+    "mean_utility": 3.5040530463996133,
+    "mean_travel_time": 4.183333333333334,
+    "mean_requests": 1.6166666666666665,
+    "mean_bits": 6.466666666666666,
+    "pct_none": 61.354581673306775,
+    "pct_front": 13.678618857901727,
+    "pct_rear": 24.966799468791503,
+    "hazard_breakdown": {
+      "CLEAR": {
+        "safe_merge_rate": 100.0,
+        "collision_rate": 0.0,
+        "driving_return": 3.71202588546385,
+        "utility": 3.643692552130517,
+        "requests": 1.3666666666666665
+      },
+      "FRONT_HAZARD": {
+        "safe_merge_rate": 100.0,
+        "collision_rate": 0.0,
+        "driving_return": 3.8546259677251946,
+        "utility": 3.7479593010585277,
+        "requests": 2.1333333333333333
+      },
+      "REAR_HAZARD": {
+        "safe_merge_rate": 100.0,
+        "collision_rate": 0.0,
+        "driving_return": 3.1880072860097965,
+        "utility": 3.120507286009797,
+        "requests": 1.3499999999999999
+      }
+    }
+  },
+  "baselines": {
+    "NO_COMM": {
+      "policy": "NO_COMM",
+      "safe_merge_rate": 75.0,
+      "collision_rate": 25.0,
+      "mean_driving_return": 2.3454796907414885,
+      "mean_utility": 2.3454796907414885,
+      "mean_travel_time": 3.283333333333333,
+      "mean_requests": 0.0,
+      "mean_bits": 0.0,
+      "pct_none": 100.0,
+      "pct_front": 0.0,
+      "pct_rear": 0.0,
+      "hazard_breakdown": {
+        "CLEAR": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.508014170425175,
+          "utility": 3.508014170425175,
+          "requests": 0.0
+        },
+        "FRONT_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.4857090027622264,
+          "utility": 3.4857090027622264,
+          "requests": 0.0
+        },
+        "REAR_HAZARD": {
+          "safe_merge_rate": 25.0,
+          "collision_rate": 75.0,
+          "driving_return": 0.042715899037060856,
+          "utility": 0.042715899037060856,
+          "requests": 0.0
+        }
+      }
+    },
+    "FULL_COMM": {
+      "policy": "FULL_COMM",
+      "safe_merge_rate": 100.0,
+      "collision_rate": 0.0,
+      "mean_driving_return": 3.4601033528856044,
+      "mean_utility": 3.410103352885604,
+      "mean_travel_time": 4.266666666666667,
+      "mean_requests": 1.0,
+      "mean_bits": 4.0,
+      "pct_none": 76.5625,
+      "pct_front": 15.625,
+      "pct_rear": 7.8125,
+      "hazard_breakdown": {
+        "CLEAR": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.225603342833189,
+          "utility": 3.1756033428331882,
+          "requests": 1.0
+        },
+        "FRONT_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.967735819520545,
+          "utility": 3.9177358195205443,
+          "requests": 1.0
+        },
+        "REAR_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.18697089630308,
+          "utility": 3.13697089630308,
+          "requests": 1.0
+        }
+      }
+    },
+    "RANDOM_REQUEST": {
+      "policy": "RANDOM_REQUEST",
+      "safe_merge_rate": 90.0,
+      "collision_rate": 10.0,
+      "mean_driving_return": 2.9980193048869164,
+      "mean_utility": 2.968852638220249,
+      "mean_travel_time": 3.816666666666667,
+      "mean_requests": 0.5833333333333334,
+      "mean_bits": 2.3333333333333335,
+      "pct_none": 84.71615720524017,
+      "pct_front": 9.170305676855897,
+      "pct_rear": 6.11353711790393,
+      "hazard_breakdown": {
+        "CLEAR": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.3928596858631375,
+          "utility": 3.360359685863137,
+          "requests": 0.65
+        },
+        "FRONT_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.621808763519841,
+          "utility": 3.591808763519841,
+          "requests": 0.6
+        },
+        "REAR_HAZARD": {
+          "safe_merge_rate": 70.0,
+          "collision_rate": 30.0,
+          "driving_return": 1.9793894652777677,
+          "utility": 1.9543894652777674,
+          "requests": 0.5
+        }
+      }
+    },
+    "ORACLE_SELECTIVE": {
+      "policy": "ORACLE_SELECTIVE",
+      "safe_merge_rate": 100.0,
+      "collision_rate": 0.0,
+      "mean_driving_return": 3.5542402954162666,
+      "mean_utility": 3.5209069620829334,
+      "mean_travel_time": 4.233333333333333,
+      "mean_requests": 0.6666666666666666,
+      "mean_bits": 2.6666666666666665,
+      "pct_none": 84.25196850393701,
+      "pct_front": 7.874015748031496,
+      "pct_rear": 7.874015748031496,
+      "hazard_breakdown": {
+        "CLEAR": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.508014170425175,
+          "utility": 3.508014170425175,
+          "requests": 0.0
+        },
+        "FRONT_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.967735819520545,
+          "utility": 3.9177358195205443,
+          "requests": 1.0
+        },
+        "REAR_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.18697089630308,
+          "utility": 3.13697089630308,
+          "requests": 1.0
+        }
+      }
+    }
+  },
+  "request_confusion": [
+    {
+      "hidden_state": "CLEAR",
+      "pct_none": 0.0,
+      "pct_front": 0.0,
+      "pct_rear": 100.0,
+      "counts": {
+        "2": 60
+      }
+    },
+    {
+      "hidden_state": "FRONT_HAZARD",
+      "pct_none": 0.0,
+      "pct_front": 0.0,
+      "pct_rear": 100.0,
+      "counts": {
+        "2": 60
+      }
+    },
+    {
+      "hidden_state": "REAR_HAZARD",
+      "pct_none": 0.0,
+      "pct_front": 0.0,
+      "pct_rear": 100.0,
+      "counts": {
+        "2": 60
+      }
+    }
+  ],
+  "cost_sweep": [
+    {
+      "policy": "LEARNED_DQN",
+      "safe_merge_rate": 100.0,
+      "collision_rate": 0.0,
+      "mean_driving_return": 3.5678654445895956,
+      "mean_utility": 3.5678654445895956,
+      "mean_travel_time": 4.166666666666667,
+      "mean_requests": 3.2666666666666666,
+      "mean_bits": 13.066666666666666,
+      "pct_none": 21.6,
+      "pct_front": 37.6,
+      "pct_rear": 40.8,
+      "hazard_breakdown": {
+        "CLEAR": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.663338559461468,
+          "utility": 3.663338559461468,
+          "requests": 3.35
+        },
+        "FRONT_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.8354396325821853,
+          "utility": 3.8354396325821853,
+          "requests": 2.4
+        },
+        "REAR_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.2048181417251316,
+          "utility": 3.2048181417251316,
+          "requests": 4.05
+        }
+      },
+      "lambda": 0.0
+    },
+    {
+      "policy": "LEARNED_DQN",
+      "safe_merge_rate": 100.0,
+      "collision_rate": 0.0,
+      "mean_driving_return": 3.5679784744965812,
+      "mean_utility": 3.536311807829914,
+      "mean_travel_time": 4.166666666666667,
+      "mean_requests": 3.1666666666666665,
+      "mean_bits": 12.666666666666666,
+      "pct_none": 24.0,
+      "pct_front": 24.4,
+      "pct_rear": 51.6,
+      "hazard_breakdown": {
+        "CLEAR": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.6623385594614684,
+          "utility": 3.6323385594614677,
+          "requests": 3.0
+        },
+        "FRONT_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.8546259677251946,
+          "utility": 3.8186259677251932,
+          "requests": 3.6
+        },
+        "REAR_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.18697089630308,
+          "utility": 3.15797089630308,
+          "requests": 2.9
+        }
+      },
+      "lambda": 0.01
+    },
+    {
+      "policy": "LEARNED_DQN",
+      "safe_merge_rate": 100.0,
+      "collision_rate": 0.0,
+      "mean_driving_return": 3.585910639537426,
+      "mean_utility": 3.4942439728707577,
+      "mean_travel_time": 4.183333333333334,
+      "mean_requests": 1.8333333333333333,
+      "mean_bits": 7.333333333333333,
+      "pct_none": 56.17529880478087,
+      "pct_front": 18.326693227091635,
+      "pct_rear": 25.49800796812749,
+      "hazard_breakdown": {
+        "CLEAR": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.71202588546385,
+          "utility": 3.6120258854638507,
+          "requests": 2.0
+        },
+        "FRONT_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.8546259677251946,
+          "utility": 3.754625967725194,
+          "requests": 2.0
+        },
+        "REAR_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.1910800654232316,
+          "utility": 3.1160800654232315,
+          "requests": 1.5
+        }
+      },
+      "lambda": 0.05
+    },
+    {
+      "policy": "LEARNED_DQN",
+      "safe_merge_rate": 100.0,
+      "collision_rate": 0.0,
+      "mean_driving_return": 3.482651666392562,
+      "mean_utility": 3.374318333059227,
+      "mean_travel_time": 4.05,
+      "mean_requests": 1.0833333333333333,
+      "mean_bits": 4.333333333333333,
+      "pct_none": 73.25102880658436,
+      "pct_front": 2.05761316872428,
+      "pct_rear": 24.691358024691358,
+      "hazard_breakdown": {
+        "CLEAR": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.71202588546385,
+          "utility": 3.6070258854638504,
+          "requests": 1.05
+        },
+        "FRONT_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.5458490482906,
+          "utility": 3.445849048290601,
+          "requests": 1.0
+        },
+        "REAR_HAZARD": {
+          "safe_merge_rate": 100.0,
+          "collision_rate": 0.0,
+          "driving_return": 3.1900800654232313,
+          "utility": 3.070080065423232,
+          "requests": 1.2
+        }
+      },
+      "lambda": 0.1
+    }
+  ],
+  "held_out_records": {
+    "dqn": {
+      "seed_1": [
+        {
+          "seed": 9000,
+          "hazard_state": "CLEAR",
+          "utility": 3.6246120655200693,
+          "driving_return": 3.72461206552007,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9001,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.2468091014270755,
+          "driving_return": 4.346809101427076,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9002,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.8149931732480167,
+          "driving_return": 2.9649931732480166,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 3,
+          "bits": 12,
+          "request_actions": [
+            2,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "seed": 9003,
+          "hazard_state": "CLEAR",
+          "utility": 3.469618892272053,
+          "driving_return": 3.569618892272053,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9004,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9005,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9006,
+          "hazard_state": "CLEAR",
+          "utility": 4.1849360397847635,
+          "driving_return": 4.284936039784764,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9007,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9008,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9009,
+          "hazard_state": "CLEAR",
+          "utility": 3.6046120655200697,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9010,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9011,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9012,
+          "hazard_state": "CLEAR",
+          "utility": 3.3949931732480167,
+          "driving_return": 3.494993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9013,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.15218338240304,
+          "driving_return": 4.2521833824030395,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9014,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.4518022746750923,
+          "driving_return": 2.5518022746750924,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9015,
+          "hazard_state": "CLEAR",
+          "utility": 3.6046120655200697,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9016,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.3749931732480167,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9017,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9018,
+          "hazard_state": "CLEAR",
+          "utility": 3.6046120655200697,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9019,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9020,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9021,
+          "hazard_state": "CLEAR",
+          "utility": 3.6046120655200697,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9022,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.204993173248017,
+          "driving_return": 4.304993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9023,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9024,
+          "hazard_state": "CLEAR",
+          "utility": 3.6046120655200697,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9025,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.307176555651056,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9026,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9027,
+          "hazard_state": "CLEAR",
+          "utility": 3.6046120655200697,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9028,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.3749931732480167,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9029,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.7271765556510563,
+          "driving_return": 3.8771765556510567,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 3,
+          "bits": 12,
+          "request_actions": [
+            2,
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "seed": 9030,
+          "hazard_state": "CLEAR",
+          "utility": 3.6046120655200697,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9031,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9032,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9033,
+          "hazard_state": "CLEAR",
+          "utility": 3.6046120655200697,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9034,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9035,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9036,
+          "hazard_state": "CLEAR",
+          "utility": 3.6046120655200697,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9037,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.184625719024036,
+          "driving_return": 4.284625719024037,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9038,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9039,
+          "hazard_state": "CLEAR",
+          "utility": 3.6046120655200697,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9040,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.307176555651056,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9041,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9042,
+          "hazard_state": "CLEAR",
+          "utility": 3.6046120655200697,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9043,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.3749931732480167,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9044,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9045,
+          "hazard_state": "CLEAR",
+          "utility": 3.6046120655200697,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9046,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9047,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.014554932056816,
+          "driving_return": 3.1145549320568167,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 9048,
+          "hazard_state": "CLEAR",
+          "utility": 3.6046120655200697,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9049,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.224993173248017,
+          "driving_return": 4.324993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9050,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9051,
+          "hazard_state": "CLEAR",
+          "utility": 3.4771765556510563,
+          "driving_return": 3.5771765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9052,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.3749931732480167,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9053,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.5100000000000002,
+          "driving_return": 3.66,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 3,
+          "bits": 12,
+          "request_actions": [
+            2,
+            0,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "seed": 9054,
+          "hazard_state": "CLEAR",
+          "utility": 3.6246120655200693,
+          "driving_return": 3.72461206552007,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9055,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.307176555651056,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9056,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.9823715496537764,
+          "driving_return": 3.032371549653777,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9057,
+          "hazard_state": "CLEAR",
+          "utility": 3.6046120655200697,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9058,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9059,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.8771765556510562,
+          "driving_return": 3.027176555651056,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 3,
+          "bits": 12,
+          "request_actions": [
+            2,
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "seed_2": [
+        {
+          "seed": 9000,
+          "hazard_state": "CLEAR",
+          "utility": 3.674612065520069,
+          "driving_return": 3.72461206552007,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9001,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.2468091014270755,
+          "driving_return": 4.346809101427076,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9002,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.864993173248017,
+          "driving_return": 2.9649931732480166,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        {
+          "seed": 9003,
+          "hazard_state": "CLEAR",
+          "utility": 3.519618892272053,
+          "driving_return": 3.569618892272053,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9004,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9005,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9006,
+          "hazard_state": "CLEAR",
+          "utility": 4.184936039784764,
+          "driving_return": 4.284936039784764,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9007,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9008,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9009,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9010,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9011,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9012,
+          "hazard_state": "CLEAR",
+          "utility": 3.4449931732480166,
+          "driving_return": 3.494993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9013,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.15218338240304,
+          "driving_return": 4.2521833824030395,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9014,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.4518022746750923,
+          "driving_return": 2.5518022746750924,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 9015,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9016,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.3749931732480167,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9017,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9018,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9019,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9020,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9021,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9022,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.204993173248017,
+          "driving_return": 4.304993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9023,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9024,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9025,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.307176555651056,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9026,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9027,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9028,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.3749931732480167,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9029,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.6449931732480167,
+          "driving_return": 3.794993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 3,
+          "bits": 12,
+          "request_actions": [
+            2,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9030,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9031,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9032,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9033,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9034,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9035,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9036,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9037,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.184625719024036,
+          "driving_return": 4.284625719024037,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9038,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9039,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9040,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.307176555651056,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9041,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9042,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9043,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.3749931732480167,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9044,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9045,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9046,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9047,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.064554932056816,
+          "driving_return": 3.1145549320568167,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9048,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9049,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.224993173248017,
+          "driving_return": 4.324993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9050,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9051,
+          "hazard_state": "CLEAR",
+          "utility": 3.527176555651056,
+          "driving_return": 3.5771765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9052,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.3749931732480167,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9053,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.5100000000000002,
+          "driving_return": 3.66,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 3,
+          "bits": 12,
+          "request_actions": [
+            2,
+            0,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9054,
+          "hazard_state": "CLEAR",
+          "utility": 3.674612065520069,
+          "driving_return": 3.72461206552007,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9055,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.307176555651056,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9056,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.9823715496537764,
+          "driving_return": 3.032371549653777,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9057,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9058,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9059,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.844993173248017,
+          "driving_return": 2.9449931732480166,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            2,
+            0
+          ]
+        }
+      ],
+      "seed_3": [
+        {
+          "seed": 9000,
+          "hazard_state": "CLEAR",
+          "utility": 3.674612065520069,
+          "driving_return": 3.72461206552007,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9001,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.196809101427076,
+          "driving_return": 4.346809101427076,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 3,
+          "bits": 12,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 9002,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.927176555651056,
+          "driving_return": 3.027176555651056,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9003,
+          "hazard_state": "CLEAR",
+          "utility": 3.519618892272053,
+          "driving_return": 3.569618892272053,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9004,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9005,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9006,
+          "hazard_state": "CLEAR",
+          "utility": 4.1849360397847635,
+          "driving_return": 4.284936039784764,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 9007,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9008,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9009,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9010,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9011,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9012,
+          "hazard_state": "CLEAR",
+          "utility": 3.4449931732480166,
+          "driving_return": 3.494993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9013,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.10218338240304,
+          "driving_return": 4.2521833824030395,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 3,
+          "bits": 12,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 9014,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.5018022746750925,
+          "driving_return": 2.5518022746750924,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9015,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9016,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.3749931732480167,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9017,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9018,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9019,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9020,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9021,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9022,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.154993173248017,
+          "driving_return": 4.304993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 3,
+          "bits": 12,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 9023,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9024,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9025,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.257176555651056,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 3,
+          "bits": 12,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 9026,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9027,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9028,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.3749931732480167,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9029,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.6949931732480166,
+          "driving_return": 3.794993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9030,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9031,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9032,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9033,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9034,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9035,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9036,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9037,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.1346257190240365,
+          "driving_return": 4.284625719024037,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 3,
+          "bits": 12,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 9038,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9039,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9040,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.257176555651056,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 3,
+          "bits": 12,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 9041,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9042,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9043,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.3749931732480167,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9044,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9045,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9046,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9047,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.064554932056816,
+          "driving_return": 3.1145549320568167,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9048,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9049,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.1749931732480166,
+          "driving_return": 4.324993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 3,
+          "bits": 12,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 9050,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9051,
+          "hazard_state": "CLEAR",
+          "utility": 3.527176555651056,
+          "driving_return": 3.5771765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9052,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.3749931732480167,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9053,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.5600000000000005,
+          "driving_return": 3.66,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9054,
+          "hazard_state": "CLEAR",
+          "utility": 3.674612065520069,
+          "driving_return": 3.72461206552007,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9055,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.257176555651056,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 3,
+          "bits": 12,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 9056,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.9823715496537764,
+          "driving_return": 3.032371549653777,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9057,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9058,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.4571765556510563,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "seed": 9059,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.927176555651056,
+          "driving_return": 3.027176555651056,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 2,
+          "bits": 8,
+          "request_actions": [
+            2,
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    "baselines": {
+      "NO_COMM": [
+        {
+          "seed": 9000,
+          "hazard_state": "CLEAR",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9001,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9002,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1145549320568167,
+          "driving_return": 3.1145549320568167,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9003,
+          "hazard_state": "CLEAR",
+          "utility": 3.569618892272053,
+          "driving_return": 3.569618892272053,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9004,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.474993173248017,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9005,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9006,
+          "hazard_state": "CLEAR",
+          "utility": 3.7046120655200694,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9007,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9008,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9009,
+          "hazard_state": "CLEAR",
+          "utility": 3.0745549320568166,
+          "driving_return": 3.0745549320568166,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9010,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9011,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9012,
+          "hazard_state": "CLEAR",
+          "utility": 3.5771765556510564,
+          "driving_return": 3.5771765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9013,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.474993173248017,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9014,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9015,
+          "hazard_state": "CLEAR",
+          "utility": 3.0523715496537767,
+          "driving_return": 3.0523715496537767,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9016,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9017,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.156738314459856,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9018,
+          "hazard_state": "CLEAR",
+          "utility": 3.7046120655200694,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9019,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 2.754173824328869,
+          "driving_return": 2.754173824328869,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9020,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.2495481053048323,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9021,
+          "hazard_state": "CLEAR",
+          "utility": 3.2495481053048323,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9022,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9023,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9024,
+          "hazard_state": "CLEAR",
+          "utility": 3.094554932056816,
+          "driving_return": 3.094554932056816,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9025,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9026,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1767383144598558,
+          "driving_return": 3.1767383144598558,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9027,
+          "hazard_state": "CLEAR",
+          "utility": 3.2295481053048327,
+          "driving_return": 3.2295481053048327,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9028,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 2.626738314459856,
+          "driving_return": 2.626738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9029,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9030,
+          "hazard_state": "CLEAR",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9031,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9032,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9033,
+          "hazard_state": "CLEAR",
+          "utility": 3.7046120655200694,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9034,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9035,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9036,
+          "hazard_state": "CLEAR",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9037,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.474993173248017,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9038,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9039,
+          "hazard_state": "CLEAR",
+          "utility": 3.72461206552007,
+          "driving_return": 3.72461206552007,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9040,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9041,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9042,
+          "hazard_state": "CLEAR",
+          "utility": 3.0745549320568166,
+          "driving_return": 3.0745549320568166,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9043,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.27218338240304,
+          "driving_return": 4.27218338240304,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9044,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9045,
+          "hazard_state": "CLEAR",
+          "utility": 3.187364722901793,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9046,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.474993173248017,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9047,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9048,
+          "hazard_state": "CLEAR",
+          "utility": 3.7046120655200694,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9049,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9050,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9051,
+          "hazard_state": "CLEAR",
+          "utility": 4.4071765556510565,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9052,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.474993173248017,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9053,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9054,
+          "hazard_state": "CLEAR",
+          "utility": 3.72461206552007,
+          "driving_return": 3.72461206552007,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9055,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9056,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.156738314459856,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9057,
+          "hazard_state": "CLEAR",
+          "utility": 3.7046120655200694,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9058,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9059,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        }
+      ],
+      "FULL_COMM": [
+        {
+          "seed": 9000,
+          "hazard_state": "CLEAR",
+          "utility": 3.6100000000000003,
+          "driving_return": 3.66,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9001,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.296809101427076,
+          "driving_return": 4.346809101427076,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9002,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.9149931732480168,
+          "driving_return": 2.9649931732480166,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9003,
+          "hazard_state": "CLEAR",
+          "utility": 3.744993173248017,
+          "driving_return": 3.794993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9004,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9005,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9006,
+          "hazard_state": "CLEAR",
+          "utility": 2.9295617588087994,
+          "driving_return": 2.9795617588087993,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9007,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9008,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9009,
+          "hazard_state": "CLEAR",
+          "utility": 3.002371549653777,
+          "driving_return": 3.0523715496537767,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9010,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9011,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9012,
+          "hazard_state": "CLEAR",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9013,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.20218338240304,
+          "driving_return": 4.2521833824030395,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9014,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.5018022746750925,
+          "driving_return": 2.5518022746750924,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9015,
+          "hazard_state": "CLEAR",
+          "utility": 3.684625719024037,
+          "driving_return": 3.7346257190240366,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9016,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.424993173248017,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9017,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9018,
+          "hazard_state": "CLEAR",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9019,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9020,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9021,
+          "hazard_state": "CLEAR",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9022,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.2549931732480175,
+          "driving_return": 4.304993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9023,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9024,
+          "hazard_state": "CLEAR",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9025,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.357176555651057,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9026,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9027,
+          "hazard_state": "CLEAR",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9028,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.1000000000000005,
+          "driving_return": 4.15,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9029,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.8271765556510564,
+          "driving_return": 3.8771765556510567,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9030,
+          "hazard_state": "CLEAR",
+          "utility": 2.991745141211839,
+          "driving_return": 3.041745141211839,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9031,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9032,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9033,
+          "hazard_state": "CLEAR",
+          "utility": 3.179548105304833,
+          "driving_return": 3.2295481053048327,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9034,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.337176555651057,
+          "driving_return": 4.387176555651056,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9035,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9036,
+          "hazard_state": "CLEAR",
+          "utility": 2.9771765556510563,
+          "driving_return": 3.027176555651056,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9037,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.234625719024037,
+          "driving_return": 4.284625719024037,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9038,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9039,
+          "hazard_state": "CLEAR",
+          "utility": 2.9149931732480168,
+          "driving_return": 2.9649931732480166,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9040,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.357176555651057,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9041,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9042,
+          "hazard_state": "CLEAR",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9043,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.202183382403041,
+          "driving_return": 4.2521833824030395,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9044,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9045,
+          "hazard_state": "CLEAR",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9046,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9047,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.064554932056816,
+          "driving_return": 3.1145549320568167,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9048,
+          "hazard_state": "CLEAR",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9049,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9050,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9051,
+          "hazard_state": "CLEAR",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9052,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.424993173248017,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9053,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.6100000000000003,
+          "driving_return": 3.66,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9054,
+          "hazard_state": "CLEAR",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9055,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.357176555651057,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9056,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.9823715496537764,
+          "driving_return": 3.032371549653777,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9057,
+          "hazard_state": "CLEAR",
+          "utility": 2.9771765556510563,
+          "driving_return": 3.027176555651056,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9058,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.2549931732480175,
+          "driving_return": 4.304993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9059,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.8949931732480167,
+          "driving_return": 2.9449931732480166,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "RANDOM_REQUEST": [
+        {
+          "seed": 9000,
+          "hazard_state": "CLEAR",
+          "utility": 3.6100000000000003,
+          "driving_return": 3.66,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9001,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9002,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.9771765556510563,
+          "driving_return": 3.027176555651056,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9003,
+          "hazard_state": "CLEAR",
+          "utility": 3.519618892272053,
+          "driving_return": 3.569618892272053,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9004,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9005,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9006,
+          "hazard_state": "CLEAR",
+          "utility": 2.9295617588087994,
+          "driving_return": 2.9795617588087993,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9007,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9008,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9009,
+          "hazard_state": "CLEAR",
+          "utility": 3.0745549320568166,
+          "driving_return": 3.0745549320568166,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9010,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9011,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9012,
+          "hazard_state": "CLEAR",
+          "utility": 3.4449931732480166,
+          "driving_return": 3.494993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9013,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9014,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9015,
+          "hazard_state": "CLEAR",
+          "utility": 3.684625719024037,
+          "driving_return": 3.7346257190240366,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9016,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9017,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.156738314459856,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9018,
+          "hazard_state": "CLEAR",
+          "utility": 3.7046120655200694,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9019,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9020,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.2495481053048323,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9021,
+          "hazard_state": "CLEAR",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9022,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.2549931732480175,
+          "driving_return": 4.304993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9023,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9024,
+          "hazard_state": "CLEAR",
+          "utility": 3.094554932056816,
+          "driving_return": 3.094554932056816,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9025,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9026,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1767383144598558,
+          "driving_return": 3.1767383144598558,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9027,
+          "hazard_state": "CLEAR",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9028,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 2.626738314459856,
+          "driving_return": 2.626738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9029,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.8271765556510564,
+          "driving_return": 3.8771765556510567,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9030,
+          "hazard_state": "CLEAR",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9031,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9032,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9033,
+          "hazard_state": "CLEAR",
+          "utility": 3.7046120655200694,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9034,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.337176555651057,
+          "driving_return": 4.387176555651056,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9035,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9036,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9037,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.234625719024037,
+          "driving_return": 4.284625719024037,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9038,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9039,
+          "hazard_state": "CLEAR",
+          "utility": 3.6546120655200696,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9040,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9041,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9042,
+          "hazard_state": "CLEAR",
+          "utility": 3.0745549320568166,
+          "driving_return": 3.0745549320568166,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9043,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9044,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9045,
+          "hazard_state": "CLEAR",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9046,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.474993173248017,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9047,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.064554932056816,
+          "driving_return": 3.1145549320568167,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9048,
+          "hazard_state": "CLEAR",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9049,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9050,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.684625719024037,
+          "driving_return": 3.7346257190240366,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9051,
+          "hazard_state": "CLEAR",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9052,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9053,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        },
+        {
+          "seed": 9054,
+          "hazard_state": "CLEAR",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9055,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9056,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.156738314459856,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9057,
+          "hazard_state": "CLEAR",
+          "utility": 3.7046120655200694,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9058,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9059,
+          "hazard_state": "REAR_HAZARD",
+          "utility": -1.0,
+          "driving_return": -1.0,
+          "crashed": true,
+          "safe_merge": false,
+          "travel_time": 1,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0
+          ]
+        }
+      ],
+      "ORACLE_SELECTIVE": [
+        {
+          "seed": 9000,
+          "hazard_state": "CLEAR",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9001,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.296809101427076,
+          "driving_return": 4.346809101427076,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9002,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.9149931732480168,
+          "driving_return": 2.9649931732480166,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9003,
+          "hazard_state": "CLEAR",
+          "utility": 3.569618892272053,
+          "driving_return": 3.569618892272053,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9004,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9005,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9006,
+          "hazard_state": "CLEAR",
+          "utility": 3.7046120655200694,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9007,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9008,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9009,
+          "hazard_state": "CLEAR",
+          "utility": 3.0745549320568166,
+          "driving_return": 3.0745549320568166,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9010,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9011,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9012,
+          "hazard_state": "CLEAR",
+          "utility": 3.5771765556510564,
+          "driving_return": 3.5771765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9013,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.20218338240304,
+          "driving_return": 4.2521833824030395,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9014,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.5018022746750925,
+          "driving_return": 2.5518022746750924,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9015,
+          "hazard_state": "CLEAR",
+          "utility": 3.0523715496537767,
+          "driving_return": 3.0523715496537767,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9016,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.424993173248017,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9017,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9018,
+          "hazard_state": "CLEAR",
+          "utility": 3.7046120655200694,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9019,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9020,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9021,
+          "hazard_state": "CLEAR",
+          "utility": 3.2495481053048323,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9022,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.2549931732480175,
+          "driving_return": 4.304993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9023,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9024,
+          "hazard_state": "CLEAR",
+          "utility": 3.094554932056816,
+          "driving_return": 3.094554932056816,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9025,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.357176555651057,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9026,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9027,
+          "hazard_state": "CLEAR",
+          "utility": 3.2295481053048327,
+          "driving_return": 3.2295481053048327,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9028,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.1000000000000005,
+          "driving_return": 4.15,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9029,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.8271765556510564,
+          "driving_return": 3.8771765556510567,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9030,
+          "hazard_state": "CLEAR",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9031,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9032,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9033,
+          "hazard_state": "CLEAR",
+          "utility": 3.7046120655200694,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9034,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.337176555651057,
+          "driving_return": 4.387176555651056,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9035,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9036,
+          "hazard_state": "CLEAR",
+          "utility": 3.5571765556510564,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9037,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.234625719024037,
+          "driving_return": 4.284625719024037,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9038,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9039,
+          "hazard_state": "CLEAR",
+          "utility": 3.72461206552007,
+          "driving_return": 3.72461206552007,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9040,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.357176555651057,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9041,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1373647229017934,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9042,
+          "hazard_state": "CLEAR",
+          "utility": 3.0745549320568166,
+          "driving_return": 3.0745549320568166,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9043,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.202183382403041,
+          "driving_return": 4.2521833824030395,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9044,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1067383144598555,
+          "driving_return": 3.156738314459856,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9045,
+          "hazard_state": "CLEAR",
+          "utility": 3.187364722901793,
+          "driving_return": 3.187364722901793,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9046,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9047,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.064554932056816,
+          "driving_return": 3.1145549320568167,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9048,
+          "hazard_state": "CLEAR",
+          "utility": 3.7046120655200694,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9049,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.5071765556510566,
+          "driving_return": 3.5571765556510564,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9050,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.1995481053048325,
+          "driving_return": 3.2495481053048323,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9051,
+          "hazard_state": "CLEAR",
+          "utility": 4.4071765556510565,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9052,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 3.424993173248017,
+          "driving_return": 3.474993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9053,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 3.6100000000000003,
+          "driving_return": 3.66,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9054,
+          "hazard_state": "CLEAR",
+          "utility": 3.72461206552007,
+          "driving_return": 3.72461206552007,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9055,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.357176555651057,
+          "driving_return": 4.4071765556510565,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9056,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.9823715496537764,
+          "driving_return": 3.032371549653777,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9057,
+          "hazard_state": "CLEAR",
+          "utility": 3.7046120655200694,
+          "driving_return": 3.7046120655200694,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 0,
+          "bits": 0,
+          "request_actions": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9058,
+          "hazard_state": "FRONT_HAZARD",
+          "utility": 4.2549931732480175,
+          "driving_return": 4.304993173248017,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 5,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 9059,
+          "hazard_state": "REAR_HAZARD",
+          "utility": 2.8949931732480167,
+          "driving_return": 2.9449931732480166,
+          "crashed": false,
+          "safe_merge": true,
+          "travel_time": 4,
+          "requests": 1,
+          "bits": 4,
+          "request_actions": [
+            2,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  }
+}

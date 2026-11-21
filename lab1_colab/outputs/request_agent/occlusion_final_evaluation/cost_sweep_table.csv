@@ -1,0 +1,5 @@
+Lambda Cost,Safe Merge Rate (%),Collision Rate (%),Mean Driving Return,Mean Utility,Mean Requests,Mean Bits
+0.00,100.0,0.0,3.568,3.568,3.27,13.1
+0.01,100.0,0.0,3.568,3.536,3.17,12.7
+0.05,100.0,0.0,3.586,3.494,1.83,7.3
+0.10,100.0,0.0,3.483,3.374,1.08,4.3
