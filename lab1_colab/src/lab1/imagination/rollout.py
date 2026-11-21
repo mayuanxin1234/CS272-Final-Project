@@ -47,7 +47,22 @@ def imagine_from_episode(
     ).to(device)
     obs0 = _obs_tensor(episode.obs[start], device).unsqueeze(0)
 
-    out = model.imagine(obs0, actions.unsqueeze(0))
+    request_actions = torch.from_numpy(
+    episode.request_actions[start:start + horizon]
+    .astype(np.int64)
+    ).to(device)
+
+    messages = torch.from_numpy(
+        episode.messages[start:start + horizon]
+        .astype(np.int64)
+    ).to(device)
+
+    out = model.imagine(
+        obs0,
+        actions.unsqueeze(0),
+        request_actions.unsqueeze(0),
+        messages.unsqueeze(0),
+    )
     imagined = out["latents"][0]  # (horizon+1, latent)
 
     real_frames = _obs_tensor(
