@@ -52,28 +52,8 @@ This project studies a hierarchical, communication-efficient architecture where:
   - `1: CLEAR` (no obstacle detected; lane unobstructed)
   - `2: HAZARD_AHEAD` (lead vehicle detects downstream obstacle / emergency braking)
   - `3: HAZARD_BEHIND` (trailing vehicle detects high-speed overtaker charging lane)
-- **DQN State Space (71 dimensions)**:
-
-$$
-s_t =
-\left[
-z_t,\;
-\mathrm{onehot}(a_{t-1}^{\mathrm{req}}),\;
-\mathrm{onehot}(m_{t-1})
-\right]
-$$
-
-- **Request Reward / Multi-Objective Utility**:
-
-$$
-U_t =
-R_t^{\mathrm{driving}}
--
-\lambda\,\mathbf{1}
-\left[
-a_t^{\mathrm{req}} \neq \mathrm{NONE}
-\right]
-$$
+- **DQN State Space (71 dimensions):** $s_t = [z_t,\; \mathrm{onehot}(a_{t-1}^{\mathrm{req}}),\; \mathrm{onehot}(m_{t-1})]$
+- **Request Reward / Multi-Objective Utility:** $U_t = R_t^{\mathrm{driving}} - \lambda \mathbf{1}[a_t^{\mathrm{req}} \neq \mathrm{NONE}]$
 
 ---
 
@@ -87,13 +67,8 @@ The primary benchmark is **Candidate A: Cooperative Blind-Zone Sensing in Target
   1. `CLEAR`: Highway target lane clear; both CAVs report `CLEAR`.
   2. `FRONT_HAZARD`: Stationary obstacle stalled downstream at $x=285.0\text{ m}$ in target lane, hidden from ego by highway geometry. Front CAV observes obstacle and reports `HAZARD_AHEAD`.
   3. `REAR_HAZARD`: High-speed overtaker charging at $30.0\text{ m/s}$ in target lane, hidden from ego. Rear CAV observes charging overtaker and reports `HAZARD_BEHIND`.
-- **Zero Initial Observation Leakage**:
-
-$$
-\max_{i, j \in \{\mathrm{CLEAR}, \mathrm{FRONT}, \mathrm{REAR}\}} \|o_0^{(i)} - o_0^{(j)}\|_\infty = 0.0
-$$
-
-Initial camera observations are $100\%$ byte-for-byte identical across all hidden states at $t=0$.
+- **Zero Initial Observation Leakage:** $\max_{i, j \in \{\mathrm{CLEAR}, \mathrm{FRONT}, \mathrm{REAR}\}} \|o_0^{(i)} - o_0^{(j)}\|_\infty = 0.0$
+  Initial camera observations are $100\%$ byte-for-byte identical across all hidden states at $t=0$.
 
 ---
 
@@ -141,11 +116,7 @@ We evaluated the sensitivity of the learned Double DQN request policy across var
 
 ## 6. Robustness Experiment 1: Degraded Visibility (Optical Fog)
 
-To evaluate whether cooperative V2X communication remains effective when ego vision is compromised, we implemented a physics-based **Beer–Lambert atmospheric scattering model** operating directly on the grayscale camera frames passed to the WorldModel CNN encoder:
-
-$$
-I_{\mathrm{fog}}(r) = I(r) \cdot e^{-\beta r} + I_{\mathrm{airlight}} \cdot (1 - e^{-\beta r})
-$$
+To evaluate whether cooperative V2X communication remains effective when ego vision is compromised, we implemented a physics-based **Beer–Lambert atmospheric scattering model** operating directly on the grayscale camera frames passed to the WorldModel CNN encoder: $I_{\mathrm{fog}}(r) = I(r) \cdot e^{-\beta r} + I_{\mathrm{airlight}} \cdot (1 - e^{-\beta r})$.
 
 We evaluated the **frozen, pre-trained WorldModel and DQN policy zero-shot** (no retraining or fine-tuning):
 
