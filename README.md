@@ -1,3 +1,5 @@
+# CS272 Final Project Group 1 (Merging task)
+
 # Communication-Efficient World Models for Connected Driving
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
@@ -77,7 +79,7 @@ $$
 
 ## 3. Main Final Experiment: Cooperative Blind-Zone Sensing (Occlusion)
 
-The primary benchmark is **Candidate A: Cooperative Blind-Zone Sensing in Target-Lane Merge** (`ego-merge-occlusion-final-v0` in `request_agent/occlusion_env.py`):
+The primary benchmark is **Candidate A: Cooperative Blind-Zone Sensing in Target-Lane Merge** (`ego-merge-occlusion-final-v0` in [`lab1_colab/request_agent/occlusion_env.py`](lab1_colab/request_agent/occlusion_env.py)):
 - **Ego Vehicle**: Begins on on-ramp (`"b", "c", 2`) at $s=5.0\text{ m}$ ($x=235.0\text{ m}$), $v=20.0\text{ m/s}$.
 - **Front CAV**: Target highway lane (`"b", "c", 1`) at $s=35.0\text{ m}$ ($x=265.0\text{ m}$), $v=22.0\text{ m/s}$.
 - **Rear CAV**: Target highway lane (`"a", "b", 1`) at $s=225.0\text{ m}$ ($x=225.0\text{ m}$), $v=22.0\text{ m/s}$.
@@ -203,11 +205,11 @@ We tested the frozen WorldModel + Double DQN policy **zero-shot** against a 4-mo
 
 ## 10. Project Notebooks
 
-The repository includes the two foundational interactive lab notebooks:
-- **Lab 1: World-Model Learning (`notebooks/1_learn_world_model.ipynb`)**: Trains the autoencoder, recurrent latent transition dynamics, and reward predictors on saved HighwayEnv driving experience.
-- **Lab 2: Imagination & Planning with MPC (`notebooks/2_imagine_and_plan.ipynb`)**: Freezes the trained world model and performs latent-space Model Predictive Control (MPC) trajectory rollouts to plan closed-loop driving maneuvers.
+The repository includes the two foundational interactive lab notebooks located in [`lab1_colab/notebooks/`](lab1_colab/notebooks/):
+- **Lab 1: World-Model Learning ([`1_learn_world_model.ipynb`](lab1_colab/notebooks/1_learn_world_model.ipynb))**: Trains the autoencoder, recurrent latent transition dynamics, and reward predictors on saved HighwayEnv driving experience.
+- **Lab 2: Imagination & Planning with MPC ([`2_imagine_and_plan.ipynb`](lab1_colab/notebooks/2_imagine_and_plan.ipynb))**: Freezes the trained world model and performs latent-space Model Predictive Control (MPC) trajectory rollouts to plan closed-loop driving maneuvers.
 
-Both notebooks are pre-configured with package discovery (`pyproject.toml`) and can be run locally or in JupyterLab.
+Both notebooks are pre-configured with package discovery ([`lab1_colab/pyproject.toml`](lab1_colab/pyproject.toml)) and can be run locally or in JupyterLab.
 
 ---
 
@@ -215,49 +217,52 @@ Both notebooks are pre-configured with package discovery (`pyproject.toml`) and 
 
 ```
 .
-├── notebooks/
-│   ├── 1_learn_world_model.ipynb               # [LAB 1] World-model learning notebook
-│   └── 2_imagine_and_plan.ipynb                # [LAB 2] Imagination & MPC planning notebook
-├── datasets/
-│   ├── merge_occlusion_final.npz                # [FINAL] 20k transitions occlusion dataset
-│   └── merge_final_candidate2.npz              # [PRIOR] Candidate #2 research dataset
-├── outputs/
-│   ├── personal_lab1/
-│   │   ├── occlusion_final_attempt_01/
-│   │   │   ├── my_lab1_world_model_occlusion_final.pt  # [FINAL] Trained WorldModel
-│   │   │   ├── validation_results.json
-│   │   │   └── train_runner.py
-│   │   └── final_candidate2_attempt_01/        # [PRIOR] Candidate #2 WorldModel
-│   └── request_agent/
-│       ├── occlusion_final_evaluation/         # [FINAL] 3 DQN seeds & cost sweep
-│       │   ├── dqn_seed1_lambda0.05.pt
-│       │   ├── dqn_seed2_lambda0.05.pt
-│       │   ├── dqn_seed3_lambda0.05.pt
-│       │   ├── dqn_seed1_lambda0.00.pt
-│       │   ├── dqn_seed1_lambda0.01.pt
-│       │   ├── dqn_seed1_lambda0.10.pt
-│       │   ├── baseline_comparison_table.csv
-│       │   ├── cost_sweep_table.csv
-│       │   ├── request_by_hazard_state_table.csv
-│       │   └── final_evaluation_results.json
-│       ├── robustness_fog_oracle_results.json
-│       ├── robustness_fog_zero_shot_results.json
-│       ├── robustness_aggressive_driver_oracle_results.json
-│       └── robustness_aggressive_zero_shot_results.json
-├── request_agent/
-│   ├── occlusion_env.py                        # [FINAL] Occlusion Gym environment
-│   ├── collect_occlusion_dataset.py            # Dataset collection pipeline
-│   ├── train_and_evaluate_occlusion_dqn.py     # DQN training and evaluation runner
-│   ├── mpc_adapter.py                          # Latent WorldModel MPC planner
-│   ├── dqn_agent.py                            # Double DQN agent architecture
-│   ├── network.py                              # QNetwork neural architecture
-│   ├── replay_buffer.py                        # Prioritized / uniform replay buffer
-│   ├── robustness_fog_diagnostic.py            # Fog robustness evaluation
-│   └── evaluate_aggressive_zero_shot.py        # Aggressive driver zero-shot evaluation
-├── docs/
-│   └── EXPERIMENT_NOTES.md                     # Complete research progression & notes
-├── pyproject.toml                              # Python project packaging configuration
-└── requirements.txt                            # Pinned dependency specification
+├── README.md                                   # [CANONICAL] Project documentation
+├── lab1_colab/
+│   ├── README.md                               # Workspace guide linking to canonical README
+│   ├── pyproject.toml                          # Package configuration for notebook imports
+│   ├── requirements.txt                        # Pinned dependencies
+│   ├── notebooks/
+│   │   ├── 1_learn_world_model.ipynb           # [LAB 1] World-model learning notebook
+│   │   └── 2_imagine_and_plan.ipynb            # [LAB 2] Imagination & MPC planning notebook
+│   ├── datasets/
+│   │   ├── merge_occlusion_final.npz           # [FINAL] 20k transitions occlusion dataset
+│   │   └── merge_final_candidate2.npz         # [PRIOR] Candidate #2 research dataset
+│   ├── outputs/
+│   │   ├── personal_lab1/
+│   │   │   ├── occlusion_final_attempt_01/
+│   │   │   │   ├── my_lab1_world_model_occlusion_final.pt  # [FINAL] Trained WorldModel
+│   │   │   │   ├── validation_results.json
+│   │   │   │   └── train_runner.py
+│   │   │   └── final_candidate2_attempt_01/   # [PRIOR] Candidate #2 WorldModel
+│   │   └── request_agent/
+│   │       ├── occlusion_final_evaluation/     # [FINAL] 3 DQN seeds & cost sweep
+│   │       │   ├── dqn_seed1_lambda0.05.pt
+│   │       │   ├── dqn_seed2_lambda0.05.pt
+│   │       │   ├── dqn_seed3_lambda0.05.pt
+│   │       │   ├── dqn_seed1_lambda0.00.pt
+│   │       │   ├── dqn_seed1_lambda0.01.pt
+│   │       │   ├── dqn_seed1_lambda0.10.pt
+│   │       │   ├── baseline_comparison_table.csv
+│   │       │   ├── cost_sweep_table.csv
+│   │       │   ├── request_by_hazard_state_table.csv
+│   │       │   └── final_evaluation_results.json
+│   │       ├── robustness_fog_oracle_results.json
+│   │       ├── robustness_fog_zero_shot_results.json
+│   │       ├── robustness_aggressive_driver_oracle_results.json
+│   │       └── robustness_aggressive_zero_shot_results.json
+│   ├── request_agent/
+│   │   ├── occlusion_env.py                    # [FINAL] Occlusion Gym environment
+│   │   ├── collect_occlusion_dataset.py        # Dataset collection pipeline
+│   │   ├── train_and_evaluate_occlusion_dqn.py # DQN training and evaluation runner
+│   │   ├── mpc_adapter.py                      # Latent WorldModel MPC planner
+│   │   ├── dqn_agent.py                        # Double DQN agent architecture
+│   │   ├── network.py                          # QNetwork neural architecture
+│   │   ├── replay_buffer.py                    # Prioritized / uniform replay buffer
+│   │   ├── robustness_fog_diagnostic.py        # Fog robustness evaluation
+│   │   └── evaluate_aggressive_zero_shot.py    # Aggressive driver zero-shot evaluation
+│   └── docs/
+│       └── EXPERIMENT_NOTES.md                 # Complete research progression & notes
 ```
 
 ---
