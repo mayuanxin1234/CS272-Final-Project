@@ -272,4 +272,6 @@ jupyter lab notebooks/
 ---
 
 ## 13. Contributors
-- CS272 Autonomous Driving & Reinforcement Learning Project Team
+
+- Devi Kamakshi
+- Yuanxin Ma
