@@ -50,10 +50,28 @@ This project studies a hierarchical, communication-efficient architecture where:
   - `1: CLEAR` (no obstacle detected; lane unobstructed)
   - `2: HAZARD_AHEAD` (lead vehicle detects downstream obstacle / emergency braking)
   - `3: HAZARD_BEHIND` (trailing vehicle detects high-speed overtaker charging lane)
-- **DQN State Space ($71\text{-D}$)**:
-  $$s_t^{\text{DQN}} = [z_t(64), \text{one\_hot}(a_{t-1}^{\text{req}}, 3), \text{one\_hot}(m_{t-1}, 4)]$$
+- **DQN State Space (71 dimensions)**:
+
+$$
+s_t =
+\left[
+z_t,\;
+\mathrm{onehot}(a_{t-1}^{\mathrm{req}}),\;
+\mathrm{onehot}(m_{t-1})
+\right]
+$$
+
 - **Request Reward / Multi-Objective Utility**:
-  $$\mathcal{U}_t = R_{\text{driving}, t} - \lambda \cdot \mathbb{I}(a_t^{\text{req}} \neq \text{NONE})$$
+
+$$
+U_t =
+R_t^{\mathrm{driving}}
+-
+\lambda\,\mathbf{1}
+\left[
+a_t^{\mathrm{req}} \neq \mathrm{NONE}
+\right]
+$$
 
 ---
 
@@ -68,8 +86,12 @@ The primary benchmark is **Candidate A: Cooperative Blind-Zone Sensing in Target
   2. `FRONT_HAZARD`: Stationary obstacle stalled downstream at $x=285.0\text{ m}$ in target lane, hidden from ego by highway geometry. Front CAV observes obstacle and reports `HAZARD_AHEAD`.
   3. `REAR_HAZARD`: High-speed overtaker charging at $30.0\text{ m/s}$ in target lane, hidden from ego. Rear CAV observes charging overtaker and reports `HAZARD_BEHIND`.
 - **Zero Initial Observation Leakage**:
-  $$\max_{i, j \in \{\text{CLEAR}, \text{FRONT}, \text{REAR}\}} \|o_0^{(i)} - o_0^{(j)}\|_\infty = 0.0$$
-  Initial camera observations are $100\%$ byte-for-byte identical across all hidden states at $t=0$.
+
+$$
+\max_{i, j \in \{\mathrm{CLEAR}, \mathrm{FRONT}, \mathrm{REAR}\}} \|o_0^{(i)} - o_0^{(j)}\|_\infty = 0.0
+$$
+
+Initial camera observations are $100\%$ byte-for-byte identical across all hidden states at $t=0$.
 
 ---
 
@@ -118,7 +140,10 @@ We evaluated the sensitivity of the learned Double DQN request policy across var
 ## 6. Robustness Experiment 1: Degraded Visibility (Optical Fog)
 
 To evaluate whether cooperative V2X communication remains effective when ego vision is compromised, we implemented a physics-based **Beer–Lambert atmospheric scattering model** operating directly on the grayscale camera frames passed to the WorldModel CNN encoder:
-$$I_{\text{fog}}(r) = I(r) \cdot e^{-\beta r} + I_{\text{airlight}} \cdot (1 - e^{-\beta r})$$
+
+$$
+I_{\mathrm{fog}}(r) = I(r) \cdot e^{-\beta r} + I_{\mathrm{airlight}} \cdot (1 - e^{-\beta r})
+$$
 
 We evaluated the **frozen, pre-trained WorldModel and DQN policy zero-shot** (no retraining or fine-tuning):
 
@@ -176,10 +201,23 @@ We tested the frozen WorldModel + Double DQN policy **zero-shot** against a 4-mo
 
 ---
 
-## 10. Repository Structure & Final Artifacts
+## 10. Project Notebooks
+
+The repository includes the two foundational interactive lab notebooks:
+- **Lab 1: World-Model Learning (`notebooks/1_learn_world_model.ipynb`)**: Trains the autoencoder, recurrent latent transition dynamics, and reward predictors on saved HighwayEnv driving experience.
+- **Lab 2: Imagination & Planning with MPC (`notebooks/2_imagine_and_plan.ipynb`)**: Freezes the trained world model and performs latent-space Model Predictive Control (MPC) trajectory rollouts to plan closed-loop driving maneuvers.
+
+Both notebooks are pre-configured with package discovery (`pyproject.toml`) and can be run locally or in JupyterLab.
+
+---
+
+## 11. Repository Structure & Final Artifacts
 
 ```
 .
+├── notebooks/
+│   ├── 1_learn_world_model.ipynb               # [LAB 1] World-model learning notebook
+│   └── 2_imagine_and_plan.ipynb                # [LAB 2] Imagination & MPC planning notebook
 ├── datasets/
 │   ├── merge_occlusion_final.npz                # [FINAL] 20k transitions occlusion dataset
 │   └── merge_final_candidate2.npz              # [PRIOR] Candidate #2 research dataset
@@ -218,12 +256,13 @@ We tested the frozen WorldModel + Double DQN policy **zero-shot** against a 4-mo
 │   └── evaluate_aggressive_zero_shot.py        # Aggressive driver zero-shot evaluation
 ├── docs/
 │   └── EXPERIMENT_NOTES.md                     # Complete research progression & notes
+├── pyproject.toml                              # Python project packaging configuration
 └── requirements.txt                            # Pinned dependency specification
 ```
 
 ---
 
-## 11. Reproducibility Guide
+## 12. Reproducibility Guide
 
 ### Environment Setup
 ```bash
@@ -249,7 +288,12 @@ PYTHONPATH=src:. python request_agent/robustness_fog_diagnostic.py
 PYTHONPATH=src:. python request_agent/evaluate_aggressive_zero_shot.py
 ```
 
+### Launch Interactive Notebooks
+```bash
+jupyter lab notebooks/
+```
+
 ---
 
-## 12. Contributors
+## 13. Contributors
 - CS272 Autonomous Driving & Reinforcement Learning Project Team
